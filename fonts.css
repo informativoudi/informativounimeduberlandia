@@ -1,0 +1,83 @@
+/* ============================================================
+   Unimed Uberlândia — Fonts
+   Official brand typefaces (proprietary — licensed by Unimed).
+   Primary: Unimed Sans. Display/accent: Unimed Slab, Unimed Serif.
+   Paths are relative to this file; @font-face src urls are resolved
+   against tokens/fonts.css.
+   ============================================================ */
+
+/* ---------- Unimed Sans (primary) ---------- */
+@font-face {
+  font-family: 'Unimed Sans';
+  src: url('../assets/fonts/UnimedSans-Light.otf') format('opentype');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Unimed Sans';
+  src: url('../assets/fonts/UnimedSans-Book.otf') format('opentype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Unimed Sans';
+  src: url('../assets/fonts/UnimedSans-BookItalic.otf') format('opentype');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Unimed Sans';
+  src: url('../assets/fonts/UnimedSans-Regular.otf') format('opentype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Unimed Sans';
+  src: url('../assets/fonts/UnimedSans-SemiBold.otf') format('opentype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Unimed Sans';
+  src: url('../assets/fonts/UnimedSans-Bold.otf') format('opentype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Unimed Sans';
+  src: url('../assets/fonts/UnimedSans-BoldItalic.otf') format('opentype');
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Unimed Sans';
+  src: url('../assets/fonts/UnimedSans-ExtraBold.otf') format('opentype');
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Unimed Sans';
+  src: url('../assets/fonts/UnimedSans-Black.otf') format('opentype');
+  font-weight: 900; font-style: normal; font-display: swap;
+}
+
+/* ---------- Unimed Slab (display / accent) ---------- */
+@font-face {
+  font-family: 'Unimed Slab';
+  src: url('../assets/fonts/UnimedSlab-Book.otf') format('opentype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Unimed Slab';
+  src: url('../assets/fonts/UnimedSlab-SemiBold.otf') format('opentype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Unimed Slab';
+  src: url('../assets/fonts/UnimedSlab-Bold.otf') format('opentype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* ---------- Unimed Serif (editorial / accent) ---------- */
+@font-face {
+  font-family: 'Unimed Serif';
+  src: url('../assets/fonts/UnimedSerif-Book.otf') format('opentype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Unimed Serif';
+  src: url('../assets/fonts/UnimedSerif-Bold.otf') format('opentype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}

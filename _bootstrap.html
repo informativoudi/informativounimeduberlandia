@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<!-- saved from url=(0198)https://c0a05195-3508-44f5-ad57-844c9d9a3e32.claudeusercontent.com/v1/design/projects/c0a05195-3508-44f5-ad57-844c9d9a3e32/serve/Montador%20Informativo.dc.html?srcmap=1&_omeo=https%3A%2F%2Fclaude.ai -->
+<html data-src-ver="7bc32260" data-om-id="7bc32260:0"><head data-om-id="7bc32260:1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<style data-omelette-injected="">html,body{background:transparent}</style><script data-omelette-injected="">(()=>{{const n=new URLSearchParams(location.search).get("theme");if(n==="light"||n==="dark"){document.documentElement.dataset.theme=n}}{if(new URLSearchParams(location.search).get("_omthumb")==="1"){const n=(f)=>{const g=f.focus;if(!g)return;f.focus=function(h){g.call(this,{...h,preventScroll:true})}};n(HTMLElement.prototype);n(SVGElement.prototype);if(typeof MathMLElement!=="undefined"){n(MathMLElement.prototype)}const d=(f)=>{f.removeAttribute("autofocus");f.inert=true;if(!(f instanceof HTMLElement))f.removeAttribute("tabindex")};const p=(f)=>{if(f.hasAttribute("autofocus"))d(f);for(const g of f.querySelectorAll("[autofocus]")){d(g)}};p(document.documentElement);new MutationObserver((f)=>{for(const g of f){for(const h of g.addedNodes){if(h.nodeType===1)p(h)}}}).observe(document,{childList:true,subtree:true})}}{const n=()=>{try{if(document.querySelector('meta[name="color-scheme"]'))return;const d=getComputedStyle(document.documentElement).getPropertyValue("color-scheme").trim();if(d&&d!=="normal")return;const p=(y)=>{if(!y)return null;const m=getComputedStyle(y).backgroundColor.match(/^rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)(?:[,\s/]+([\d.]+%?))?\s*\)$/);if(!m)return null;const w=m[4]==null?1:parseFloat(m[4])/(m[4].endsWith("%")?100:1);if(w<0.99)return null;return[+m[1],+m[2],+m[3]]};const f=p(document.body)||p(document.documentElement);if(!f)return;const g=(y)=>{const m=y/255;return m<=0.04045?m/12.92:((m+0.055)/1.055)**2.4};const h=0.2126*g(f[0])+0.7152*g(f[1])+0.0722*g(f[2]);document.documentElement.style.setProperty("color-scheme",h<0.4?"dark":"light")}catch{}};if(document.readyState==="complete")n();else window.addEventListener("load",n)}var I=["https://claude.ai","https://preview.claude.ai","https://c0a05195-3508-44f5-ad57-844c9d9a3e32.claudeusercontent.com"];var B=true;var K=false;var C=()=>{};if(K===true){try{const n=setTimeout.bind(window);const d=1e4;const p=15;const f=1e4;const g=120000;const h=200;const y=(o)=>{try{let r;if(typeof o==="string")r=o;else if(o instanceof URL)r=o.href;else if(typeof Request!=="undefined"&&o instanceof Request)r=o.url;else return null;if(!r)return null;const l=document.baseURI;const i=new URL(r,l);if(i.protocol!=="http:"&&i.protocol!=="https:")return null;if(i.origin!==new URL(l).origin)return null;return i.origin+i.pathname}catch{return null}};const m=new Map;const w=(o)=>{let r=m.get(o);if(!r){if(m.size>=h){const l=m.keys().next().value;if(l!==undefined)m.delete(l)}r={fails:[],until:0,cooldown:f,hard:false};m.set(o,r)}return r};const R=(o)=>{const r=m.get(o);return r!==undefined&&r.until>Date.now()};const O=(o,r)=>{const l=Date.now();const i=w(o);if(r)i.hard=true;if(i.until>l)return;i.fails.push(l);while(i.fails.length>0&&i.fails[0]<=l-d)i.fails.shift();if(i.fails.length>=p){i.until=l+i.cooldown;if(i.hard)i.cooldown=Math.min(i.cooldown*2,g);i.fails.length=0;try{n(()=>{try{S(true)}catch{}},i.until-l+100)}catch{}console.warn("[omelette] asset circuit breaker: pausing requests to "+o+" for "+Math.round((i.until-l)/1000)+"s after "+p+" failures in "+d/1000+"s")}};const e=(o)=>{m.delete(o)};const t=100;const a=new WeakMap;const u=new Set;let s=null;const S=(o)=>{for(const r of Array.from(u)){try{const l=a.get(r);if(l===undefined){u.delete(r);continue}if(o){const i=y(l);if(i!==null&&R(i))continue}a.delete(r);u.delete(r);if(s!==null)s.call(r,l)}catch{}}};C=()=>{try{m.clear();S(false)}catch{}};document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")C()});const _=window.fetch;if(typeof _==="function"){const o=function(...r){let l=null;try{l=y(r[0])}catch{}if(l!==null&&R(l)){let c;try{if(r[1]&&r[1].signal!==undefined){c=r[1].signal||undefined}else if(typeof Request!=="undefined"&&r[0]instanceof Request){c=r[0].signal||undefined}}catch{c=undefined}return new Promise((k,b)=>{const E=()=>{try{return c.reason!==undefined?c.reason:new DOMException("The operation was aborted.","AbortError")}catch{return new DOMException("The operation was aborted.","AbortError")}};try{if(c&&c.aborted){b(E());return}}catch{}let T=false;const j=()=>{if(T)return;T=true;b(E())};try{if(c)c.addEventListener("abort",j,{once:true})}catch{}n(()=>{if(T)return;T=true;try{if(c)c.removeEventListener("abort",j)}catch{}let L;try{L=new Response(null,{status:429,statusText:"Too Many Requests",headers:{"Retry-After":"10"}})}catch{L={ok:false,status:429}}k(L)},250)})}const i=_.apply(window,r);if(l!==null){const c=l;i.then((k)=>{try{if(k.ok)e(c);else if(k.status===401||k.status===403||k.status===404||k.status===429){O(c,k.status!==404)}}catch{}},()=>{})}return i};window.fetch=o}const v=Object.getOwnPropertyDescriptor(HTMLImageElement.prototype,"src");if(v!==undefined&&v.set!==undefined&&v.get!==undefined){const o=v.set;s=o;Object.defineProperty(HTMLImageElement.prototype,"src",{configurable:true,enumerable:v.enumerable,get:v.get,set(r){const l=`${r}`;try{const i=y(l);if(i!==null&&R(i)){a.set(this,l);if(u.size<t)u.add(this);return}}catch{}try{a.delete(this);u.delete(this)}catch{}o.call(this,l)}})}try{const o=HTMLImageElement.prototype.setAttribute;HTMLImageElement.prototype.setAttribute=function(r,l){if(arguments.length<2){o.apply(this,arguments);return}if(typeof r==="string"&&r.toLowerCase()==="src"){const i=`${l}`;try{const c=y(i);if(c!==null&&R(c)){a.set(this,i);if(u.size<t)u.add(this);return}a.delete(this);u.delete(this)}catch{}o.call(this,r,i);return}o.call(this,r,l)}}catch{}window.addEventListener("error",(o)=>{try{const r=o.target;if(r instanceof HTMLImageElement){const l=y(r.currentSrc||r.src||"");if(l!==null)O(l,true)}}catch{}},true);window.addEventListener("load",(o)=>{try{const r=o.target;if(r instanceof HTMLImageElement){const l=y(r.currentSrc||r.src||"");if(l!==null)e(l);const i=a.get(r);if(i!==undefined){let c=false;try{c=new URL(i,document.baseURI).href===new URL(r.currentSrc||r.src||"",document.baseURI).href}catch{c=false}if(c){a.delete(r);u.delete(r)}}}}catch{}},true)}catch{}}var J=30000;var G=3000;document.addEventListener("DOMContentLoaded",()=>{const n=window.Babel;const d="om-src-id";if(n&&n.registerPlugin&&!(n.availablePlugins&&n.availablePlugins[d])){n.registerPlugin(d,({types:h})=>({visitor:{JSXOpeningElement(y,m){const w=y.node;if(w.name&&w.name.type==="JSXMemberExpression")return;for(let t=0;t<w.attributes.length;t++){const a=w.attributes[t];if(a.type==="JSXAttribute"&&a.name&&a.name.name==="data-om-id")return}const R=m.file&&m.file.opts&&m.file.opts.filename||"?";const O=w.loc&&w.loc.start;const e=`jsx:${R}:${w.start??0}:${O?O.line:0}:${O?O.column+1:0}`;w.attributes.push(h.jsxAttribute(h.jsxIdentifier("data-om-id"),h.stringLiteral(e)))}}}))}const p="om-text-extract";let f=false;if(B&&n&&n.registerPlugin&&!(n.availablePlugins&&n.availablePlugins[p])){const h=window.React;if(h&&h.useSyncExternalStore&&h.createElement){f=true;const y={};const m=new Set;let w=0;window.__omTextO=y;window.__omTextSet=(e)=>{for(const t in e){const a=e[t];if(a==null)delete y[t];else y[t]=a}w++;m.forEach((t)=>t())};const R=(e)=>{m.add(e);return()=>m.delete(e)};const O=()=>w;window.__OmT=function e(t){h.useSyncExternalStore(R,O,O);return h.createElement("span",{"data-om-text":t.i,className:"__om-t"},t.i in y?y[t.i]:t.children)};n.registerPlugin(p,({types:e})=>{const t={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const a={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const u=(o,r)=>e.logicalExpression("??",e.memberExpression(e.logicalExpression("||",e.memberExpression(e.identifier("window"),e.identifier("__omTextO")),e.objectExpression([])),e.stringLiteral(o),true),r);const s=(o)=>o.file&&o.file.opts&&o.file.opts.filename||"?";const S=(o)=>o.file&&o.file.code||"";const _=(o,r)=>{const l=(c)=>c&&c.start!=null&&c.end!=null&&(c.type==="StringLiteral"||c.type==="TemplateLiteral"&&c.expressions.length===0)?[c.start,c.end]:null;const i=l(r);if(i)return i;if(r&&r.type==="Identifier"){const c=o.scope.getBinding(r.name);if(c&&c.constant&&c.path.node.type==="VariableDeclarator"){return l(c.path.node.init)}}return null};const v=(o,r,l)=>{const i=o.node;let c=false;const k=(E,T)=>{c=true;return e.jsxElement(e.jsxOpeningElement(e.jsxIdentifier("__OmT"),[e.jsxAttribute(e.jsxIdentifier("i"),e.stringLiteral(E))],false),e.jsxClosingElement(e.jsxIdentifier("__OmT")),[T],false)};const b=i.children.map((E)=>{if(E.type==="JSXText"){if(E.start==null||E.end==null)return E;const T=l.slice(E.start,E.end);const j=T.length-T.trimStart().length;const L=T.length-T.trimEnd().length;if(j+L>=T.length)return E;return k(`txt:${r}:${E.start+j}:${E.end-L}`,E)}if(E.type==="JSXExpressionContainer"){const T=_(o,E.expression);if(T)return k(`str:${r}:${T[0]}:${T[1]}`,E)}return E});if(c)i.children=b};return{visitor:{JSXOpeningElement(o,r){const l=o.node;const i=s(r);const c={};for(let k=0;k<l.attributes.length;k++){const b=l.attributes[k];if(b.type!=="JSXAttribute"||!b.name)continue;const E=b.name.name;if(!a[E])continue;if(!b.value||b.value.type!=="StringLiteral")continue;if(b.value.start==null||b.value.end==null)continue;const T=`txt:${i}:${b.value.start}:${b.value.end}`;c[E]=T;b.value=e.jsxExpressionContainer(u(T,e.stringLiteral(b.value.value)))}if(Object.keys(c).length){l.attributes.push(e.jsxAttribute(e.jsxIdentifier("data-om-text-attrs"),e.stringLiteral(JSON.stringify(c))))}},JSXElement(o,r){const l=o.node.openingElement;const i=l&&l.name&&l.name.name;if(i==="__OmT")return;if(typeof i==="string"&&t[i])return;v(o,s(r),S(r))},JSXFragment(o,r){v(o,s(r),S(r))}}}})}}const g=f?["transform-react-jsx-source",d,p]:["transform-react-jsx-source",d];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((h,y)=>{const m=h.getAttribute("data-plugins")||"";const w=g.filter((R)=>m.indexOf(R)<0);if(w.length){h.setAttribute("data-plugins",m?`${m},${w.join(",")}`:w.join(","))}if(!h.hasAttribute("data-filename")){h.setAttribute("data-filename",h.getAttribute("src")||`inline-${y}`)}})});var A=window.parent;var U="not editable here — open the project in the Claude Design editor to save";var W=()=>Promise.resolve({persisted:false,noHost:true,reason:U});var H=W;var M="data/storage.json";var z=()=>{try{const n=new URL(document.baseURI);const d=n.pathname.match(/\/projects\/([^/]+)\/serve\//);if(d)return d[1];return n.hostname.split(".")[0]||""}catch{return location.hostname.split(".")[0]||""}};var Z=()=>{try{const n=new URL(document.baseURI);const d=n.pathname.indexOf("/serve/");if(d>=0)return n.origin+n.pathname.slice(0,d+"/serve/".length)+M}catch{}return"./"+M};var x=null;var N=()=>{if(!x){x=fetch(Z(),{cache:"no-store"}).then((n)=>{if(n.ok)return n.text();return n.status===404?"":null}).catch(()=>null).then((n)=>{if(n===null){x=null;return null}const d=new Map;if(!n)return d;let p;try{p=JSON.parse(n)}catch{console.warn("[omelette.storage] "+M+" is not valid JSON; treating the store as unreadable so a save cannot overwrite the "+"hand-edited bytes. Fix the JSON (or delete the file) to re-enable persistence.");x=null;return null}if(p===null||typeof p!=="object"||Array.isArray(p)){console.warn("[omelette.storage] "+M+" doesn't hold a JSON object; treating the store as unreadable so a save cannot "+"overwrite the hand-edited bytes. Make the top level a JSON object to re-enable persistence.");x=null;return null}const f=p;if("data"in f){const g=f.data;if(g===null||typeof g!=="object"||Array.isArray(g)){console.warn("[omelette.storage] "+M+' has a "data" field that is not a JSON object; treating the store as unreadable so a '+'save cannot overwrite the hand-edited bytes. Make "data" a JSON object to re-enable persistence.');x=null;return null}const h=f._meta;const y=h!==null&&typeof h==="object"?h.project:undefined;if(typeof y==="string"&&y!==""&&y!==z())return d;for(const m of Object.keys(g))d.set(m,g[m]);return d}for(const g of Object.keys(f)){if(g!=="_meta")d.set(g,f[g])}return d})}return x};var F=(n)=>H(M,JSON.stringify({_meta:{project:z(),version:1},data:Object.fromEntries(n)},null,2));var D=Promise.resolve();var $=(n)=>{const d=D.then(n);D=d.then(()=>{return},()=>{return});return d};var V=/sk-(?:ant-)?[A-Za-z0-9_-]{16,}|AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{20,}|xox[a-z]-[A-Za-z0-9][A-Za-z0-9-]{9,}|AIza[0-9A-Za-z_-]{30,}|-----BEGIN [A-Z ]*PRIVATE KEY-----/;var Y=/password|passwd|secret|api[_-]?key|access[_-]?token|auth[_-]?token|credential/i;var Q=(n,d,p)=>{if(V.test(d)||Y.test(n)&&typeof p==="string"&&p.length>=8){console.warn('[omelette.storage] the value for "'+n+'" looks like a credential. The storage file is a plaintext project file — visible to '+"everyone with project access and copied when the project is duplicated. Do not store secrets here.")}};var q={persisted:false,reason:"could not load the existing store — not overwriting it"};var X={persisted:false,reason:"stored value changed since a failed read — re-read this key before saving"};var P=new Set;var ee={get:(n)=>{if(typeof n!=="string"){return Promise.reject(new TypeError("storage.get: key must be a string"))}return $(N).then((d)=>{if(d===null){P.add(n);return null}P.delete(n);if(!d.has(n))return null;const p=d.get(n);return p==null?null:JSON.parse(JSON.stringify(p))})},set:(n,d)=>{if(typeof n!=="string"){return Promise.reject(new TypeError("storage.set: key must be a string"))}let p;try{p=JSON.stringify(d)}catch(g){return Promise.reject(new TypeError("storage.set: value must be JSON-serializable ("+String(g)+")"))}if(p===undefined){return Promise.reject(new TypeError("storage.set: value must be JSON-serializable"))}Q(n,p,d);const f=JSON.parse(p);return $(()=>N().then((g)=>{if(g===null)return q;if(P.has(n)){if(g.has(n))return X;P.delete(n)}g.set(n,f);return F(g)}))},delete:(n)=>{if(typeof n!=="string"){return Promise.reject(new TypeError("storage.delete: key must be a string"))}return $(()=>N().then((d)=>{if(d===null)return q;if(P.has(n)){if(d.has(n))return X;P.delete(n)}d.delete(n);return F(d)}))},keys:()=>$(N).then((n)=>n===null?[]:Array.from(n.keys()))};window.omelette={writeFile:(n,d)=>H(n,d).then((p)=>{if(!p.persisted&&!p.noHost){throw new Error(p.reason||"write failed")}}),storage:ee};if(A&&A!==window){const n=(e,t)=>{try{A.postMessage({__omelette_log:true,type:e,data:t},"*")}catch{}};["log","warn","error"].forEach((e)=>{const t=console[e];console[e]=(...a)=>{const u=a.map((s)=>{try{return typeof s==="object"?JSON.stringify(s):String(s)}catch{try{return String(s)}catch{return"[unstringifiable]"}}}).join(" ");n(e,u);t.apply(console,a)}});window.addEventListener("error",(e)=>{const t=e.target;if(t&&t!==window&&t.tagName){const a=t.src||t.href||"";n("resource_error",`${t.tagName} failed to load: ${a}`)}else{n("error",`${e.message||"Unknown error"} at ${e.filename||"?"}:${e.lineno||0}:${e.colno||0}`)}},true);window.addEventListener("unhandledrejection",(e)=>{const t=e.reason;const a=t instanceof Error?`${t.message} ${t.stack}`:String(t);n("error",`Unhandled rejection: ${a}`)});window.addEventListener("click",(e)=>{if(e.defaultPrevented||e.button!==0)return;if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;const t=e.composedPath?e.composedPath():[];const a=["button","input","select","textarea","summary","label"];let u=null;for(const v of t){if(!(v instanceof Element))continue;if(v.localName==="a"){if(!(v instanceof HTMLAnchorElement))return;u=v;break}if(a.indexOf(v.localName)!==-1)return}if(!u)return;if(u.isContentEditable)return;const s=u.closest("[contenteditable]");if(s&&s.getAttribute("contenteditable")!=="false")return;const S=(u.getAttribute("target")||"_self").toLowerCase();if(S!=="_self"&&S!=="_top"&&S!=="_parent")return;let _;try{_=new URL(u.href)}catch{return}if(_.protocol!=="http:"&&_.protocol!=="https:")return;if(location.origin==="null")return;if(_.origin===location.origin)return;e.preventDefault();window.open(_.href,"_blank","noopener,noreferrer")});const d=()=>{try{A.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(window.ResizeObserver)new ResizeObserver(d).observe(document.documentElement);const p=()=>{d();if(!document.querySelector('script[type="text/babel"],script[type="text/jsx"]'))return;const e=()=>document.getElementById("root")||document.querySelector("body > div[id]");const t=e()?.firstElementChild??null;let a=0;const u=()=>{const s=e();if(s&&s.firstElementChild!==t||++a>30){d();return}setTimeout(u,100)};setTimeout(u,100)};if(document.readyState==="complete")p();else window.addEventListener("load",p);const f={};let g=0;const h=(e)=>new Promise((t,a)=>{if(!I.length){a(new Error("claude.complete: no parent origin"));return}const u=`c${++g}`;const s=()=>setTimeout(()=>{delete f[u];a(new Error(`claude.complete: no data for ${J/1000}s`))},J);const S=s();f[u]={resolve:t,reject:a,text:"",t:S,arm:s};try{for(const _ of I){A.postMessage({__om_api:true,id:u,body:e},_)}}catch(_){clearTimeout(S);delete f[u];a(_)}});const y=8;const m=async(e,t)=>{if(!Array.isArray(e.messages)){throw new Error("claude.complete: tools require a messages array")}const a=e.messages.slice();const u={...e,tools:e.tools.map((_)=>{if(_===null||typeof _!=="object")return _;const v={};for(const o of Object.keys(_)){if(typeof _[o]!=="function")v[o]=_[o]}return v})};const s=u.tool_choice;const S=s!=null&&(s.type==="any"||s.type==="tool")?{...u,tool_choice:s.disable_parallel_tool_use!==undefined?{type:"auto",disable_parallel_tool_use:s.disable_parallel_tool_use}:{type:"auto"}}:u;for(let _=0;_<y;_++){const v=await h({..._===0?u:S,messages:a});const o=v.message;const r=o&&Array.isArray(o.content)?o.content:null;const l=r?r.filter((c)=>c?.type==="tool_use"):[];if(o?.stop_reason!=="tool_use"||l.length===0){return v.text}const i=[];for(const c of l){const k=t.get(c.name);if(!k){i.push({type:"tool_result",tool_use_id:c.id,content:`no handler for tool "${c.name}"`,is_error:true});continue}try{const b=await k(c.input);const E=typeof b==="string"?b:O(b)??"";i.push({type:"tool_result",tool_use_id:c.id,content:E})}catch(b){i.push({type:"tool_result",tool_use_id:c.id,content:String(b?.message??b??"tool handler failed"),is_error:true})}}a.push({role:"assistant",content:r},{role:"user",content:i})}throw new Error(`claude.complete: exceeded ${y} tool turns`)};window.claude={complete(e){const t=e;if(t!==null&&typeof t==="object"&&Array.isArray(t.tools)&&t.tools.some((a)=>a!==null&&typeof a==="object"&&typeof a.run==="function")){const a=new Map;for(const u of t.tools){if(u!==null&&typeof u==="object"&&typeof u.run==="function"){a.set(String(u.name),u.run)}}return m(t,a)}return h(e).then((a)=>a.text)}};const w={};let R=0;H=(e,t)=>new Promise((a)=>{if(!I.length){a({persisted:false,noHost:true,reason:U});return}const u=`f${++R}`;const s=setTimeout(()=>{delete w[u];a({persisted:false,noHost:true,reason:U})},G);w[u]={settle:a,t:s};try{for(const S of I){A.postMessage({__om_file:true,id:u,op:"write",path:e,content:t},S)}}catch{clearTimeout(s);delete w[u];a({persisted:false,noHost:true,reason:U})}});const O=(e)=>{try{return JSON.stringify(e)}catch{return JSON.stringify(String(e))}};window.addEventListener("message",(e)=>{if(I.indexOf(e.origin)<0)return;if(e.source!==A)return;const t=e.data;if(!t)return;if(t.type==="omelette-preview-refresh"){if(typeof t.token!=="string"||!/^[0-9a-f.-]+(\.(rc|pr-[0-9]+))?(\.[0-9]+\.[0-9a-f]{16})?$/.test(t.token))return;const s=Math.max(1,Math.floor((t.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+t.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+s;C();return}if(t.__om_file_r){const s=w[t.id];if(!s)return;clearTimeout(s.t);delete w[t.id];s.settle(t.ok?{persisted:true}:{persisted:false,reason:t.error||"write failed"});return}if(t.__om_api_r){const s=f[t.id];if(!s)return;if(t.error!=null){clearTimeout(s.t);delete f[t.id];s.reject(new Error(t.error));return}if(t.chunk!=null){clearTimeout(s.t);s.t=s.arm();s.text+=t.chunk;return}if(t.done){clearTimeout(s.t);delete f[t.id];s.resolve({text:t.text!=null?t.text:s.text,message:t.message});return}return}if(!t.__om_eval)return;const a=t;const u=(s)=>{e.source.postMessage({...s,__om_eval_r:1,id:a.id},e.origin)};try{const s=(0,eval)(a.code);if(s&&typeof s.then==="function"){s.then((S)=>u({ok:1,v:O(S)}),(S)=>u({ok:0,e:String(S)}))}else{u({ok:1,v:O(s)})}}catch(s){u({ok:0,e:String(s)})}})}})();
+</script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1" data-om-id="7bc32260:3">
+<script src="./support.js.download"></script><style>x-dc{display:none!important}</style><script src="./react.production.min.js.download" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script><script src="./react-dom.production.min.js.download" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
+<style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><link rel="stylesheet" href="./fonts.css" data-om-id="7bc32260:7" data-dc-tpl="1"><link rel="stylesheet" href="./colors.css" data-om-id="7bc32260:8" data-dc-tpl="2"><script src="./mammoth.browser.min.js.download" data-dc-tpl="3"></script><style data-dc-tpl="4">
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Unimed Sans','Source Sans 3',system-ui,sans-serif;background:#f2efe9;-webkit-font-smoothing:antialiased}
+    a{color:#00995d;text-decoration:none}
+    a:hover{color:#004e4c}
+    input,textarea,button,select{font-family:inherit}
+    ::-webkit-scrollbar{width:10px;height:10px}
+    ::-webkit-scrollbar-track{background:transparent}
+    ::-webkit-scrollbar-thumb{background:#d8d4cc;border-radius:5px;border:2px solid transparent;background-clip:content-box}
+    ::-webkit-scrollbar-thumb:hover{background:#b9b4a9;background-clip:content-box}
+    [contenteditable]:focus{outline:none}
+    [contenteditable] p{margin:0 0 10px}
+    [contenteditable] p:last-child{margin-bottom:0}
+    [contenteditable] ul,[contenteditable] ol{margin:8px 0 10px 20px}
+    [contenteditable] li{margin-bottom:4px}
+    [contenteditable]:empty:before{content:attr(data-ph);color:#b4afa4}
+    @keyframes riseIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+  </style><style data-designer-overlay="1"></style><meta name="x-build-id" content="98aa310dc6cc8c80c1864029316232292c93b19e"><style data-dc-editor-style="">body:not([data-dc-editor-overlay-hidden]) [data-dc-editor-hover][data-dc-editor-hover-stroke]:not([data-dc-editor-selected]){filter:drop-shadow(0 0 1px rgba(59,130,246,0.9)) drop-shadow(0 0 2px rgba(59,130,246,0.55))!important;}[data-dc-editor-linked]{outline:1.5px dashed #3b82f6!important;outline-offset:1px!important;}body[data-dc-editor-on]:not([data-dc-editor-overlay-hidden]) [data-dc-editor-dragging],body[data-dc-editor-on]:not([data-dc-editor-overlay-hidden]) [data-dc-dragging],body[data-dc-floor-gestures]:not([data-dc-editor-overlay-hidden]) [data-dc-editor-dragging],body[data-dc-floor-gestures]:not([data-dc-editor-overlay-hidden]) [data-dc-dragging]{outline:1.5px solid #3b82f6!important;outline-offset:-0.75px!important;opacity:0.55!important;}body[data-dc-editor-on][data-dc-editor-drag-parked]:not([data-dc-editor-overlay-hidden]) [data-dc-editor-dragging],body[data-dc-editor-on][data-dc-editor-drag-parked]:not([data-dc-editor-overlay-hidden]) [data-dc-dragging],body[data-dc-floor-gestures][data-dc-editor-drag-parked]:not([data-dc-editor-overlay-hidden]) [data-dc-editor-dragging],body[data-dc-floor-gestures][data-dc-editor-drag-parked]:not([data-dc-editor-overlay-hidden]) [data-dc-dragging]{outline:1.5px dashed #3b82f6!important;opacity:0.3!important;}body[data-dc-editor-on] [data-dc-editor-editing]::selection,body[data-dc-editor-on] [data-dc-editor-editing] ::selection{background-color:#3b82f6!important;color:#fff!important;}body[data-dc-editor-on] [data-dc-editor-editing]{outline:none!important;}body[data-dc-editor-on]:not([data-dc-editor-tool="interact"]) *{cursor:default!important;user-select:none!important;}body[data-dc-editor-on]:not([data-dc-editor-tool="interact"]) :not([data-dc-editor-overlay-root]):not([data-dc-editor-overlay-root] *){pointer-events:auto!important;transition:none!important;animation:none!important;}body[data-dc-editor-on][data-dc-editor-tool="rect"] *,body[data-dc-editor-on][data-dc-editor-tool="frame"] *,body[data-dc-editor-on][data-dc-editor-tool="oval"] *{cursor:crosshair!important;}body[data-dc-editor-on][data-dc-editor-tool="text"] *{cursor:text!important;}body[data-dc-editor-on][data-dc-editor-tool="draw"] *{cursor:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 16 16%22%3E%3Cpath d=%22M2 14l1-4 8-8a2.1 2.1 0 0 1 3 3l-8 8-4 1z%22 fill=%22%23333%22 stroke=%22%23fff%22 stroke-width=%221%22/%3E%3C/svg%3E') 1 15, crosshair!important;}body[data-dc-editor-on]:not([data-dc-editor-tool]) [data-drags-parent],body[data-dc-editor-on]:not([data-dc-editor-tool]) [data-drags-parent] *{cursor:grab!important;}body[data-dc-editor-on]:not([data-dc-editor-tool]) [data-drags-parent]:active,body[data-dc-editor-on]:not([data-dc-editor-tool]) [data-drags-parent]:active *{cursor:grabbing!important;}html:not([data-dc-canvas]):has(body[data-dc-editor-on] .sc-host){background:var(--dc-editor-backdrop,#e9e7e4);}html:not([data-dc-canvas]) body[data-dc-editor-on]:has(.sc-host){background:var(--dc-editor-backdrop,#e9e7e4);}html:not([data-dc-canvas]) body[data-dc-editor-on] .sc-host:not(.sc-host .sc-host){min-height:100vh;background:var(--dc-editor-host-bg,#fff);}html[data-dc-canvas]{overflow:hidden;}html[data-dc-canvas],html[data-dc-canvas]>body{touch-action:none;}html[data-dc-canvas] body[data-dc-editor-on] .sc-host:not(.sc-host .sc-host)::before{content:"";position:absolute;left:-100000px;top:-100000px;width:200000px;height:200000px;pointer-events:none;background:repeating-linear-gradient(45deg,var(--dc-editor-hatch-ink,rgba(0,0,0,.05)) 0 8px,transparent 8px 16px);clip-path:polygon(0 0,100% 0,100% 50%,50% 50%,50% 100%,0 100%);}html[data-dc-pan-cursor="grab"],html[data-dc-pan-cursor="grab"] *,html[data-dc-pan-cursor="grab"] body[data-dc-editor-on] *{cursor:grab!important;}html[data-dc-pan-cursor="grabbing"],html[data-dc-pan-cursor="grabbing"] *,html[data-dc-pan-cursor="grabbing"] body[data-dc-editor-on] *{cursor:grabbing!important;}html[data-dc-drag-cursor="grabbing"]:not(#sc-chrome-boost):not(#sc-chrome-boost),html[data-dc-drag-cursor="grabbing"] *:not(#sc-chrome-boost):not(#sc-chrome-boost){cursor:grabbing!important;}html[data-dc-drag-cursor="not-allowed"]:not(#sc-chrome-boost):not(#sc-chrome-boost),html[data-dc-drag-cursor="not-allowed"] *:not(#sc-chrome-boost):not(#sc-chrome-boost){cursor:not-allowed!important;}html:not([data-dc-pan-cursor]):not([data-dc-drag-cursor]) body[data-dc-editor-on]:not([data-dc-editor-tool]) [data-dc-editor-grab]:not(#sc-chrome-boost):not(#sc-chrome-boost),html:not([data-dc-pan-cursor]):not([data-dc-drag-cursor]) body[data-dc-editor-on]:not([data-dc-editor-tool]) [data-dc-editor-grab] *:not(#sc-chrome-boost):not(#sc-chrome-boost){cursor:grab!important;}body[data-dc-floor-gestures] [data-dc-editor-selected],body[data-dc-floor-gestures] [data-dc-editor-selected] *{cursor:grab!important;user-select:none!important;}body[data-dc-floor-gestures] [data-dc-editor-selected]:active,body[data-dc-floor-gestures] [data-dc-editor-selected]:active *{cursor:grabbing!important;}</style></head>
+<body data-om-id="7bc32260:4">
+<div id="dc-root"><div class="sc-host" data-sc-name="Montador Informativo"><div data-dc-tpl="5" data-om-id="7bc32260:9" style="height: 100vh; display: flex; flex-direction: column; overflow: hidden; background: rgb(242, 239, 233);">
+
+  <header data-dc-tpl="6" data-om-id="7bc32260:10" style="flex-shrink: 0; background: linear-gradient(135deg, rgb(0, 153, 93) 0%, rgb(0, 78, 76) 100%); padding: 0px 28px; height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+    <div data-dc-tpl="7" data-om-id="7bc32260:11" style="display: flex; align-items: center; gap: 16px; min-width: 0px;">
+      <div data-dc-tpl="8" data-om-id="7bc32260:12" style="width: 34px; height: 34px; border-radius: 9px; background: rgba(255, 255, 255, 0.14); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <svg data-dc-tpl="9" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b1d34b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" data-om-id="7bc32260:13"><path data-dc-tpl="10" d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-om-id="7bc32260:14"></path><path data-dc-tpl="11" d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-om-id="7bc32260:15"></path></svg>
+      </div>
+      <div data-dc-tpl="12" data-om-id="7bc32260:16" style="min-width: 0px;">
+        <div data-dc-tpl="13" data-om-id="7bc32260:17" style="font-size: 15px; font-weight: 800; color: rgb(255, 255, 255); letter-spacing: -0.01em;">Montador de Informativo</div>
+        <div data-dc-tpl="14" data-om-id="7bc32260:18" style="font-size: 11px; color: rgba(255, 255, 255, 0.55); margin-top: 1px;">Unimed Uberlândia · uso interno</div>
+      </div>
+    </div>
+    <div data-dc-tpl="15" data-om-id="7bc32260:19" style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+      <input data-dc-tpl="16" type="file" accept=".docx" data-om-id="7bc32260:20" style="display: none;">
+      <button data-dc-tpl="17" data-om-id="7bc32260:21" class="scp0" style="display: flex; align-items: center; gap: 8px; height: 38px; padding: 0px 18px; border: 0px; border-radius: 9px; background: rgb(177, 211, 75); color: rgb(0, 78, 76); font-size: 13px; font-weight: 800; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: transform 0.15s, box-shadow 0.2s;">
+        <svg data-dc-tpl="18" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" data-om-id="7bc32260:22"><path data-dc-tpl="19" d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" data-om-id="7bc32260:23"></path><polyline data-dc-tpl="20" points="17 8 12 3 7 8" data-om-id="7bc32260:24"></polyline><line data-dc-tpl="21" x1="12" y1="3" x2="12" y2="15" data-om-id="7bc32260:25"></line></svg>
+        Importar Word
+      </button>
+      <button data-dc-tpl="22" data-om-id="7bc32260:26" class="scp1" style="display: flex; align-items: center; gap: 7px; height: 38px; padding: 0px 16px; border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 9px; background: rgba(255, 255, 255, 0.08); color: rgb(255, 255, 255); font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: background 0.18s;">
+        <svg data-dc-tpl="23" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" data-om-id="7bc32260:27" style="flex-shrink: 0;"><line data-dc-tpl="24" x1="12" y1="5" x2="12" y2="19" data-om-id="7bc32260:28"></line><line data-dc-tpl="25" x1="5" y1="12" x2="19" y2="12" data-om-id="7bc32260:29"></line></svg>
+        Nova edição
+      </button>
+      <button data-dc-tpl="26" title="Mostrar ou esconder o espelho" data-om-id="7bc32260:30" style="display: flex; align-items: center; gap: 7px; height: 38px; padding: 0px 15px; border-radius: 9px; cursor: pointer; font-size: 13px; font-weight: 700; white-space: nowrap; flex-shrink: 0; transition: background 0.18s, border-color 0.18s; border: 1px solid rgba(177, 211, 75, 0.6); background: rgba(177, 211, 75, 0.2); color: rgb(220, 236, 171);">
+        <svg data-dc-tpl="27" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" data-om-id="7bc32260:31"><path data-dc-tpl="28" d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" data-om-id="7bc32260:32"></path><circle data-dc-tpl="29" cx="12" cy="12" r="3" data-om-id="7bc32260:33"></circle></svg>
+        Espelho
+      </button>
+      <button data-dc-tpl="30" data-om-id="7bc32260:34" class="scp2" style="display: flex; align-items: center; gap: 8px; height: 38px; padding: 0px 18px; border: 0px; border-radius: 9px; background: rgb(255, 255, 255); color: rgb(0, 78, 76); font-size: 13px; font-weight: 800; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: transform 0.15s, box-shadow 0.2s;">
+        <svg data-dc-tpl="31" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" data-om-id="7bc32260:35"><polyline data-dc-tpl="32" points="16 18 22 12 16 6" data-om-id="7bc32260:36"></polyline><polyline data-dc-tpl="33" points="8 6 2 12 8 18" data-om-id="7bc32260:37"></polyline></svg>
+        Gerar embed
+      </button>
+    </div>
+  </header>
+
+  <div data-dc-tpl="34" data-om-id="7bc32260:38" style="flex: 1 1 0%; display: flex; min-height: 0px;">
+
+    <aside data-dc-tpl="35" data-om-id="7bc32260:39" style="width: 288px; min-width: 214px; background: rgb(255, 255, 255); border-right: 1px solid rgb(228, 224, 216); display: flex; flex-direction: column; min-height: 0px;">
+      <div data-dc-tpl="36" data-om-id="7bc32260:40" style="padding: 20px 20px 12px;">
+        <div data-dc-tpl="37" data-om-id="7bc32260:41" style="font-size: 10px; font-weight: 800; color: rgb(0, 153, 93); letter-spacing: 0.12em; text-transform: uppercase;">Edições</div>
+      </div>
+      <div data-dc-tpl="38" data-om-id="7bc32260:42" style="flex: 1 1 0%; overflow-y: auto; padding: 0px 12px 20px;">
+        
+        
+          <div data-dc-tpl="43" data-om-id="7bc32260:47" style="display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 11px; cursor: pointer; margin-bottom: 4px; transition: background 0.15s; background: rgb(230, 245, 238); box-shadow: rgb(0, 153, 93) 0px 0px 0px 1.5px inset;">
+            <div data-dc-tpl="44" data-om-id="7bc32260:48" style="width: 38px; flex-shrink: 0; border-radius: 8px 8px 0px; padding: 5px 0px; text-align: center; background: rgb(182, 177, 165);">
+              <div data-dc-tpl="45" data-om-id="7bc32260:49" style="font-size: 16px; font-weight: 900; line-height: 1; color: rgb(255, 255, 255);"><span class="sc-interp">11</span></div>
+              <div data-dc-tpl="46" data-om-id="7bc32260:50" style="font-size: 8px; font-weight: 800; text-transform: uppercase; color: rgb(255, 255, 255);"><span class="sc-interp">set</span></div>
+            </div>
+            <div data-dc-tpl="47" data-om-id="7bc32260:51" style="flex: 1 1 0%; min-width: 0px;">
+              <div data-dc-tpl="48" data-om-id="7bc32260:52" style="font-size: 13px; font-weight: 700; color: rgb(31, 36, 32); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><span class="sc-interp">11/09/2026</span></div>
+              <div data-dc-tpl="49" data-om-id="7bc32260:53" style="font-size: 11px; color: rgb(139, 133, 120); margin-top: 2px;"><span class="sc-interp">1 pauta</span></div>
+            </div>
+            <div data-dc-tpl="50" data-om-id="7bc32260:54" style="flex-shrink: 0; font-size: 9px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 7px; border-radius: 100px; background: rgb(242, 239, 233); color: rgb(139, 133, 120);"><span class="sc-interp">Espelho</span></div>
+          </div>
+        
+
+        <div data-dc-tpl="51" data-om-id="7bc32260:55" style="margin-top: 22px; padding-top: 18px; border-top: 1px solid rgb(238, 234, 226);">
+          <div data-dc-tpl="52" data-om-id="7bc32260:56" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; padding: 0px 8px;">
+            <div data-dc-tpl="53" data-om-id="7bc32260:57" style="font-size: 10px; font-weight: 800; color: rgb(139, 133, 120); letter-spacing: 0.12em; text-transform: uppercase;">Arquivo Framer</div>
+            <button data-dc-tpl="54" data-om-id="7bc32260:58" class="scp3" style="width: 22px; height: 22px; border: 0px; border-radius: 6px; background: rgb(242, 239, 233); color: rgb(0, 153, 93); font-size: 15px; font-weight: 800; line-height: 1; cursor: pointer; transition: background 0.15s;">+</button>
+          </div>
+          <div data-dc-tpl="55" data-om-id="7bc32260:59" style="font-size: 11px; color: rgb(164, 158, 145); line-height: 1.5; padding: 0px 8px 10px;">Links das edições antigas que continuam hospedadas no Framer.</div>
+          
+        </div>
+      </div>
+    </aside>
+
+    <main data-dc-tpl="65" data-om-id="7bc32260:69" style="flex: 1 1 0%; overflow-y: auto; min-width: 0px; padding: 24px 28px 80px;">
+      
+        <div data-dc-tpl="67" data-om-id="7bc32260:71" style="max-width: 760px; margin: 0px auto;">
+
+          <div data-dc-tpl="68" data-om-id="7bc32260:72" style="background: rgb(255, 255, 255); border-radius: 16px; border: 1px solid rgb(228, 224, 216); padding: 22px 24px; margin-bottom: 20px;">
+            <div data-dc-tpl="69" data-om-id="7bc32260:73" style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;">
+              <div data-dc-tpl="70" data-om-id="7bc32260:74" style="flex: 1 1 0%; min-width: 220px;">
+                <div data-dc-tpl="71" data-om-id="7bc32260:75" style="font-size: 10px; font-weight: 800; color: rgb(139, 133, 120); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 7px;">Data da edição</div>
+                <div data-dc-tpl="72" data-om-id="7bc32260:76" style="display: flex; gap: 8px;">
+                  <input data-dc-tpl="73" placeholder="04/09/2026" data-om-id="7bc32260:77" class="scp5" value="11/09/2026" style="flex: 1 1 0%; min-width: 0px; height: 42px; padding: 0px 14px; border: 1.5px solid rgb(228, 224, 216); border-radius: 10px; background: rgb(250, 248, 244); font-size: 16px; font-weight: 700; color: rgb(0, 78, 76);">
+                  <select data-dc-tpl="74" data-om-id="7bc32260:78" class="scp5" style="width: 150px; flex-shrink: 0; height: 42px; padding: 0px 10px; border: 1.5px solid rgb(228, 224, 216); border-radius: 10px; background: rgb(250, 248, 244); font-size: 13px; font-weight: 700; color: rgb(0, 153, 93); cursor: pointer;">
+                    <option data-dc-tpl="75" value="" data-om-id="7bc32260:79">Sextas…</option>
+                    
+                      <option data-dc-tpl="77" value="11/09/2026" data-om-id="7bc32260:81"><span class="sc-interp">11/09/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="18/09/2026" data-om-id="7bc32260:81"><span class="sc-interp">18/09/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="25/09/2026" data-om-id="7bc32260:81"><span class="sc-interp">25/09/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="02/10/2026" data-om-id="7bc32260:81"><span class="sc-interp">02/10/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="09/10/2026" data-om-id="7bc32260:81"><span class="sc-interp">09/10/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="16/10/2026" data-om-id="7bc32260:81"><span class="sc-interp">16/10/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="23/10/2026" data-om-id="7bc32260:81"><span class="sc-interp">23/10/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="30/10/2026" data-om-id="7bc32260:81"><span class="sc-interp">30/10/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="06/11/2026" data-om-id="7bc32260:81"><span class="sc-interp">06/11/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="13/11/2026" data-om-id="7bc32260:81"><span class="sc-interp">13/11/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="20/11/2026" data-om-id="7bc32260:81"><span class="sc-interp">20/11/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="27/11/2026" data-om-id="7bc32260:81"><span class="sc-interp">27/11/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="04/12/2026" data-om-id="7bc32260:81"><span class="sc-interp">04/12/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="11/12/2026" data-om-id="7bc32260:81"><span class="sc-interp">11/12/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="18/12/2026" data-om-id="7bc32260:81"><span class="sc-interp">18/12/2026</span></option>
+                    
+                      <option data-dc-tpl="77" value="25/12/2026" data-om-id="7bc32260:81"><span class="sc-interp">25/12/2026</span></option>
+                    
+                  </select>
+                </div>
+              </div>
+              <div data-dc-tpl="78" data-om-id="7bc32260:82" style="display: flex; gap: 8px;">
+                <div data-dc-tpl="79" data-om-id="7bc32260:83">
+                  <div data-dc-tpl="80" data-om-id="7bc32260:84" style="font-size: 10px; font-weight: 800; color: rgb(139, 133, 120); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 7px;">Dia</div>
+                  <input data-dc-tpl="81" placeholder="28" data-om-id="7bc32260:85" class="scp5" value="11" style="width: 62px; height: 42px; padding: 0px 10px; border: 1.5px solid rgb(228, 224, 216); border-radius: 10px; background: rgb(250, 248, 244); font-size: 15px; font-weight: 800; color: rgb(0, 78, 76); text-align: center;">
+                </div>
+                <div data-dc-tpl="82" data-om-id="7bc32260:86">
+                  <div data-dc-tpl="83" data-om-id="7bc32260:87" style="font-size: 10px; font-weight: 800; color: rgb(139, 133, 120); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 7px;">Mês</div>
+                  <input data-dc-tpl="84" placeholder="ago" data-om-id="7bc32260:88" class="scp5" value="set" style="width: 62px; height: 42px; padding: 0px 10px; border: 1.5px solid rgb(228, 224, 216); border-radius: 10px; background: rgb(250, 248, 244); font-size: 15px; font-weight: 800; color: rgb(0, 78, 76); text-align: center;">
+                </div>
+              </div>
+            </div>
+            <div data-dc-tpl="85" data-om-id="7bc32260:89" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 18px; padding-top: 16px; border-top: 1px solid rgb(240, 236, 228); flex-wrap: wrap;">
+              <div data-dc-tpl="86" data-om-id="7bc32260:90" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <div data-dc-tpl="87" data-om-id="7bc32260:91" style="display: flex; gap: 6px; background: rgb(242, 239, 233); padding: 4px; border-radius: 10px;">
+                  <button data-dc-tpl="88" data-om-id="7bc32260:92" style="height: 28px; padding: 0px 14px; border: 0px; border-radius: 7px; cursor: pointer; font-size: 12px; font-weight: 800; transition: background 0.18s, color 0.18s; background: rgb(255, 255, 255); color: rgb(139, 133, 120); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;">Espelho</button>
+                  <button data-dc-tpl="89" data-om-id="7bc32260:93" style="height: 28px; padding: 0px 14px; border: 0px; border-radius: 7px; cursor: pointer; font-size: 12px; font-weight: 800; transition: background 0.18s, color 0.18s; background: transparent; color: rgb(139, 133, 120); box-shadow: none;">Online</button>
+                  <button data-dc-tpl="90" data-om-id="7bc32260:94" style="height: 28px; padding: 0px 14px; border: 0px; border-radius: 7px; cursor: pointer; font-size: 12px; font-weight: 800; transition: background 0.18s, color 0.18s; background: transparent; color: rgb(139, 133, 120); box-shadow: none;">Arquivado</button>
+                </div>
+                
+                  <button data-dc-tpl="92" data-om-id="7bc32260:96" class="scp6" style="display: flex; align-items: center; gap: 8px; height: 36px; padding: 0px 18px; border: 0px; border-radius: 9px; background: rgb(0, 153, 93); color: rgb(255, 255, 255); font-size: 13px; font-weight: 800; cursor: pointer; transition: transform 0.16s, box-shadow 0.2s;">
+                    <svg data-dc-tpl="93" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" data-om-id="7bc32260:97"><polyline data-dc-tpl="94" points="20 6 9 17 4 12" data-om-id="7bc32260:98"></polyline></svg>
+                    Publicar
+                  </button>
+                
+              </div>
+              <button data-dc-tpl="95" data-om-id="7bc32260:99" class="scp4" style="display: flex; align-items: center; gap: 6px; height: 32px; padding: 0px 12px; border: 1px solid rgb(240, 223, 210); border-radius: 8px; background: rgb(255, 255, 255); color: rgb(244, 121, 32); font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; flex-shrink: 0;">
+                <svg data-dc-tpl="96" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" data-om-id="7bc32260:100"><polyline data-dc-tpl="97" points="3 6 5 6 21 6" data-om-id="7bc32260:101"></polyline><path data-dc-tpl="98" d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" data-om-id="7bc32260:102"></path></svg>
+                Excluir edição
+              </button>
+            </div>
+            
+              <div data-dc-tpl="100" data-om-id="7bc32260:104" style="margin-top: 16px; background: rgb(230, 245, 238); border-radius: 10px; padding: 14px 16px; font-size: 12px; color: rgb(0, 87, 58); line-height: 1.6;">
+                <strong data-dc-tpl="101" data-om-id="7bc32260:105">Espelho</strong> aparece só na página /espelho do Framer, para validação. Quando estiver aprovado, clique em <strong data-dc-tpl="102" data-om-id="7bc32260:106">Publicar</strong>: esta edição vira a atual e a anterior vai para o histórico automaticamente.
+              </div>
+            
+          </div>
+
+          
+            <div data-dc-tpl="104" data-om-id="7bc32260:108" style="background: rgb(255, 255, 255); border-radius: 16px; border: 1px solid rgb(228, 224, 216); margin-bottom: 16px; animation: 0.3s ease 0s 1 normal both running riseIn; overflow: hidden;">
+              <div data-dc-tpl="105" data-om-id="7bc32260:109" style="display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: rgb(250, 248, 244); border-bottom: 1px solid rgb(240, 236, 228);">
+                <div data-dc-tpl="106" data-om-id="7bc32260:110" style="width: 26px; height: 26px; border-radius: 7px; background: rgb(0, 153, 93); color: rgb(255, 255, 255); font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><span class="sc-interp">1</span></div>
+                <input data-dc-tpl="107" placeholder="Sessão (ex: Governança)" data-om-id="7bc32260:111" class="scp7 scp8" value="" style="flex: 1 1 0%; min-width: 0px; height: 30px; padding: 0px 10px; border: 1px solid transparent; border-radius: 7px; background: transparent; font-size: 11px; font-weight: 800; color: rgb(0, 153, 93); letter-spacing: 0.08em; text-transform: uppercase;">
+                <div data-dc-tpl="108" data-om-id="7bc32260:112" style="display: flex; gap: 4px; flex-shrink: 0;">
+                  <button data-dc-tpl="109" title="Subir" data-om-id="7bc32260:113" class="scp9" style="width: 28px; height: 28px; border: 1px solid rgb(228, 224, 216); border-radius: 7px; background: rgb(255, 255, 255); color: rgb(92, 87, 77); cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                    <svg data-dc-tpl="110" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" data-om-id="7bc32260:114"><polyline data-dc-tpl="111" points="18 15 12 9 6 15" data-om-id="7bc32260:115"></polyline></svg>
+                  </button>
+                  <button data-dc-tpl="112" title="Descer" data-om-id="7bc32260:116" class="scp9" style="width: 28px; height: 28px; border: 1px solid rgb(228, 224, 216); border-radius: 7px; background: rgb(255, 255, 255); color: rgb(92, 87, 77); cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                    <svg data-dc-tpl="113" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" data-om-id="7bc32260:117"><polyline data-dc-tpl="114" points="6 9 12 15 18 9" data-om-id="7bc32260:118"></polyline></svg>
+                  </button>
+                  <button data-dc-tpl="115" title="Duplicar" data-om-id="7bc32260:119" class="scp9" style="width: 28px; height: 28px; border: 1px solid rgb(228, 224, 216); border-radius: 7px; background: rgb(255, 255, 255); color: rgb(92, 87, 77); cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                    <svg data-dc-tpl="116" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" data-om-id="7bc32260:120"><rect data-dc-tpl="117" x="9" y="9" width="13" height="13" rx="2" data-om-id="7bc32260:121"></rect><path data-dc-tpl="118" d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" data-om-id="7bc32260:122"></path></svg>
+                  </button>
+                  <button data-dc-tpl="119" title="Remover" data-om-id="7bc32260:123" class="scp4" style="width: 28px; height: 28px; border: 1px solid rgb(240, 223, 210); border-radius: 7px; background: rgb(255, 255, 255); color: rgb(244, 121, 32); cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                    <svg data-dc-tpl="120" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" data-om-id="7bc32260:124"><line data-dc-tpl="121" x1="18" y1="6" x2="6" y2="18" data-om-id="7bc32260:125"></line><line data-dc-tpl="122" x1="6" y1="6" x2="18" y2="18" data-om-id="7bc32260:126"></line></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div data-dc-tpl="123" data-om-id="7bc32260:127" style="padding: 18px;">
+                <input data-dc-tpl="124" placeholder="Título da pauta" data-om-id="7bc32260:128" class="scp5" value="" style="width: 100%; height: 44px; padding: 0px 14px; border: 1.5px solid rgb(228, 224, 216); border-radius: 10px; background: rgb(250, 248, 244); font-size: 19px; font-weight: 800; color: rgb(0, 78, 76); margin-bottom: 12px;">
+
+                <div data-dc-tpl="125" data-om-id="7bc32260:129" style="display: flex; align-items: center; gap: 4px; margin-bottom: 8px;">
+                  <button data-dc-tpl="126" title="Negrito" data-om-id="7bc32260:130" class="scpa" style="width: 30px; height: 28px; border: 1px solid rgb(228, 224, 216); border-radius: 7px; background: rgb(255, 255, 255); font-size: 13px; font-weight: 900; color: rgb(0, 78, 76); cursor: pointer;">B</button>
+                  <button data-dc-tpl="127" title="Itálico" data-om-id="7bc32260:131" class="scpa" style="width: 30px; height: 28px; border: 1px solid rgb(228, 224, 216); border-radius: 7px; background: rgb(255, 255, 255); font-size: 13px; font-style: italic; font-weight: 700; color: rgb(0, 78, 76); cursor: pointer;">I</button>
+                  <button data-dc-tpl="128" title="Lista" data-om-id="7bc32260:132" class="scpa" style="width: 30px; height: 28px; border: 1px solid rgb(228, 224, 216); border-radius: 7px; background: rgb(255, 255, 255); color: rgb(0, 78, 76); cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                    <svg data-dc-tpl="129" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" data-om-id="7bc32260:133"><line data-dc-tpl="130" x1="8" y1="6" x2="21" y2="6" data-om-id="7bc32260:134"></line><line data-dc-tpl="131" x1="8" y1="12" x2="21" y2="12" data-om-id="7bc32260:135"></line><line data-dc-tpl="132" x1="8" y1="18" x2="21" y2="18" data-om-id="7bc32260:136"></line><line data-dc-tpl="133" x1="3" y1="6" x2="3.01" y2="6" data-om-id="7bc32260:137"></line><line data-dc-tpl="134" x1="3" y1="12" x2="3.01" y2="12" data-om-id="7bc32260:138"></line><line data-dc-tpl="135" x1="3" y1="18" x2="3.01" y2="18" data-om-id="7bc32260:139"></line></svg>
+                  </button>
+                  <button data-dc-tpl="136" title="Limpar formatação" data-om-id="7bc32260:140" class="scp9" style="height: 28px; padding: 0px 10px; border: 1px solid rgb(228, 224, 216); border-radius: 7px; background: rgb(255, 255, 255); font-size: 11px; font-weight: 700; color: rgb(139, 133, 120); cursor: pointer;">Limpar</button>
+                  <div data-dc-tpl="137" data-om-id="7bc32260:141" style="flex: 1 1 0%;"></div>
+                  <button data-dc-tpl="138" data-om-id="7bc32260:142" class="scpb" style="height: 28px; padding: 0px 12px; border: 1px solid rgb(228, 224, 216); border-radius: 7px; background: rgb(255, 255, 255); font-size: 11px; font-weight: 800; color: rgb(0, 153, 93); cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; flex-shrink: 0;">
+                    <span class="sc-interp">Mais opções</span>
+                  </button>
+                </div>
+
+                <div data-dc-tpl="139" contenteditable="true" data-ph="Cole ou digite o corpo da pauta…" data-om-id="7bc32260:143" class="scp5" style="min-height: 96px; padding: 14px 16px; border: 1.5px solid rgb(228, 224, 216); border-radius: 10px; background: rgb(250, 248, 244); font-size: 14px; line-height: 1.65; color: rgb(58, 54, 48);"></div>
+
+                
+              </div>
+            </div>
+          
+
+          <button data-dc-tpl="188" data-om-id="7bc32260:191" class="scpa" style="width: 100%; height: 52px; border: 1.5px dashed rgb(207, 201, 189); border-radius: 14px; background: rgb(255, 255, 255); color: rgb(0, 153, 93); font-size: 14px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 9px; transition: border-color 0.2s, background 0.2s;">
+            <svg data-dc-tpl="189" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" data-om-id="7bc32260:192"><line data-dc-tpl="190" x1="12" y1="5" x2="12" y2="19" data-om-id="7bc32260:193"></line><line data-dc-tpl="191" x1="5" y1="12" x2="19" y2="12" data-om-id="7bc32260:194"></line></svg>
+            Adicionar pauta
+          </button>
+        </div>
+      
+      
+    </main>
+
+    
+      <aside data-dc-tpl="202" data-om-id="7bc32260:205" style="background: rgb(255, 255, 255); border-left: 1px solid rgb(228, 224, 216); display: flex; flex-direction: column; min-height: 0px; width: 470px; min-width: 340px; flex-shrink: 0;">
+        <div data-dc-tpl="203" data-om-id="7bc32260:206" style="flex-shrink: 0; height: 52px; padding: 0px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; border-bottom: 1px solid rgb(228, 224, 216); background: rgb(250, 248, 244);">
+          <div data-dc-tpl="204" data-om-id="7bc32260:207" style="font-size: 11px; font-weight: 800; color: rgb(139, 133, 120); letter-spacing: 0.1em; text-transform: uppercase;">Espelho</div>
+          <div data-dc-tpl="205" data-om-id="7bc32260:208" style="display: flex; gap: 4px; background: rgb(242, 239, 233); padding: 3px; border-radius: 8px;">
+            <button data-dc-tpl="206" data-om-id="7bc32260:209" style="height: 24px; padding: 0px 11px; border: 0px; border-radius: 6px; cursor: pointer; font-size: 11px; font-weight: 800; background: transparent; color: rgb(139, 133, 120); box-shadow: none;">Home</button>
+            <button data-dc-tpl="207" data-om-id="7bc32260:210" style="height: 24px; padding: 0px 11px; border: 0px; border-radius: 6px; cursor: pointer; font-size: 11px; font-weight: 800; background: rgb(255, 255, 255); color: rgb(0, 78, 76); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;">/espelho</button>
+          </div>
+        </div>
+        <div data-dc-tpl="208" data-om-id="7bc32260:211" style="flex: 1 1 0%; min-height: 0px; background: rgb(255, 255, 255);">
+          <iframe data-dc-tpl="209" title="Espelho do informativo" data-om-id="7bc32260:212" style="width: 100%; height: 100%; border: 0px; display: block;" src="./saved_resource(1).html"></iframe>
+        </div>
+      </aside>
+    
+
+  </div>
+
+  
+
+  
+
+  </div></div></div>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;previewLargura&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:470,&quot;min&quot;:360,&quot;max&quot;:720,&quot;step&quot;:10,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;mostrarDicas&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+const KEY = 'montador-informativo-v1';
+
+class Component extends DCLogic {
+  state = {
+    data: null,
+    selId: null,
+    modo: null,
+    previewAberto: null,
+    larguraJanela: typeof window !== 'undefined' ? window.innerWidth : 1440,
+    extras: {},
+    toast: '',
+    importando: false,
+    modalEmbed: false,
+    embedCodigo: '',
+    copiado: false
+  };
+
+  editores = {};
+  timers = {};
+
+  componentDidMount() {
+    window.addEventListener('resize', this.onResize);
+    if (window.innerWidth !== this.state.larguraJanela) this.setState({ larguraJanela: window.innerWidth });
+    import('./embed-builder.js').then((mod) => {
+      this.builder = mod;
+      let data = null;
+      try { data = JSON.parse(localStorage.getItem(KEY)); } catch (e) { data = null; }
+      if (!data || !data.edicoes) data = { edicoes: [], legados: [], acessos: mod.ACESSOS_PADRAO.slice() };
+      if (!data.acessos || !data.acessos.length) data.acessos = mod.ACESSOS_PADRAO.slice();
+      const sel = data.edicoes.length ? data.edicoes[0].id : null;
+      this.setState({ data, selId: sel });
+    });
+  }
+
+  onResize = () => {
+    clearTimeout(this.timers.resize);
+    this.timers.resize = setTimeout(() => this.setState({ larguraJanela: window.innerWidth }), 140);
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    Object.keys(this.timers).forEach((k) => clearTimeout(this.timers[k]));
+  }
+
+  componentDidUpdate() { this.syncEditores(); }
+
+  syncEditores() {
+    const ed = this.edicaoAtual();
+    if (!ed) return;
+    ed.pautas.forEach((p) => {
+      const el = this.editores[p.id];
+      if (!el) return;
+      if (document.activeElement === el) return;
+      const alvo = p.texto || '';
+      if (el.innerHTML !== alvo) el.innerHTML = alvo;
+    });
+  }
+
+  salvar(data) {
+    try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) { /* cota */ }
+  }
+
+  mut(fn) {
+    const data = JSON.parse(JSON.stringify(this.state.data || { edicoes: [], legados: [], acessos: [] }));
+    const out = fn(data) || data;
+    this.salvar(out);
+    this.setState({ data: out });
+    return out;
+  }
+
+  aviso(msg) {
+    this.setState({ toast: msg });
+    clearTimeout(this.timers.toast);
+    this.timers.toast = setTimeout(() => this.setState({ toast: '' }), 2600);
+  }
+
+  edicaoAtual() {
+    const d = this.state.data;
+    if (!d) return null;
+    return d.edicoes.find((e) => e.id === this.state.selId) || null;
+  }
+
+  // ---- Word ----
+
+  pedirArquivo = () => { if (this.fileEl) this.fileEl.click(); };
+
+  onFile = (ev) => {
+    const file = ev.target.files && ev.target.files[0];
+    ev.target.value = '';
+    if (!file) return;
+    if (!window.mammoth) { this.aviso('Leitor de Word ainda carregando — tente de novo.'); return; }
+    this.setState({ importando: true });
+    const reader = new FileReader();
+    reader.onload = () => {
+      window.mammoth.convertToHtml({ arrayBuffer: reader.result })
+        .then((res) => {
+          const html = res.value || '';
+          const doc = new DOMParser().parseFromString('<div id="r">' + html + '</div>', 'text/html');
+          const tabelas = Array.from(doc.querySelectorAll('table'));
+          let pautas = null;
+          let dataTab = '';
+          this.origemImport = '';
+
+          for (const tab of tabelas) {
+            const porColuna = this.lerTabela(tab);
+            if (porColuna && porColuna.length) { pautas = porColuna; this.origemImport = 'tabela'; break; }
+          }
+          if (!pautas) {
+            for (const tab of tabelas) {
+              const vert = this.lerTabelaVertical(tab);
+              if (vert && vert.pautas.length) {
+                pautas = vert.pautas;
+                dataTab = vert.data;
+                this.origemImport = 'tabela';
+                break;
+              }
+            }
+          }
+          if (!pautas) pautas = this.quebrarPautas(html);
+
+          const ed = this.builder.edicaoVazia(dataTab || this.proximaSexta());
+          ed.pautas = pautas;
+          this.mut((d) => { d.edicoes.unshift(ed); });
+          this.setState({ selId: ed.id, modo: null, importando: false });
+          const via = this.origemImport === 'tabela' ? ' (tabela)' : '';
+          this.aviso(pautas.length + (pautas.length === 1 ? ' pauta importada' : ' pautas importadas') + via);
+        })
+        .catch(() => { this.setState({ importando: false }); this.aviso('Não consegui ler esse arquivo. Salve como .docx.'); });
+    };
+    reader.onerror = () => { this.setState({ importando: false }); this.aviso('Falha ao abrir o arquivo.'); };
+    reader.readAsArrayBuffer(file);
+  };
+
+  // Tabela: cada linha é uma pauta, cada coluna um campo.
+  // Cabeçalhos aceitos (sem acento/caixa): sessao, titulo, texto, imagem, video,
+  // destaque, botao/botao1..3, link/link1..3, evento, local, horario, formato
+  lerTabela(tabela) {
+    const norm = (s) => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const linhas = Array.from(tabela.querySelectorAll('tr'));
+    if (linhas.length < 2) return null;
+
+    const cabec = Array.from(linhas[0].children).map((c) => norm(c.textContent));
+    const acha = (...nomes) => {
+      for (const n of nomes) { const i = cabec.indexOf(n); if (i >= 0) return i; }
+      return -1;
+    };
+    const col = {
+      sessao: acha('sessao', 'secao', 'tag', 'categoria'),
+      titulo: acha('titulo'),
+      texto: acha('texto', 'corpo', 'conteudo'),
+      imagem: acha('imagem', 'linkimagem', 'urlimagem', 'foto'),
+      video: acha('video', 'linkvideo', 'youtube'),
+      destaque: acha('destaque'),
+      b1t: acha('botao', 'botao1', 'botao1texto', 'textobotao1'),
+      b1l: acha('link', 'link1', 'botao1link', 'linkbotao1'),
+      b2t: acha('botao2', 'botao2texto', 'textobotao2'),
+      b2l: acha('link2', 'botao2link', 'linkbotao2'),
+      b3t: acha('botao3', 'botao3texto', 'textobotao3'),
+      b3l: acha('link3', 'botao3link', 'linkbotao3'),
+      evTitulo: acha('evento', 'tituloevento', 'nomeevento'),
+      evDia: acha('dia', 'diaevento'),
+      evMes: acha('mes', 'mesevento'),
+      evLocal: acha('local', 'localevento'),
+      evHorario: acha('horario', 'hora', 'horarioevento'),
+      evFormato: acha('formato', 'modalidade')
+    };
+    if (col.titulo < 0 && col.texto < 0) return null;
+
+    const pautas = [];
+    for (let i = 1; i < linhas.length; i++) {
+      const cels = Array.from(linhas[i].children);
+      const txt = (j) => (j >= 0 && cels[j] ? (cels[j].textContent || '').replace(/\u00a0/g, ' ').trim() : '');
+      const rico = (j) => {
+        if (j < 0 || !cels[j]) return '';
+        const clone = cels[j].cloneNode(true);
+        clone.querySelectorAll('img').forEach((n) => n.remove());
+        const blocos = Array.from(clone.children).filter((el) => /^(p|ul|ol|h[1-6])$/i.test(el.tagName));
+        if (blocos.length) {
+          return blocos.map((el) => {
+            const t = el.tagName.toLowerCase();
+            if (t === 'ul' || t === 'ol') return el.outerHTML;
+            const inner = el.innerHTML.trim();
+            return inner ? '<p>' + inner + '</p>' : '';
+          }).join('');
+        }
+        const inner = clone.innerHTML.trim();
+        return inner ? '<p>' + inner + '</p>' : '';
+      };
+
+      const titulo = txt(col.titulo);
+      const corpo = rico(col.texto);
+      if (!titulo && !corpo.replace(/<[^>]*>/g, '').trim()) continue;
+
+      const p = this.builder.pautaVazia();
+      p.sessao = txt(col.sessao);
+      p.titulo = titulo;
+      p.texto = corpo;
+      p.imagem = txt(col.imagem);
+      p.video = txt(col.video);
+      p.destaque = rico(col.destaque);
+
+      const botoes = [];
+      [[col.b1t, col.b1l], [col.b2t, col.b2l], [col.b3t, col.b3l]].forEach(([ct, cl]) => {
+        const t = txt(ct);
+        let l = txt(cl);
+        if (cl >= 0 && cels[cl]) {
+          const a = cels[cl].querySelector('a[href]');
+          if (a) l = a.getAttribute('href') || l;
+        }
+        if (t) botoes.push({ texto: t, link: l });
+      });
+      p.botoes = botoes;
+
+      const evT = txt(col.evTitulo);
+      const evD = txt(col.evDia);
+      const evL = txt(col.evLocal);
+      const evH = txt(col.evHorario);
+      if (evT || evD || evL || evH) {
+        p.evento = {
+          ativo: true, titulo: evT, dia: evD, mes: txt(col.evMes),
+          local: evL, horario: evH, formato: txt(col.evFormato)
+        };
+      }
+      pautas.push(p);
+    }
+    return pautas.length ? pautas : null;
+  }
+
+  // Tabela vertical: cada linha é "rótulo | conteúdo".
+  // Uma nova pauta começa a cada linha de Sessão (ou de Título repetido).
+  lerTabelaVertical(tabela) {
+    const norm = (s) => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+
+    const tipo = (rot) => {
+      const n = norm(rot);
+      if (!n) return '';
+      if (/\b(dia|data)\b/.test(n) && /informativo|sair|edicao/.test(n)) return 'data';
+      if (/sessao|secao|categoria/.test(n)) return 'sessao';
+      if (/titulo/.test(n)) return 'titulo';
+      if (/texto|corpo|conteudo|descricao/.test(n)) return 'texto';
+      if (/destaque|observacao|atencao/.test(n)) return 'destaque';
+      if (/botao|botoes|cta|link/.test(n)) return 'botao';
+      if (/video|youtube/.test(n)) return 'video';
+      if (/imagem|imagens|foto|fotos|arte|peca/.test(n)) return 'imagem';
+      if (/local/.test(n)) return 'local';
+      if (/horario|hora/.test(n)) return 'horario';
+      if (/formato|modalidade/.test(n)) return 'formato';
+      if (/evento|agenda/.test(n)) return 'evento';
+      return '';
+    };
+
+    const rico = (cel) => {
+      const c = cel.cloneNode(true);
+      c.querySelectorAll('img').forEach((n) => n.remove());
+      const blocos = Array.from(c.children).filter((el) => /^(p|ul|ol|h[1-6])$/i.test(el.tagName));
+      if (blocos.length) {
+        return blocos.map((el) => {
+          const t = el.tagName.toLowerCase();
+          if (t === 'ul' || t === 'ol') return el.outerHTML;
+          const inner = el.innerHTML.trim();
+          return inner ? '<p>' + inner + '</p>' : '';
+        }).join('');
+      }
+      const inner = c.innerHTML.trim();
+      return inner ? '<p>' + inner + '</p>' : '';
+    };
+
+    const urls = (cel) => {
+      const out = [];
+      cel.querySelectorAll('a[href]').forEach((a) => { const h = a.getAttribute('href'); if (h) out.push(h); });
+      const txt = (cel.textContent || '').replace(/\u00a0/g, ' ');
+      (txt.match(/https?:\/\/[^\s,;)"'<>]+/g) || []).forEach((u) => { if (out.indexOf(u) < 0) out.push(u); });
+      return out;
+    };
+
+    const linhas = Array.from(tabela.querySelectorAll('tr'));
+    let data = '';
+    const pautas = [];
+    let cur = null;
+    let vistos = 0;
+
+    const fechar = () => {
+      if (!cur) return;
+      const vazia = !cur.titulo && !(cur.texto || '').replace(/<[^>]*>/g, '').trim();
+      if (!vazia) pautas.push(cur);
+      cur = null;
+    };
+    const garante = () => { if (!cur) cur = this.builder.pautaVazia(); return cur; };
+
+    linhas.forEach((tr) => {
+      const cels = Array.from(tr.children);
+      if (!cels.length) return;
+      const temPar = cels.length > 1;
+      const rot = temPar ? (cels[0].textContent || '').trim() : '';
+      const cel = temPar ? cels[1] : cels[0];
+      const txt = (cel.textContent || '').replace(/\u00a0/g, ' ').trim();
+      const t = tipo(rot);
+      if (!t && !txt) return;
+      vistos++;
+
+      if (t === 'data') {
+        if (!data && txt) {
+          const m = txt.match(/(\d{1,2}\s*[\/\-]\s*\d{1,2}(?:\s*[\/\-]\s*\d{2,4})?)/);
+          data = m ? m[1] : txt.replace(/^.*?informativo\s*[–\-—:]?\s*/i, '').trim();
+        }
+        return;
+      }
+      if (t === 'sessao') { fechar(); garante().sessao = txt.toUpperCase(); return; }
+      if (t === 'titulo') {
+        if (cur && cur.titulo) { const s = cur.sessao; fechar(); garante().sessao = s; }
+        garante().titulo = txt;
+        return;
+      }
+
+      const p = garante();
+      if (t === 'texto') { p.texto = (p.texto || '') + rico(cel); return; }
+      if (t === 'destaque') { p.destaque = (p.destaque || '') + rico(cel); return; }
+      if (t === 'botao') {
+        const links = urls(cel);
+        const rotulo = txt.replace(/https?:\/\/\S+/g, '').replace(/[|–—-]\s*$/, '').trim();
+        if (rotulo || links.length) {
+          p.botoes = (p.botoes || []).concat([{ texto: rotulo || 'Saiba mais', link: links[0] || '' }]);
+        }
+        return;
+      }
+      if (t === 'video') { const l = urls(cel); if (l.length) p.video = l[0]; else if (txt) p.video = txt; return; }
+      if (t === 'imagem') {
+        const l = urls(cel).filter((u) => !/youtu\.?be|youtube\.com/i.test(u));
+        if (l.length) { p.imagens = (p.imagens || []).concat(l); p.imagem = p.imagens[0]; }
+        return;
+      }
+      if (t === 'local' || t === 'horario' || t === 'formato' || t === 'evento') {
+        const ev = Object.assign({ ativo: true, titulo: '', dia: '', mes: '', local: '', horario: '', formato: '' }, p.evento || {}, { ativo: true });
+        if (t === 'local') ev.local = txt;
+        else if (t === 'horario') ev.horario = txt;
+        else if (t === 'formato') ev.formato = txt;
+        else {
+          ev.titulo = ev.titulo || txt;
+          const d = this.builder.parseRotulo(txt);
+          if (d.dia) ev.dia = d.dia;
+          if (d.mes) ev.mes = d.mes;
+        }
+        const loc = txt.match(/local\s*:?\s*([^\n|]+)/i);
+        const hor = txt.match(/hor[áa]rio\s*:?\s*([^\n|]+)/i);
+        if (loc) ev.local = loc[1].trim();
+        if (hor) ev.horario = hor[1].trim();
+        if (!ev.titulo) ev.titulo = p.titulo || '';
+        p.evento = ev;
+        return;
+      }
+
+      // Sem rótulo reconhecido: cai no corpo (ou vira título, se ainda não houver).
+      if (!txt) return;
+      const l = urls(cel);
+      if (l.length && /youtu\.?be|youtube\.com/i.test(l[0]) && !p.video && txt.length < 110) { p.video = l[0]; return; }
+      if (!p.titulo && txt.length <= 130 && !/[.;]\s/.test(txt)) { p.titulo = txt; return; }
+      p.texto = (p.texto || '') + rico(cel);
+    });
+    fechar();
+    if (!pautas.length || vistos < 2) return null;
+    return { data, pautas };
+  }
+
+  quebrarPautas(html) {
+    const nova = () => this.builder.pautaVazia();
+    const doc = new DOMParser().parseFromString('<div id="r">' + html + '</div>', 'text/html');
+    const root = doc.getElementById('r');
+    if (!root) return [nova()];
+    root.querySelectorAll('img').forEach((n) => n.remove());
+
+    const tabelas = Array.from(root.querySelectorAll('table'));
+    for (const t of tabelas) {
+      const lidas = this.lerTabela(t);
+      if (lidas) { this.origemImport = 'tabela'; return lidas; }
+    }
+    this.origemImport = 'texto';
+    tabelas.forEach((t) => t.remove());
+
+    const out = [];
+    let cur = null;
+    const fechar = () => { if (cur && (cur.titulo || (cur.texto || '').replace(/<[^>]*>/g, '').trim())) out.push(cur); };
+    const abrir = (titulo) => { cur = nova(); cur.titulo = titulo || ''; };
+
+    Array.from(root.children).forEach((el) => {
+      const tag = el.tagName.toLowerCase();
+      const txt = (el.textContent || '').replace(/\u00a0/g, ' ').trim();
+      if (!txt && tag !== 'ul' && tag !== 'ol') return;
+
+      if (/^h[1-4]$/.test(tag)) { fechar(); abrir(txt); return; }
+
+      const num = txt.match(/^(\d{1,2})\s*[\.\)\-]\s*(.{3,140})$/);
+      const curto = txt.length <= 140;
+      const strong = el.querySelector('strong, b');
+      const soNegrito = !!strong && strong.textContent.replace(/\u00a0/g, ' ').trim() === txt;
+
+      if (num && curto) { fechar(); abrir(num[2].trim()); return; }
+      if (soNegrito && curto && cur && (cur.texto || '').replace(/<[^>]*>/g, '').trim()) { fechar(); abrir(txt); return; }
+      if (soNegrito && curto && !cur) { fechar(); abrir(txt); return; }
+
+      if (!cur) abrir('');
+
+      const link = el.querySelector('a[href]');
+      if (link) {
+        const href = link.getAttribute('href') || '';
+        if (/youtu\.?be|youtube\.com/i.test(href) && !cur.video) { cur.video = href; if (txt === link.textContent.trim()) return; }
+      }
+
+      if (tag === 'ul' || tag === 'ol') cur.texto += el.outerHTML;
+      else cur.texto += '<p>' + el.innerHTML + '</p>';
+    });
+    fechar();
+    return out.length ? out : [nova()];
+  }
+
+  // Todas as sextas-feiras daqui até o fim do ano, em dd/mm/aaaa.
+  sextasDoAno() {
+    const hoje = new Date();
+    hoje.setHours(0, 0, 0, 0);
+    const d = new Date(hoje);
+    d.setDate(d.getDate() + ((5 - d.getDay() + 7) % 7));
+    const fim = new Date(hoje.getFullYear(), 11, 31);
+    const out = [];
+    while (d <= fim && out.length < 60) {
+      const dd = String(d.getDate()).padStart(2, '0');
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      out.push(dd + '/' + mm + '/' + d.getFullYear());
+      d.setDate(d.getDate() + 7);
+    }
+    return out;
+  }
+
+  // Espelho → Online. A que estava Online vai para o histórico.
+  publicar = () => {
+    const id = this.state.selId;
+    let anterior = '';
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === id);
+      if (!e) return;
+      d.edicoes.forEach((o) => {
+        if (o.id !== id && o.status === 'online') { o.status = 'arquivado'; anterior = o.rotulo || ''; }
+      });
+      e.status = 'online';
+    });
+    this.setState({ modo: null });
+    this.aviso(anterior
+      ? 'Publicado. ' + anterior + ' foi para o histórico.'
+      : 'Informativo publicado.');
+  };
+
+  proximaSexta() {
+    const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    const d = new Date();
+    d.setDate(d.getDate() + ((5 - d.getDay() + 7) % 7));
+    void meses;
+    return String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0') + '/' + d.getFullYear();
+  }
+
+  // ---- edições ----
+
+  novaEdicao = () => {
+    const ed = this.builder.edicaoVazia(this.proximaSexta());
+    this.mut((d) => { d.edicoes.unshift(ed); });
+    this.setState({ selId: ed.id, modo: null });
+  };
+
+  removerEdicao = () => {
+    const id = this.state.selId;
+    let prox = null;
+    this.mut((d) => {
+      d.edicoes = d.edicoes.filter((e) => e.id !== id);
+      prox = d.edicoes.length ? d.edicoes[0].id : null;
+    });
+    this.setState({ selId: prox });
+  };
+
+  setCampoEd(campo, valor) {
+    const id = this.state.selId;
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === id);
+      if (!e) return;
+      e[campo] = valor;
+      if (campo === 'rotulo') {
+        const p = this.builder.parseRotulo(valor);
+        if (p.dia) e.dia = p.dia;
+        if (p.mes) e.mes = p.mes;
+      }
+    });
+  }
+
+  setStatus(status) {
+    const id = this.state.selId;
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === id);
+      if (!e) return;
+      if (status === 'online') d.edicoes.forEach((o) => { if (o.id !== id && o.status === 'online') o.status = 'arquivado'; });
+      e.status = status;
+    });
+    this.setState({ modo: null });
+  }
+
+  // ---- pautas ----
+
+  mutPauta(pid, fn) {
+    const eid = this.state.selId;
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === eid);
+      if (!e) return;
+      const p = e.pautas.find((x) => x.id === pid);
+      if (p) fn(p, e);
+    });
+  }
+
+  setTextoDebounce(pid, html) {
+    clearTimeout(this.timers['t' + pid]);
+    this.timers['t' + pid] = setTimeout(() => { this.mutPauta(pid, (p) => { p.texto = html; }); }, 420);
+  }
+
+  addPauta = () => {
+    const eid = this.state.selId;
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === eid);
+      if (e) e.pautas.push(this.builder.pautaVazia());
+    });
+  };
+
+  moverPauta(pid, delta) {
+    const eid = this.state.selId;
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === eid);
+      if (!e) return;
+      const i = e.pautas.findIndex((p) => p.id === pid);
+      const j = i + delta;
+      if (i < 0 || j < 0 || j >= e.pautas.length) return;
+      const tmp = e.pautas[i]; e.pautas[i] = e.pautas[j]; e.pautas[j] = tmp;
+    });
+  }
+
+  cmd(nome) {
+    return (ev) => { ev.preventDefault(); try { document.execCommand(nome, false, null); } catch (e) { /* noop */ } };
+  }
+
+  // ---- legados ----
+
+  addLegado = () => { this.mut((d) => { d.legados.push({ rotulo: '', link: '' }); }); };
+
+  // ---- embed ----
+
+  gerarEmbed = () => {
+    if (!this.builder) return;
+    const html = this.builder.buildEmbed(this.state.data);
+    this.setState({ modalEmbed: true, embedCodigo: html, copiado: false });
+  };
+
+  fecharModal = () => this.setState({ modalEmbed: false });
+
+  copiarEmbed = () => {
+    const txt = this.state.embedCodigo;
+    const done = () => { this.setState({ copiado: true }); setTimeout(() => this.setState({ copiado: false }), 2200); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, done);
+    else done();
+  };
+
+  baixarEmbed = () => {
+    const blob = new Blob([this.state.embedCodigo], { type: 'text/html' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'informativo-cooperado.html';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1500);
+  };
+
+  // ---- render ----
+
+  renderVals() {
+    const d = this.state.data;
+    const seg = (ativo, cor) => 'height:28px;padding:0 14px;border:0;border-radius:7px;cursor:pointer;font-size:12px;font-weight:800;transition:background .18s,color .18s;background:' + (ativo ? '#fff' : 'transparent') + ';color:' + (ativo ? cor : '#8b8578') + ';box-shadow:' + (ativo ? '0 1px 4px rgba(0,0,0,.1)' : 'none');
+    const segMini = (ativo) => 'height:24px;padding:0 11px;border:0;border-radius:6px;cursor:pointer;font-size:11px;font-weight:800;background:' + (ativo ? '#fff' : 'transparent') + ';color:' + (ativo ? '#004e4c' : '#8b8578') + ';box-shadow:' + (ativo ? '0 1px 3px rgba(0,0,0,.1)' : 'none');
+
+    const edSel = this.edicaoAtual();
+    const modo = this.state.modo || (edSel && edSel.status === 'espelho' ? 'espelho' : 'online');
+    const larga = (this.state.larguraJanela || 1440) >= 1200;
+    const mostrarPreview = this.state.previewAberto === null ? larga : this.state.previewAberto;
+
+    const base = {
+      setFileEl: (el) => { this.fileEl = el; },
+      onFile: this.onFile,
+      pedirArquivo: this.pedirArquivo,
+      novaEdicao: this.novaEdicao,
+      gerarEmbed: this.gerarEmbed,
+      addPauta: this.addPauta,
+      addLegado: this.addLegado,
+      removerEdicao: this.removerEdicao,
+      fecharModal: this.fecharModal,
+      copiarEmbed: this.copiarEmbed,
+      baixarEmbed: this.baixarEmbed,
+      verOnline: () => this.setState({ modo: 'online' }),
+      verEspelho: () => this.setState({ modo: 'espelho' }),
+      modoEfetivo: modo,
+      toast: this.state.toast,
+      importando: this.state.importando,
+      modalEmbed: this.state.modalEmbed,
+      embedCodigo: this.state.embedCodigo,
+      rotuloCopiar: this.state.copiado ? 'Copiado!' : 'Copiar código',
+      tamanhoEmbed: Math.round((this.state.embedCodigo || '').length / 1024) + ' KB',
+      dicas: this.props.mostrarDicas !== false,
+      btnVerOnline: segMini(modo === 'online'),
+      btnVerEspelho: segMini(modo === 'espelho'),
+      mostrarPreview: mostrarPreview,
+      togglePreview: () => this.setState({ previewAberto: !mostrarPreview }),
+      btnTogglePreview: 'display:flex;align-items:center;gap:7px;height:38px;padding:0 15px;border-radius:9px;cursor:pointer;font-size:13px;font-weight:700;white-space:nowrap;flex-shrink:0;transition:background .18s,border-color .18s;border:1px solid ' + (mostrarPreview ? 'rgba(177,211,75,.6)' : 'rgba(255,255,255,.22)') + ';background:' + (mostrarPreview ? 'rgba(177,211,75,.2)' : 'rgba(255,255,255,.08)') + ';color:' + (mostrarPreview ? '#dcecab' : '#fff'),
+      estiloPreview: (function (larguraPref, janela) {
+        const comum = 'background:#fff;border-left:1px solid #e4e0d8;display:flex;flex-direction:column;min-height:0;';
+        if (larga) return comum + 'width:' + larguraPref + 'px;min-width:340px;flex-shrink:0';
+        const w = Math.max(320, Math.min(larguraPref, janela - 96));
+        return comum + 'position:fixed;top:68px;right:0;bottom:0;width:' + w + 'px;z-index:400;box-shadow:-14px 0 40px rgba(20,35,28,.18)';
+      })(this.props.previewLargura || 470, this.state.larguraJanela || 1440)
+    };
+
+    if (!d) {
+      return Object.assign(base, {
+        semEdicoes: false, semSelecao: false, temSelecao: false,
+        listaEdicoes: [], listaLegados: [], pautas: [], srcDoc: ''
+      });
+    }
+
+    const ed = this.edicaoAtual();
+    const ordem = { online: 0, espelho: 1, arquivado: 2 };
+    const listaEdicoes = d.edicoes.slice().sort((a, b) => (ordem[a.status] || 3) - (ordem[b.status] || 3)).map((e) => {
+      const ativo = e.id === this.state.selId;
+      const arq = e.status === 'arquivado';
+      const esp = e.status === 'espelho';
+      const cor = arq ? '#f47920' : (esp ? '#8b8578' : '#00995d');
+      const n = (e.pautas || []).length;
+      return {
+        rotulo: e.rotulo || 'Sem data',
+        dia: e.dia || '—',
+        mes: e.mes || '',
+        resumo: n + (n === 1 ? ' pauta' : ' pautas'),
+        badge: arq ? 'Arq.' : (esp ? 'Espelho' : 'Online'),
+        corData: arq || esp ? '#fff' : '#004e4c',
+        estilo: 'display:flex;align-items:center;gap:10px;padding:10px;border-radius:11px;cursor:pointer;margin-bottom:4px;transition:background .15s;background:' + (ativo ? '#e6f5ee' : 'transparent') + ';box-shadow:' + (ativo ? 'inset 0 0 0 1.5px #00995d' : 'none'),
+        estiloData: 'width:38px;flex-shrink:0;border-radius:8px 8px 0 8px;padding:5px 0;text-align:center;background:' + (arq ? '#f47920' : (esp ? '#b6b1a5' : '#b1d34b')),
+        estiloBadge: 'flex-shrink:0;font-size:9px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 7px;border-radius:100px;background:' + (arq ? '#fff3e0' : (esp ? '#f2efe9' : '#e6f5ee')) + ';color:' + cor,
+        abrir: () => this.setState({ selId: e.id, modo: null })
+      };
+    });
+
+    const listaLegados = (d.legados || []).map((l, i) => ({
+      rotulo: l.rotulo || '',
+      link: l.link || '',
+      setRotulo: (ev) => { const v = ev.target.value; this.mut((x) => { if (x.legados[i]) x.legados[i].rotulo = v; }); },
+      setLink: (ev) => { const v = ev.target.value; this.mut((x) => { if (x.legados[i]) x.legados[i].link = v; }); },
+      remover: () => this.mut((x) => { x.legados.splice(i, 1); })
+    }));
+
+    const pautas = ed ? ed.pautas.map((p, i) => {
+      const ev0 = p.evento || {};
+      const aberto = !!this.state.extras[p.id];
+      const set = (campo) => (e) => { const v = e.target.value; this.mutPauta(p.id, (x) => { x[campo] = v; }); };
+      const setEv = (campo) => (e) => { const v = e.target.value; this.mutPauta(p.id, (x) => { x.evento = Object.assign({}, x.evento || {}, { [campo]: v }); }); };
+      return {
+        id: p.id, num: i + 1,
+        sessao: p.sessao || '', titulo: p.titulo || '',
+        imagem: p.imagem || '', video: p.video || '', destaque: p.destaque || '',
+        fotos: (p.imagens && p.imagens.length ? p.imagens : (p.imagem ? [p.imagem] : [])).map((u, fi) => ({
+          num: fi + 1, url: u,
+          setUrl: (e) => {
+            const v = e.target.value;
+            this.mutPauta(p.id, (x) => {
+              const arr = (x.imagens && x.imagens.length ? x.imagens.slice() : (x.imagem ? [x.imagem] : []));
+              arr[fi] = v;
+              x.imagens = arr.filter((u2, k) => u2 || k < arr.length - 1);
+              x.imagem = x.imagens[0] || '';
+            });
+          },
+          remover: () => this.mutPauta(p.id, (x) => {
+            const arr = (x.imagens && x.imagens.length ? x.imagens.slice() : (x.imagem ? [x.imagem] : []));
+            arr.splice(fi, 1);
+            x.imagens = arr;
+            x.imagem = arr[0] || '';
+          })
+        })),
+        semFoto: !(p.imagens && p.imagens.length) && !p.imagem,
+        addFoto: () => this.mutPauta(p.id, (x) => {
+          const arr = (x.imagens && x.imagens.length ? x.imagens.slice() : (x.imagem ? [x.imagem] : []));
+          arr.push('');
+          x.imagens = arr;
+        }),
+        extras: aberto,
+        rotuloExtras: aberto ? 'Menos opções' : 'Mais opções',
+        eventoAtivo: !!ev0.ativo,
+        evTitulo: ev0.titulo || '', evDia: ev0.dia || '', evMes: ev0.mes || '',
+        evLocal: ev0.local || '', evHorario: ev0.horario || '', evFormato: ev0.formato || '',
+        setSessao: set('sessao'), setTitulo: set('titulo'),
+        setImagem: set('imagem'), setVideo: set('video'), setDestaque: set('destaque'),
+        setEvTitulo: setEv('titulo'), setEvDia: setEv('dia'), setEvMes: setEv('mes'),
+        setEvLocal: setEv('local'), setEvHorario: setEv('horario'), setEvFormato: setEv('formato'),
+        toggleEvento: (e) => { const on = e.target.checked; this.mutPauta(p.id, (x) => { x.evento = Object.assign({}, x.evento || {}, { ativo: on }); }); },
+        toggleExtras: () => this.setState((s) => ({ extras: Object.assign({}, s.extras, { [p.id]: !s.extras[p.id] }) })),
+        ref: (el) => { if (el) { this.editores[p.id] = el; if (el.innerHTML !== (p.texto || '')) el.innerHTML = p.texto || ''; } else { delete this.editores[p.id]; } },
+        onInput: (e) => this.setTextoDebounce(p.id, e.currentTarget.innerHTML),
+        onBlur: (e) => { clearTimeout(this.timers['t' + p.id]); this.mutPauta(p.id, (x) => { x.texto = e.currentTarget.innerHTML; }); },
+        cmdBold: this.cmd('bold'), cmdItalic: this.cmd('italic'),
+        cmdList: this.cmd('insertUnorderedList'), cmdLimpar: this.cmd('removeFormat'),
+        subir: () => this.moverPauta(p.id, -1),
+        descer: () => this.moverPauta(p.id, 1),
+        duplicar: () => this.mut((x) => {
+          const e2 = x.edicoes.find((y) => y.id === this.state.selId);
+          if (!e2) return;
+          const j = e2.pautas.findIndex((y) => y.id === p.id);
+          const cp = JSON.parse(JSON.stringify(e2.pautas[j]));
+          cp.id = 'p' + Math.random().toString(36).slice(2, 9);
+          e2.pautas.splice(j + 1, 0, cp);
+        }),
+        remover: () => this.mut((x) => {
+          const e2 = x.edicoes.find((y) => y.id === this.state.selId);
+          if (e2) e2.pautas = e2.pautas.filter((y) => y.id !== p.id);
+        }),
+        botoes: (p.botoes || []).map((b, bi) => ({
+          texto: b.texto || '', link: b.link || '',
+          setTexto: (e) => { const v = e.target.value; this.mutPauta(p.id, (x) => { x.botoes[bi].texto = v; }); },
+          setLink: (e) => { const v = e.target.value; this.mutPauta(p.id, (x) => { x.botoes[bi].link = v; }); },
+          remover: () => this.mutPauta(p.id, (x) => { x.botoes.splice(bi, 1); })
+        })),
+        addBotao: () => this.mutPauta(p.id, (x) => { x.botoes = (x.botoes || []).concat([{ texto: '', link: '' }]); })
+      };
+    }) : [];
+
+    let srcDoc = '';
+    if (this.builder) {
+      srcDoc = this.builder.buildEmbed(d, { forceMode: modo, forceId: ed ? ed.id : null });
+    }
+
+    return Object.assign(base, {
+      semEdicoes: d.edicoes.length === 0,
+      semSelecao: !ed,
+      temSelecao: !!ed,
+      listaEdicoes, listaLegados, pautas, srcDoc,
+      edRotulo: ed ? (ed.rotulo || '') : '',
+      edDia: ed ? (ed.dia || '') : '',
+      edMes: ed ? (ed.mes || '') : '',
+      setRotulo: (e) => this.setCampoEd('rotulo', e.target.value),
+      sextas: this.sextasDoAno().map((v) => ({ v, t: v })),
+      sextaSel: '',
+      setSexta: (e) => { const v = e.target.value; if (v) this.setCampoEd('rotulo', v); },
+      podePublicar: !!ed && ed.status !== 'online',
+      publicar: this.publicar,
+      setDia: (e) => this.setCampoEd('dia', e.target.value),
+      setMes: (e) => this.setCampoEd('mes', e.target.value),
+      setEspelho: () => this.setStatus('espelho'),
+      setOnline: () => this.setStatus('online'),
+      setArquivado: () => this.setStatus('arquivado'),
+      btnEspelho: seg(ed && ed.status === 'espelho', '#8b8578'),
+      btnOnline: seg(ed && ed.status === 'online', '#00995d'),
+      btnArquivado: seg(ed && ed.status === 'arquivado', '#f47920')
+    });
+  }
+}
+</script>
+
+
+<script type="application/json" id="__om_srcmap">{"gen":"7bc32260","entries":[{"id":"7bc32260:0","tag":"html","openStart":16,"attrEnd":21,"openEnd":22,"closeStart":69172,"closeEnd":69179,"textRuns":[[22,23],[166,167],[69171,69172]],"parentId":null,"childIds":["7bc32260:1","7bc32260:4"]},{"id":"7bc32260:1","tag":"head","openStart":23,"attrEnd":28,"openEnd":29,"closeStart":159,"closeEnd":166,"textRuns":[[29,30],[52,53],[121,122],[158,159]],"parentId":"7bc32260:0","childIds":["7bc32260:2","7bc32260:3"]},{"id":"7bc32260:2","tag":"meta","openStart":30,"attrEnd":51,"openEnd":52,"closeEnd":52,"textRuns":[],"parentId":"7bc32260:1","childIds":[]},{"id":"7bc32260:3","tag":"meta","openStart":53,"attrEnd":120,"openEnd":121,"closeEnd":121,"textRuns":[],"parentId":"7bc32260:1","childIds":[]},{"id":"7bc32260:4","tag":"body","openStart":167,"attrEnd":172,"openEnd":173,"closeStart":69164,"closeEnd":69171,"textRuns":[[173,174],[36501,36502],[69163,69164]],"parentId":"7bc32260:0","childIds":["7bc32260:5"]},{"id":"7bc32260:5","tag":"x-dc","openStart":174,"attrEnd":179,"openEnd":180,"closeStart":36494,"closeEnd":36501,"textRuns":[[180,181],[1694,1696],[36493,36494]],"parentId":"7bc32260:4","childIds":["7bc32260:6","7bc32260:9"]},{"id":"7bc32260:6","tag":"helmet","openStart":181,"attrEnd":188,"openEnd":189,"closeStart":1685,"closeEnd":1694,"textRuns":[[189,192],[312,315],[436,439],[528,531],[1684,1685]],"parentId":"7bc32260:5","childIds":["7bc32260:7","7bc32260:8"]},{"id":"7bc32260:7","tag":"link","openStart":192,"attrEnd":311,"openEnd":312,"closeEnd":312,"textRuns":[],"parentId":"7bc32260:6","childIds":[]},{"id":"7bc32260:8","tag":"link","openStart":315,"attrEnd":435,"openEnd":436,"closeEnd":436,"textRuns":[],"parentId":"7bc32260:6","childIds":[]},{"id":"7bc32260:9","tag":"div","openStart":1696,"attrEnd":1791,"openEnd":1792,"closeStart":36487,"closeEnd":36493,"styleAttr":[1708,1790],"textRuns":[[1792,1796],[5473,5477],[32161,32165],[35620,35624],[35976,35980],[36485,36487]],"parentId":"7bc32260:5","childIds":["7bc32260:10","7bc32260:38","7bc32260:213","7bc32260:237","7bc32260:239"]},{"id":"7bc32260:10","tag":"header","openStart":1796,"attrEnd":1982,"openEnd":1983,"closeStart":5464,"closeEnd":5473,"styleAttr":[1811,1981],"textRuns":[[1983,1988],[2807,2812],[5461,5464]],"parentId":"7bc32260:9","childIds":["7bc32260:11","7bc32260:19"]},{"id":"7bc32260:11","tag":"div","openStart":1988,"attrEnd":2053,"openEnd":2054,"closeStart":2801,"closeEnd":2807,"styleAttr":[2000,2052],"textRuns":[[2054,2061],[2517,2524],[2796,2801]],"parentId":"7bc32260:10","childIds":["7bc32260:12","7bc32260:16"]},{"id":"7bc32260:12","tag":"div","openStart":2061,"attrEnd":2216,"openEnd":2217,"closeStart":2511,"closeEnd":2517,"styleAttr":[2073,2215],"textRuns":[[2217,2226],[2504,2511]],"parentId":"7bc32260:11","childIds":["7bc32260:13"]},{"id":"7bc32260:13","tag":"svg","openStart":2226,"attrEnd":2368,"openEnd":2369,"closeStart":2498,"closeEnd":2504,"textRuns":[],"parentId":"7bc32260:12","childIds":["7bc32260:14","7bc32260:15"]},{"id":"7bc32260:14","tag":"path","openStart":2369,"attrEnd":2410,"openEnd":2411,"closeStart":2411,"closeEnd":2418,"textRuns":[],"parentId":"7bc32260:13","childIds":[]},{"id":"7bc32260:15","tag":"path","openStart":2418,"attrEnd":2490,"openEnd":2491,"closeStart":2491,"closeEnd":2498,"textRuns":[],"parentId":"7bc32260:13","childIds":[]},{"id":"7bc32260:16","tag":"div","openStart":2524,"attrEnd":2548,"openEnd":2549,"closeStart":2790,"closeEnd":2796,"styleAttr":[2536,2547],"textRuns":[[2549,2558],[2664,2673],[2783,2790]],"parentId":"7bc32260:11","childIds":["7bc32260:17","7bc32260:18"]},{"id":"7bc32260:17","tag":"div","openStart":2558,"attrEnd":2634,"openEnd":2635,"closeStart":2658,"closeEnd":2664,"styleAttr":[2570,2633],"textRuns":[[2635,2658]],"parentId":"7bc32260:16","childIds":[]},{"id":"7bc32260:18","tag":"div","openStart":2673,"attrEnd":2743,"openEnd":2744,"closeStart":2777,"closeEnd":2783,"styleAttr":[2685,2742],"textRuns":[[2744,2777]],"parentId":"7bc32260:16","childIds":[]},{"id":"7bc32260:19","tag":"div","openStart":2812,"attrEnd":2879,"openEnd":2880,"closeStart":5455,"closeEnd":5461,"styleAttr":[2824,2878],"textRuns":[[2880,2887],[2988,2995],[3719,3726],[4377,4384],[4787,4794],[5450,5455]],"parentId":"7bc32260:10","childIds":["7bc32260:20","7bc32260:21","7bc32260:26","7bc32260:30","7bc32260:34"]},{"id":"7bc32260:20","tag":"input","openStart":2887,"attrEnd":2987,"openEnd":2988,"closeEnd":2988,"styleAttr":[2928,2940],"textRuns":[],"parentId":"7bc32260:19","childIds":[]},{"id":"7bc32260:21","tag":"button","openStart":2995,"attrEnd":3370,"openEnd":3371,"closeStart":3710,"closeEnd":3719,"styleAttr":[3039,3285],"textRuns":[[3371,3380],[3681,3710]],"parentId":"7bc32260:19","childIds":["7bc32260:22"]},{"id":"7bc32260:22","tag":"svg","openStart":3380,"attrEnd":3527,"openEnd":3528,"closeStart":3675,"closeEnd":3681,"textRuns":[],"parentId":"7bc32260:21","childIds":["7bc32260:23","7bc32260:24","7bc32260:25"]},{"id":"7bc32260:23","tag":"path","openStart":3528,"attrEnd":3579,"openEnd":3580,"closeStart":3580,"closeEnd":3587,"textRuns":[],"parentId":"7bc32260:22","childIds":[]},{"id":"7bc32260:24","tag":"polyline","openStart":3587,"attrEnd":3619,"openEnd":3620,"closeStart":3620,"closeEnd":3631,"textRuns":[],"parentId":"7bc32260:22","childIds":[]},{"id":"7bc32260:25","tag":"line","openStart":3631,"attrEnd":3667,"openEnd":3668,"closeStart":3668,"closeEnd":3675,"textRuns":[],"parentId":"7bc32260:22","childIds":[]},{"id":"7bc32260:26","tag":"button","openStart":3726,"attrEnd":4089,"openEnd":4090,"closeStart":4368,"closeEnd":4377,"styleAttr":[3768,4041],"textRuns":[[4090,4099],[4339,4368]],"parentId":"7bc32260:19","childIds":["7bc32260:27"]},{"id":"7bc32260:27","tag":"svg","openStart":4099,"attrEnd":4244,"openEnd":4245,"closeStart":4333,"closeEnd":4339,"styleAttr":[4230,4243],"textRuns":[],"parentId":"7bc32260:26","childIds":["7bc32260:28","7bc32260:29"]},{"id":"7bc32260:28","tag":"line","openStart":4245,"attrEnd":4281,"openEnd":4282,"closeStart":4282,"closeEnd":4289,"textRuns":[],"parentId":"7bc32260:27","childIds":[]},{"id":"7bc32260:29","tag":"line","openStart":4289,"attrEnd":4325,"openEnd":4326,"closeStart":4326,"closeEnd":4333,"textRuns":[],"parentId":"7bc32260:27","childIds":[]},{"id":"7bc32260:30","tag":"button","openStart":4384,"attrEnd":4490,"openEnd":4491,"closeStart":4778,"closeEnd":4787,"styleAttr":[4467,4489],"textRuns":[[4491,4500],[4755,4778]],"parentId":"7bc32260:19","childIds":["7bc32260:31"]},{"id":"7bc32260:31","tag":"svg","openStart":4500,"attrEnd":4647,"openEnd":4648,"closeStart":4749,"closeEnd":4755,"textRuns":[],"parentId":"7bc32260:30","childIds":["7bc32260:32","7bc32260:33"]},{"id":"7bc32260:32","tag":"path","openStart":4648,"attrEnd":4702,"openEnd":4703,"closeStart":4703,"closeEnd":4710,"textRuns":[],"parentId":"7bc32260:31","childIds":[]},{"id":"7bc32260:33","tag":"circle","openStart":4710,"attrEnd":4739,"openEnd":4740,"closeStart":4740,"closeEnd":4749,"textRuns":[],"parentId":"7bc32260:31","childIds":[]},{"id":"7bc32260:34","tag":"button","openStart":4794,"attrEnd":5159,"openEnd":5160,"closeStart":5441,"closeEnd":5450,"styleAttr":[4836,5079],"textRuns":[[5160,5169],[5414,5441]],"parentId":"7bc32260:19","childIds":["7bc32260:35"]},{"id":"7bc32260:35","tag":"svg","openStart":5169,"attrEnd":5316,"openEnd":5317,"closeStart":5408,"closeEnd":5414,"textRuns":[],"parentId":"7bc32260:34","childIds":["7bc32260:36","7bc32260:37"]},{"id":"7bc32260:36","tag":"polyline","openStart":5317,"attrEnd":5352,"openEnd":5353,"closeStart":5353,"closeEnd":5364,"textRuns":[],"parentId":"7bc32260:35","childIds":[]},{"id":"7bc32260:37","tag":"polyline","openStart":5364,"attrEnd":5396,"openEnd":5397,"closeStart":5397,"closeEnd":5408,"textRuns":[],"parentId":"7bc32260:35","childIds":[]},{"id":"7bc32260:38","tag":"div","openStart":5477,"attrEnd":5522,"openEnd":5523,"closeStart":32155,"closeEnd":32161,"styleAttr":[5489,5521],"textRuns":[[5523,5529],[9219,9225],[31179,31185],[32151,32155]],"parentId":"7bc32260:9","childIds":["7bc32260:39","7bc32260:69","7bc32260:204"]},{"id":"7bc32260:39","tag":"aside","openStart":5529,"attrEnd":5666,"openEnd":5667,"closeStart":9211,"closeEnd":9219,"styleAttr":[5543,5665],"textRuns":[[5667,5674],[5851,5858],[9206,9211]],"parentId":"7bc32260:38","childIds":["7bc32260:40","7bc32260:42"]},{"id":"7bc32260:40","tag":"div","openStart":5674,"attrEnd":5709,"openEnd":5710,"closeStart":5845,"closeEnd":5851,"styleAttr":[5686,5708],"textRuns":[[5710,5719],[5838,5845]],"parentId":"7bc32260:39","childIds":["7bc32260:41"]},{"id":"7bc32260:41","tag":"div","openStart":5719,"attrEnd":5822,"openEnd":5823,"closeStart":5832,"closeEnd":5838,"styleAttr":[5731,5821],"textRuns":[[5823,5832]],"parentId":"7bc32260:40","childIds":[]},{"id":"7bc32260:42","tag":"div","openStart":5858,"attrEnd":5913,"openEnd":5914,"closeStart":9200,"closeEnd":9206,"styleAttr":[5870,5912],"textRuns":[[5914,5923],[6197,6206],[7042,7052],[9193,9200]],"parentId":"7bc32260:39","childIds":["7bc32260:43","7bc32260:46","7bc32260:55"]},{"id":"7bc32260:43","tag":"sc-if","openStart":5923,"attrEnd":5989,"openEnd":5990,"closeStart":6189,"closeEnd":6197,"textRuns":[[5990,6001],[6180,6189]],"parentId":"7bc32260:42","childIds":["7bc32260:44"]},{"id":"7bc32260:44","tag":"div","openStart":6001,"attrEnd":6049,"openEnd":6050,"closeStart":6174,"closeEnd":6180,"styleAttr":[6013,6048],"textRuns":[[6050,6063],[6163,6174]],"parentId":"7bc32260:43","childIds":["7bc32260:45"]},{"id":"7bc32260:45","tag":"div","openStart":6063,"attrEnd":6121,"openEnd":6122,"closeStart":6157,"closeEnd":6163,"styleAttr":[6075,6120],"textRuns":[[6122,6157]],"parentId":"7bc32260:44","childIds":[]},{"id":"7bc32260:46","tag":"sc-for","openStart":6206,"attrEnd":6273,"openEnd":6274,"closeStart":7033,"closeEnd":7042,"textRuns":[[6274,6285],[7024,7033]],"parentId":"7bc32260:42","childIds":["7bc32260:47"]},{"id":"7bc32260:47","tag":"div","openStart":6285,"attrEnd":6336,"openEnd":6337,"closeStart":7018,"closeEnd":7024,"styleAttr":[6321,6335],"textRuns":[[6337,6350],[6635,6648],[6942,6955],[7007,7018]],"parentId":"7bc32260:46","childIds":["7bc32260:48","7bc32260:51","7bc32260:54"]},{"id":"7bc32260:48","tag":"div","openStart":6350,"attrEnd":6381,"openEnd":6382,"closeStart":6629,"closeEnd":6635,"styleAttr":[6362,6380],"textRuns":[[6382,6397],[6494,6509],[6616,6629]],"parentId":"7bc32260:47","childIds":["7bc32260:49","7bc32260:50"]},{"id":"7bc32260:49","tag":"div","openStart":6397,"attrEnd":6476,"openEnd":6477,"closeStart":6488,"closeEnd":6494,"styleAttr":[6409,6475],"textRuns":[[6477,6488]],"parentId":"7bc32260:48","childIds":[]},{"id":"7bc32260:50","tag":"div","openStart":6509,"attrEnd":6598,"openEnd":6599,"closeStart":6610,"closeEnd":6616,"styleAttr":[6521,6597],"textRuns":[[6599,6610]],"parentId":"7bc32260:48","childIds":[]},{"id":"7bc32260:51","tag":"div","openStart":6648,"attrEnd":6679,"openEnd":6680,"closeStart":6936,"closeEnd":6942,"styleAttr":[6660,6678],"textRuns":[[6680,6695],[6831,6846],[6923,6936]],"parentId":"7bc32260:47","childIds":["7bc32260:52","7bc32260:53"]},{"id":"7bc32260:52","tag":"div","openStart":6695,"attrEnd":6810,"openEnd":6811,"closeStart":6825,"closeEnd":6831,"styleAttr":[6707,6809],"textRuns":[[6811,6825]],"parentId":"7bc32260:51","childIds":[]},{"id":"7bc32260:53","tag":"div","openStart":6846,"attrEnd":6902,"openEnd":6903,"closeStart":6917,"closeEnd":6923,"styleAttr":[6858,6901],"textRuns":[[6903,6917]],"parentId":"7bc32260:51","childIds":[]},{"id":"7bc32260:54","tag":"div","openStart":6955,"attrEnd":6987,"openEnd":6988,"closeStart":7001,"closeEnd":7007,"styleAttr":[6967,6986],"textRuns":[[6988,7001]],"parentId":"7bc32260:47","childIds":[]},{"id":"7bc32260:55","tag":"div","openStart":7052,"attrEnd":7126,"openEnd":7127,"closeStart":9187,"closeEnd":9193,"styleAttr":[7064,7125],"textRuns":[[7127,7138],[7668,7679],[7825,7836],[9178,9187]],"parentId":"7bc32260:42","childIds":["7bc32260:56","7bc32260:59","7bc32260:60"]},{"id":"7bc32260:56","tag":"div","openStart":7138,"attrEnd":7245,"openEnd":7246,"closeStart":7662,"closeEnd":7668,"styleAttr":[7150,7244],"textRuns":[[7246,7259],[7383,7396],[7651,7662]],"parentId":"7bc32260:55","childIds":["7bc32260:57","7bc32260:58"]},{"id":"7bc32260:57","tag":"div","openStart":7259,"attrEnd":7362,"openEnd":7363,"closeStart":7377,"closeEnd":7383,"styleAttr":[7271,7361],"textRuns":[[7363,7377]],"parentId":"7bc32260:56","childIds":[]},{"id":"7bc32260:58","tag":"button","openStart":7396,"attrEnd":7640,"openEnd":7641,"closeStart":7642,"closeEnd":7651,"styleAttr":[7437,7606],"textRuns":[[7641,7642]],"parentId":"7bc32260:56","childIds":[]},{"id":"7bc32260:59","tag":"div","openStart":7679,"attrEnd":7755,"openEnd":7756,"closeStart":7819,"closeEnd":7825,"styleAttr":[7691,7754],"textRuns":[[7756,7819]],"parentId":"7bc32260:55","childIds":[]},{"id":"7bc32260:60","tag":"sc-for","openStart":7836,"attrEnd":7903,"openEnd":7904,"closeStart":9169,"closeEnd":9178,"textRuns":[[7904,7917],[9158,9169]],"parentId":"7bc32260:55","childIds":["7bc32260:61"]},{"id":"7bc32260:61","tag":"div","openStart":7917,"attrEnd":8039,"openEnd":8040,"closeStart":9152,"closeEnd":9158,"styleAttr":[7929,8038],"textRuns":[[8040,8055],[8297,8312],[9139,9152]],"parentId":"7bc32260:60","childIds":["7bc32260:62","7bc32260:63"]},{"id":"7bc32260:62","tag":"input","openStart":8055,"attrEnd":8296,"openEnd":8297,"closeEnd":8297,"styleAttr":[8155,8295],"textRuns":[],"parentId":"7bc32260:61","childIds":[]},{"id":"7bc32260:63","tag":"div","openStart":8312,"attrEnd":8345,"openEnd":8346,"closeStart":9133,"closeEnd":9139,"styleAttr":[8324,8344],"textRuns":[[8346,8363],[8585,8602],[9118,9133]],"parentId":"7bc32260:61","childIds":["7bc32260:64","7bc32260:65"]},{"id":"7bc32260:64","tag":"input","openStart":8363,"attrEnd":8584,"openEnd":8585,"closeEnd":8585,"styleAttr":[8451,8583],"textRuns":[],"parentId":"7bc32260:63","childIds":[]},{"id":"7bc32260:65","tag":"button","openStart":8602,"attrEnd":8856,"openEnd":8857,"closeStart":9109,"closeEnd":9118,"styleAttr":[8643,8822],"textRuns":[[8857,8876],[9092,9109]],"parentId":"7bc32260:63","childIds":["7bc32260:66"]},{"id":"7bc32260:66","tag":"svg","openStart":8876,"attrEnd":8999,"openEnd":9000,"closeStart":9086,"closeEnd":9092,"textRuns":[],"parentId":"7bc32260:65","childIds":["7bc32260:67","7bc32260:68"]},{"id":"7bc32260:67","tag":"line","openStart":9000,"attrEnd":9035,"openEnd":9036,"closeStart":9036,"closeEnd":9043,"textRuns":[],"parentId":"7bc32260:66","childIds":[]},{"id":"7bc32260:68","tag":"line","openStart":9043,"attrEnd":9078,"openEnd":9079,"closeStart":9079,"closeEnd":9086,"textRuns":[],"parentId":"7bc32260:66","childIds":[]},{"id":"7bc32260:69","tag":"main","openStart":9225,"attrEnd":9296,"openEnd":9297,"closeStart":31172,"closeEnd":31179,"styleAttr":[9238,9295],"textRuns":[[9297,9304],[29768,29775],[31167,31172]],"parentId":"7bc32260:38","childIds":["7bc32260:70","7bc32260:195"]},{"id":"7bc32260:70","tag":"sc-if","openStart":9304,"attrEnd":9369,"openEnd":9370,"closeStart":29760,"closeEnd":29768,"textRuns":[[9370,9379],[29753,29760]],"parentId":"7bc32260:69","childIds":["7bc32260:71"]},{"id":"7bc32260:71","tag":"div","openStart":9379,"attrEnd":9421,"openEnd":9422,"closeStart":29747,"closeEnd":29753,"styleAttr":[9391,9420],"textRuns":[[9422,9434],[14550,14562],[29100,29112],[29738,29747]],"parentId":"7bc32260:70","childIds":["7bc32260:72","7bc32260:107","7bc32260:191"]},{"id":"7bc32260:72","tag":"div","openStart":9434,"attrEnd":9543,"openEnd":9544,"closeStart":14544,"closeEnd":14550,"styleAttr":[9446,9542],"textRuns":[[9544,9557],[11930,11943],[14028,14041],[14533,14544]],"parentId":"7bc32260:71","childIds":["7bc32260:73","7bc32260:89","7bc32260:103"]},{"id":"7bc32260:73","tag":"div","openStart":9557,"attrEnd":9627,"openEnd":9628,"closeStart":11924,"closeEnd":11930,"styleAttr":[9569,9626],"textRuns":[[9628,9643],[10827,10842],[11911,11924]],"parentId":"7bc32260:72","childIds":["7bc32260:74","7bc32260:82"]},{"id":"7bc32260:74","tag":"div","openStart":9643,"attrEnd":9678,"openEnd":9679,"closeStart":10821,"closeEnd":10827,"styleAttr":[9655,9677],"textRuns":[[9679,9696],[9839,9856],[10806,10821]],"parentId":"7bc32260:73","childIds":["7bc32260:75","7bc32260:76"]},{"id":"7bc32260:75","tag":"div","openStart":9696,"attrEnd":9816,"openEnd":9817,"closeStart":9833,"closeEnd":9839,"styleAttr":[9708,9815],"textRuns":[[9817,9833]],"parentId":"7bc32260:74","childIds":[]},{"id":"7bc32260:76","tag":"div","openStart":9856,"attrEnd":9889,"openEnd":9890,"closeStart":10800,"closeEnd":10806,"styleAttr":[9868,9888],"textRuns":[[9890,9909],[10206,10225],[10783,10800]],"parentId":"7bc32260:74","childIds":["7bc32260:77","7bc32260:78"]},{"id":"7bc32260:77","tag":"input","openStart":9909,"attrEnd":10205,"openEnd":10206,"closeEnd":10206,"styleAttr":[9998,10153],"textRuns":[],"parentId":"7bc32260:76","childIds":[]},{"id":"7bc32260:78","tag":"select","openStart":10225,"attrEnd":10518,"openEnd":10519,"closeStart":10774,"closeEnd":10783,"styleAttr":[10289,10466],"textRuns":[[10519,10540],[10575,10596],[10755,10774]],"parentId":"7bc32260:76","childIds":["7bc32260:79","7bc32260:80"]},{"id":"7bc32260:79","tag":"option","openStart":10540,"attrEnd":10556,"openEnd":10557,"textRuns":[[10557,10566]],"parentId":"7bc32260:78","childIds":[]},{"id":"7bc32260:80","tag":"sc-for","openStart":10596,"attrEnd":10657,"openEnd":10658,"closeStart":10746,"closeEnd":10755,"textRuns":[[10658,10681],[10725,10746]],"parentId":"7bc32260:78","childIds":["7bc32260:81"]},{"id":"7bc32260:81","tag":"option","openStart":10681,"attrEnd":10706,"openEnd":10707,"textRuns":[[10707,10716]],"parentId":"7bc32260:80","childIds":[]},{"id":"7bc32260:82","tag":"div","openStart":10842,"attrEnd":10875,"openEnd":10876,"closeStart":11905,"closeEnd":11911,"styleAttr":[10854,10874],"textRuns":[[10876,10893],[11382,11399],[11890,11905]],"parentId":"7bc32260:73","childIds":["7bc32260:83","7bc32260:86"]},{"id":"7bc32260:83","tag":"div","openStart":10893,"attrEnd":10897,"openEnd":10898,"closeStart":11376,"closeEnd":11382,"textRuns":[[10898,10917],[11047,11066],[11359,11376]],"parentId":"7bc32260:82","childIds":["7bc32260:84","7bc32260:85"]},{"id":"7bc32260:84","tag":"div","openStart":10917,"attrEnd":11037,"openEnd":11038,"closeStart":11041,"closeEnd":11047,"styleAttr":[10929,11036],"textRuns":[[11038,11041]],"parentId":"7bc32260:83","childIds":[]},{"id":"7bc32260:85","tag":"input","openStart":11066,"attrEnd":11358,"openEnd":11359,"closeEnd":11359,"styleAttr":[11141,11306],"textRuns":[],"parentId":"7bc32260:83","childIds":[]},{"id":"7bc32260:86","tag":"div","openStart":11399,"attrEnd":11403,"openEnd":11404,"closeStart":11884,"closeEnd":11890,"textRuns":[[11404,11423],[11554,11573],[11867,11884]],"parentId":"7bc32260:82","childIds":["7bc32260:87","7bc32260:88"]},{"id":"7bc32260:87","tag":"div","openStart":11423,"attrEnd":11543,"openEnd":11544,"closeStart":11548,"closeEnd":11554,"styleAttr":[11435,11542],"textRuns":[[11544,11548]],"parentId":"7bc32260:86","childIds":[]},{"id":"7bc32260:88","tag":"input","openStart":11573,"attrEnd":11866,"openEnd":11867,"closeEnd":11867,"styleAttr":[11649,11814],"textRuns":[],"parentId":"7bc32260:86","childIds":[]},{"id":"7bc32260:89","tag":"div","openStart":11943,"attrEnd":12103,"openEnd":12104,"closeStart":14022,"closeEnd":14028,"styleAttr":[11955,12102],"textRuns":[[12104,12119],[13362,13377],[14009,14022]],"parentId":"7bc32260:72","childIds":["7bc32260:90","7bc32260:99"]},{"id":"7bc32260:90","tag":"div","openStart":12119,"attrEnd":12187,"openEnd":12188,"closeStart":13356,"closeEnd":13362,"styleAttr":[12131,12186],"textRuns":[[12188,12205],[12600,12617],[13341,13356]],"parentId":"7bc32260:89","childIds":["7bc32260:91","7bc32260:95"]},{"id":"7bc32260:91","tag":"div","openStart":12205,"attrEnd":12288,"openEnd":12289,"closeStart":12594,"closeEnd":12600,"styleAttr":[12217,12287],"textRuns":[[12289,12308],[12384,12403],[12476,12495],[12577,12594]],"parentId":"7bc32260:90","childIds":["7bc32260:92","7bc32260:93","7bc32260:94"]},{"id":"7bc32260:92","tag":"button","openStart":12308,"attrEnd":12367,"openEnd":12368,"closeStart":12375,"closeEnd":12384,"styleAttr":[12350,12366],"textRuns":[[12368,12375]],"parentId":"7bc32260:91","childIds":[]},{"id":"7bc32260:93","tag":"button","openStart":12403,"attrEnd":12460,"openEnd":12461,"closeStart":12467,"closeEnd":12476,"styleAttr":[12444,12459],"textRuns":[[12461,12467]],"parentId":"7bc32260:91","childIds":[]},{"id":"7bc32260:94","tag":"button","openStart":12495,"attrEnd":12558,"openEnd":12559,"closeStart":12568,"closeEnd":12577,"styleAttr":[12539,12557],"textRuns":[[12559,12568]],"parentId":"7bc32260:91","childIds":[]},{"id":"7bc32260:95","tag":"sc-if","openStart":12617,"attrEnd":12685,"openEnd":12686,"closeStart":13333,"closeEnd":13341,"textRuns":[[12686,12705],[13316,13333]],"parentId":"7bc32260:90","childIds":["7bc32260:96"]},{"id":"7bc32260:96","tag":"button","openStart":12705,"attrEnd":13038,"openEnd":13039,"closeStart":13307,"closeEnd":13316,"styleAttr":[12745,12955],"textRuns":[[13039,13060],[13259,13307]],"parentId":"7bc32260:95","childIds":["7bc32260:97"]},{"id":"7bc32260:97","tag":"svg","openStart":13060,"attrEnd":13207,"openEnd":13208,"closeStart":13253,"closeEnd":13259,"textRuns":[],"parentId":"7bc32260:96","childIds":["7bc32260:98"]},{"id":"7bc32260:98","tag":"polyline","openStart":13208,"attrEnd":13241,"openEnd":13242,"closeStart":13242,"closeEnd":13253,"textRuns":[],"parentId":"7bc32260:97","childIds":[]},{"id":"7bc32260:99","tag":"button","openStart":13377,"attrEnd":13674,"openEnd":13675,"closeStart":14000,"closeEnd":14009,"styleAttr":[13422,13640],"textRuns":[[13675,13692],[13952,14000]],"parentId":"7bc32260:89","childIds":["7bc32260:100"]},{"id":"7bc32260:100","tag":"svg","openStart":13692,"attrEnd":13839,"openEnd":13840,"closeStart":13946,"closeEnd":13952,"textRuns":[],"parentId":"7bc32260:99","childIds":["7bc32260:101","7bc32260:102"]},{"id":"7bc32260:101","tag":"polyline","openStart":13840,"attrEnd":13871,"openEnd":13872,"closeStart":13872,"closeEnd":13883,"textRuns":[],"parentId":"7bc32260:100","childIds":[]},{"id":"7bc32260:102","tag":"path","openStart":13883,"attrEnd":13938,"openEnd":13939,"closeStart":13939,"closeEnd":13946,"textRuns":[],"parentId":"7bc32260:100","childIds":[]},{"id":"7bc32260:103","tag":"sc-if","openStart":14041,"attrEnd":14102,"openEnd":14103,"closeStart":14525,"closeEnd":14533,"textRuns":[[14103,14118],[14512,14525]],"parentId":"7bc32260:72","childIds":["7bc32260:104"]},{"id":"7bc32260:104","tag":"div","openStart":14118,"attrEnd":14247,"openEnd":14248,"closeStart":14506,"closeEnd":14512,"styleAttr":[14130,14246],"textRuns":[[14248,14265],[14289,14386],[14411,14506]],"parentId":"7bc32260:103","childIds":["7bc32260:105","7bc32260:106"]},{"id":"7bc32260:105","tag":"strong","openStart":14265,"attrEnd":14272,"openEnd":14273,"closeStart":14280,"closeEnd":14289,"textRuns":[[14273,14280]],"parentId":"7bc32260:104","childIds":[]},{"id":"7bc32260:106","tag":"strong","openStart":14386,"attrEnd":14393,"openEnd":14394,"closeStart":14402,"closeEnd":14411,"textRuns":[[14394,14402]],"parentId":"7bc32260:104","childIds":[]},{"id":"7bc32260:107","tag":"sc-for","openStart":14562,"attrEnd":14623,"openEnd":14624,"closeStart":29091,"closeEnd":29100,"textRuns":[[14624,14637],[29080,29091]],"parentId":"7bc32260:71","childIds":["7bc32260:108"]},{"id":"7bc32260:108","tag":"div","openStart":14637,"attrEnd":14775,"openEnd":14776,"closeStart":29074,"closeEnd":29080,"styleAttr":[14649,14774],"textRuns":[[14776,14791],[17915,17931],[29061,29074]],"parentId":"7bc32260:107","childIds":["7bc32260:109","7bc32260:127"]},{"id":"7bc32260:109","tag":"div","openStart":14791,"attrEnd":14913,"openEnd":14914,"closeStart":17909,"closeEnd":17915,"styleAttr":[14803,14912],"textRuns":[[14914,14931],[15132,15149],[15565,15582],[17894,17909]],"parentId":"7bc32260:108","childIds":["7bc32260:110","7bc32260:111","7bc32260:112"]},{"id":"7bc32260:110","tag":"div","openStart":14931,"attrEnd":15114,"openEnd":15115,"closeStart":15126,"closeEnd":15132,"styleAttr":[14943,15113],"textRuns":[[15115,15126]],"parentId":"7bc32260:109","childIds":[]},{"id":"7bc32260:111","tag":"input","openStart":15149,"attrEnd":15564,"openEnd":15565,"closeEnd":15565,"styleAttr":[15255,15461],"textRuns":[],"parentId":"7bc32260:109","childIds":[]},{"id":"7bc32260:112","tag":"div","openStart":15582,"attrEnd":15629,"openEnd":15630,"closeStart":17888,"closeEnd":17894,"styleAttr":[15594,15628],"textRuns":[[15630,15649],[16167,16186],[16705,16724],[17330,17349],[17871,17888]],"parentId":"7bc32260:109","childIds":["7bc32260:113","7bc32260:116","7bc32260:119","7bc32260:123"]},{"id":"7bc32260:113","tag":"button","openStart":15649,"attrEnd":15917,"openEnd":15918,"closeStart":16158,"closeEnd":16167,"styleAttr":[15702,15867],"textRuns":[[15918,15939],[16139,16158]],"parentId":"7bc32260:112","childIds":["7bc32260:114"]},{"id":"7bc32260:114","tag":"svg","openStart":15939,"attrEnd":16086,"openEnd":16087,"closeStart":16133,"closeEnd":16139,"textRuns":[],"parentId":"7bc32260:113","childIds":["7bc32260:115"]},{"id":"7bc32260:115","tag":"polyline","openStart":16087,"attrEnd":16121,"openEnd":16122,"closeStart":16122,"closeEnd":16133,"textRuns":[],"parentId":"7bc32260:114","childIds":[]},{"id":"7bc32260:116","tag":"button","openStart":16186,"attrEnd":16456,"openEnd":16457,"closeStart":16696,"closeEnd":16705,"styleAttr":[16241,16406],"textRuns":[[16457,16478],[16677,16696]],"parentId":"7bc32260:112","childIds":["7bc32260:117"]},{"id":"7bc32260:117","tag":"svg","openStart":16478,"attrEnd":16625,"openEnd":16626,"closeStart":16671,"closeEnd":16677,"textRuns":[],"parentId":"7bc32260:116","childIds":["7bc32260:118"]},{"id":"7bc32260:118","tag":"polyline","openStart":16626,"attrEnd":16659,"openEnd":16660,"closeStart":16660,"closeEnd":16671,"textRuns":[],"parentId":"7bc32260:117","childIds":[]},{"id":"7bc32260:119","tag":"button","openStart":16724,"attrEnd":16998,"openEnd":16999,"closeStart":17321,"closeEnd":17330,"styleAttr":[16783,16948],"textRuns":[[16999,17020],[17302,17321]],"parentId":"7bc32260:112","childIds":["7bc32260:120"]},{"id":"7bc32260:120","tag":"svg","openStart":17020,"attrEnd":17167,"openEnd":17168,"closeStart":17296,"closeEnd":17302,"textRuns":[],"parentId":"7bc32260:119","childIds":["7bc32260:121","7bc32260:122"]},{"id":"7bc32260:121","tag":"rect","openStart":17168,"attrEnd":17215,"openEnd":17216,"closeStart":17216,"closeEnd":17223,"textRuns":[],"parentId":"7bc32260:120","childIds":[]},{"id":"7bc32260:122","tag":"path","openStart":17223,"attrEnd":17288,"openEnd":17289,"closeStart":17289,"closeEnd":17296,"textRuns":[],"parentId":"7bc32260:120","childIds":[]},{"id":"7bc32260:123","tag":"button","openStart":17349,"attrEnd":17605,"openEnd":17606,"closeStart":17862,"closeEnd":17871,"styleAttr":[17406,17571],"textRuns":[[17606,17627],[17843,17862]],"parentId":"7bc32260:112","childIds":["7bc32260:124"]},{"id":"7bc32260:124","tag":"svg","openStart":17627,"attrEnd":17750,"openEnd":17751,"closeStart":17837,"closeEnd":17843,"textRuns":[],"parentId":"7bc32260:123","childIds":["7bc32260:125","7bc32260:126"]},{"id":"7bc32260:125","tag":"line","openStart":17751,"attrEnd":17786,"openEnd":17787,"closeStart":17787,"closeEnd":17794,"textRuns":[],"parentId":"7bc32260:124","childIds":[]},{"id":"7bc32260:126","tag":"line","openStart":17794,"attrEnd":17829,"openEnd":17830,"closeStart":17830,"closeEnd":17837,"textRuns":[],"parentId":"7bc32260:124","childIds":[]},{"id":"7bc32260:127","tag":"div","openStart":17931,"attrEnd":17956,"openEnd":17957,"closeStart":29055,"closeEnd":29061,"styleAttr":[17943,17955],"textRuns":[[17957,17974],[18290,18308],[20499,20517],[20868,20886],[29040,29055]],"parentId":"7bc32260:108","childIds":["7bc32260:128","7bc32260:129","7bc32260:143","7bc32260:144"]},{"id":"7bc32260:128","tag":"input","openStart":17974,"attrEnd":18289,"openEnd":18290,"closeEnd":18290,"styleAttr":[18071,18237],"textRuns":[],"parentId":"7bc32260:127","childIds":[]},{"id":"7bc32260:129","tag":"div","openStart":18308,"attrEnd":18378,"openEnd":18379,"closeStart":20493,"closeEnd":20499,"styleAttr":[18320,18377],"textRuns":[[18379,18398],[18666,18685],[18974,18993],[19718,19737],[20023,20042],[20068,20087],[20476,20493]],"parentId":"7bc32260:127","childIds":["7bc32260:130","7bc32260:131","7bc32260:132","7bc32260:140","7bc32260:141","7bc32260:142"]},{"id":"7bc32260:130","tag":"button","openStart":18398,"attrEnd":18655,"openEnd":18656,"closeStart":18657,"closeEnd":18666,"styleAttr":[18459,18600],"textRuns":[[18656,18657]],"parentId":"7bc32260:129","childIds":[]},{"id":"7bc32260:131","tag":"button","openStart":18685,"attrEnd":18963,"openEnd":18964,"closeStart":18965,"closeEnd":18974,"styleAttr":[18749,18908],"textRuns":[[18964,18965]],"parentId":"7bc32260:129","childIds":[]},{"id":"7bc32260:132","tag":"button","openStart":18993,"attrEnd":19272,"openEnd":19273,"closeStart":19709,"closeEnd":19718,"styleAttr":[19052,19217],"textRuns":[[19273,19294],[19690,19709]],"parentId":"7bc32260:129","childIds":["7bc32260:133"]},{"id":"7bc32260:133","tag":"svg","openStart":19294,"attrEnd":19417,"openEnd":19418,"closeStart":19684,"closeEnd":19690,"textRuns":[],"parentId":"7bc32260:132","childIds":["7bc32260:134","7bc32260:135","7bc32260:136","7bc32260:137","7bc32260:138","7bc32260:139"]},{"id":"7bc32260:134","tag":"line","openStart":19418,"attrEnd":19452,"openEnd":19453,"closeStart":19453,"closeEnd":19460,"textRuns":[],"parentId":"7bc32260:133","childIds":[]},{"id":"7bc32260:135","tag":"line","openStart":19460,"attrEnd":19496,"openEnd":19497,"closeStart":19497,"closeEnd":19504,"textRuns":[],"parentId":"7bc32260:133","childIds":[]},{"id":"7bc32260:136","tag":"line","openStart":19504,"attrEnd":19540,"openEnd":19541,"closeStart":19541,"closeEnd":19548,"textRuns":[],"parentId":"7bc32260:133","childIds":[]},{"id":"7bc32260:137","tag":"line","openStart":19548,"attrEnd":19584,"openEnd":19585,"closeStart":19585,"closeEnd":19592,"textRuns":[],"parentId":"7bc32260:133","childIds":[]},{"id":"7bc32260:138","tag":"line","openStart":19592,"attrEnd":19630,"openEnd":19631,"closeStart":19631,"closeEnd":19638,"textRuns":[],"parentId":"7bc32260:133","childIds":[]},{"id":"7bc32260:139","tag":"line","openStart":19638,"attrEnd":19676,"openEnd":19677,"closeStart":19677,"closeEnd":19684,"textRuns":[],"parentId":"7bc32260:133","childIds":[]},{"id":"7bc32260:140","tag":"button","openStart":19737,"attrEnd":20007,"openEnd":20008,"closeStart":20014,"closeEnd":20023,"styleAttr":[19812,19957],"textRuns":[[20008,20014]],"parentId":"7bc32260:129","childIds":[]},{"id":"7bc32260:141","tag":"div","openStart":20042,"attrEnd":20061,"openEnd":20062,"closeStart":20062,"closeEnd":20068,"styleAttr":[20054,20060],"textRuns":[],"parentId":"7bc32260:129","childIds":[]},{"id":"7bc32260:142","tag":"button","openStart":20087,"attrEnd":20406,"openEnd":20407,"closeStart":20467,"closeEnd":20476,"styleAttr":[20133,20351],"textRuns":[[20407,20467]],"parentId":"7bc32260:129","childIds":[]},{"id":"7bc32260:143","tag":"div","openStart":20517,"attrEnd":20861,"openEnd":20862,"closeStart":20862,"closeEnd":20868,"styleAttr":[20665,20809],"textRuns":[],"parentId":"7bc32260:127","childIds":[]},{"id":"7bc32260:144","tag":"sc-if","openStart":20886,"attrEnd":20950,"openEnd":20951,"closeStart":29032,"closeEnd":29040,"textRuns":[[20951,20970],[29015,29032]],"parentId":"7bc32260:127","childIds":["7bc32260:145"]},{"id":"7bc32260:145","tag":"div","openStart":20970,"attrEnd":21089,"openEnd":21090,"closeStart":29009,"closeEnd":29015,"styleAttr":[20982,21088],"textRuns":[[21090,21112],[23341,23363],[23863,23885],[24455,24477],[26502,26524],[28990,29009]],"parentId":"7bc32260:144","childIds":["7bc32260:146","7bc32260:161","7bc32260:164","7bc32260:166","7bc32260:178"]},{"id":"7bc32260:146","tag":"div","openStart":21112,"attrEnd":21116,"openEnd":21117,"closeStart":23335,"closeEnd":23341,"textRuns":[[21117,21140],[21776,21799],[23031,23054],[23314,23335]],"parentId":"7bc32260:145","childIds":["7bc32260:147","7bc32260:151","7bc32260:159"]},{"id":"7bc32260:147","tag":"div","openStart":21140,"attrEnd":21232,"openEnd":21233,"closeStart":21770,"closeEnd":21776,"styleAttr":[21152,21231],"textRuns":[[21233,21258],[21465,21490],[21747,21770]],"parentId":"7bc32260:146","childIds":["7bc32260:148","7bc32260:150"]},{"id":"7bc32260:148","tag":"div","openStart":21258,"attrEnd":21360,"openEnd":21361,"closeStart":21459,"closeEnd":21465,"styleAttr":[21270,21359],"textRuns":[[21361,21367]],"parentId":"7bc32260:147","childIds":["7bc32260:149"]},{"id":"7bc32260:149","tag":"span","openStart":21367,"attrEnd":21433,"openEnd":21434,"closeStart":21452,"closeEnd":21459,"styleAttr":[21380,21432],"textRuns":[[21434,21452]],"parentId":"7bc32260:148","childIds":[]},{"id":"7bc32260:150","tag":"button","openStart":21490,"attrEnd":21731,"openEnd":21732,"closeStart":21738,"closeEnd":21747,"styleAttr":[21531,21676],"textRuns":[[21732,21738]],"parentId":"7bc32260:147","childIds":[]},{"id":"7bc32260:151","tag":"sc-for","openStart":21799,"attrEnd":21861,"openEnd":21862,"closeStart":23022,"closeEnd":23031,"textRuns":[[21862,21887],[22999,23022]],"parentId":"7bc32260:146","childIds":["7bc32260:152"]},{"id":"7bc32260:152","tag":"div","openStart":21887,"attrEnd":21957,"openEnd":21958,"closeStart":22993,"closeEnd":22999,"styleAttr":[21899,21956],"textRuns":[[21958,21985],[22103,22130],[22405,22432],[22968,22993]],"parentId":"7bc32260:151","childIds":["7bc32260:153","7bc32260:154","7bc32260:155"]},{"id":"7bc32260:153","tag":"div","openStart":21985,"attrEnd":22085,"openEnd":22086,"closeStart":22097,"closeEnd":22103,"styleAttr":[21997,22084],"textRuns":[[22086,22097]],"parentId":"7bc32260:152","childIds":[]},{"id":"7bc32260:154","tag":"input","openStart":22130,"attrEnd":22404,"openEnd":22405,"closeEnd":22405,"styleAttr":[22216,22352],"textRuns":[],"parentId":"7bc32260:152","childIds":[]},{"id":"7bc32260:155","tag":"button","openStart":22432,"attrEnd":22686,"openEnd":22687,"closeStart":22959,"closeEnd":22968,"styleAttr":[22473,22652],"textRuns":[[22687,22716],[22932,22959]],"parentId":"7bc32260:152","childIds":["7bc32260:156"]},{"id":"7bc32260:156","tag":"svg","openStart":22716,"attrEnd":22839,"openEnd":22840,"closeStart":22926,"closeEnd":22932,"textRuns":[],"parentId":"7bc32260:155","childIds":["7bc32260:157","7bc32260:158"]},{"id":"7bc32260:157","tag":"line","openStart":22840,"attrEnd":22875,"openEnd":22876,"closeStart":22876,"closeEnd":22883,"textRuns":[],"parentId":"7bc32260:156","childIds":[]},{"id":"7bc32260:158","tag":"line","openStart":22883,"attrEnd":22918,"openEnd":22919,"closeStart":22919,"closeEnd":22926,"textRuns":[],"parentId":"7bc32260:156","childIds":[]},{"id":"7bc32260:159","tag":"sc-if","openStart":23054,"attrEnd":23119,"openEnd":23120,"closeStart":23306,"closeEnd":23314,"textRuns":[[23120,23145],[23283,23306]],"parentId":"7bc32260:146","childIds":["7bc32260:160"]},{"id":"7bc32260:160","tag":"div","openStart":23145,"attrEnd":23209,"openEnd":23210,"closeStart":23277,"closeEnd":23283,"styleAttr":[23157,23208],"textRuns":[[23210,23277]],"parentId":"7bc32260:159","childIds":[]},{"id":"7bc32260:161","tag":"div","openStart":23363,"attrEnd":23367,"openEnd":23368,"closeStart":23857,"closeEnd":23863,"textRuns":[[23368,23391],[23533,23556],[23836,23857]],"parentId":"7bc32260:145","childIds":["7bc32260:162","7bc32260:163"]},{"id":"7bc32260:162","tag":"div","openStart":23391,"attrEnd":23511,"openEnd":23512,"closeStart":23527,"closeEnd":23533,"styleAttr":[23403,23510],"textRuns":[[23512,23527]],"parentId":"7bc32260:161","childIds":[]},{"id":"7bc32260:163","tag":"input","openStart":23556,"attrEnd":23835,"openEnd":23836,"closeEnd":23836,"styleAttr":[23655,23783],"textRuns":[],"parentId":"7bc32260:161","childIds":[]},{"id":"7bc32260:164","tag":"div","openStart":23885,"attrEnd":23889,"openEnd":23890,"closeStart":24449,"closeEnd":24455,"textRuns":[[23890,23913],[24062,24085],[24428,24449]],"parentId":"7bc32260:145","childIds":["7bc32260:165"]},{"id":"7bc32260:165","tag":"div","openStart":23913,"attrEnd":24033,"openEnd":24034,"closeStart":24056,"closeEnd":24062,"styleAttr":[23925,24032],"textRuns":[[24034,24056]],"parentId":"7bc32260:164","childIds":[]},{"id":"7bc32260:166","tag":"div","openStart":24477,"attrEnd":24481,"openEnd":24482,"closeStart":26496,"closeEnd":26502,"textRuns":[[24482,24505],[25053,25076],[26475,26496]],"parentId":"7bc32260:145","childIds":["7bc32260:167","7bc32260:170"]},{"id":"7bc32260:167","tag":"div","openStart":24505,"attrEnd":24597,"openEnd":24598,"closeStart":25047,"closeEnd":25053,"styleAttr":[24517,24596],"textRuns":[[24598,24623],[24739,24764],[25024,25047]],"parentId":"7bc32260:166","childIds":["7bc32260:168","7bc32260:169"]},{"id":"7bc32260:168","tag":"div","openStart":24623,"attrEnd":24725,"openEnd":24726,"closeStart":24733,"closeEnd":24739,"styleAttr":[24635,24724],"textRuns":[[24726,24733]],"parentId":"7bc32260:167","childIds":[]},{"id":"7bc32260:169","tag":"button","openStart":24764,"attrEnd":25006,"openEnd":25007,"closeStart":25015,"closeEnd":25024,"styleAttr":[24806,24951],"textRuns":[[25007,25015]],"parentId":"7bc32260:167","childIds":[]},{"id":"7bc32260:170","tag":"sc-for","openStart":25076,"attrEnd":25139,"openEnd":25140,"closeStart":26466,"closeEnd":26475,"textRuns":[[25140,25165],[26443,26466]],"parentId":"7bc32260:166","childIds":["7bc32260:171"]},{"id":"7bc32260:171","tag":"div","openStart":25165,"attrEnd":25216,"openEnd":25217,"closeStart":26437,"closeEnd":26443,"styleAttr":[25177,25215],"textRuns":[[25217,25244],[25545,25572],[25849,25876],[26412,26437]],"parentId":"7bc32260:170","childIds":["7bc32260:172","7bc32260:173","7bc32260:174"]},{"id":"7bc32260:172","tag":"input","openStart":25244,"attrEnd":25544,"openEnd":25545,"closeEnd":25545,"styleAttr":[25333,25492],"textRuns":[],"parentId":"7bc32260:171","childIds":[]},{"id":"7bc32260:173","tag":"input","openStart":25572,"attrEnd":25848,"openEnd":25849,"closeEnd":25849,"styleAttr":[25660,25796],"textRuns":[],"parentId":"7bc32260:171","childIds":[]},{"id":"7bc32260:174","tag":"button","openStart":25876,"attrEnd":26130,"openEnd":26131,"closeStart":26403,"closeEnd":26412,"styleAttr":[25917,26096],"textRuns":[[26131,26160],[26376,26403]],"parentId":"7bc32260:171","childIds":["7bc32260:175"]},{"id":"7bc32260:175","tag":"svg","openStart":26160,"attrEnd":26283,"openEnd":26284,"closeStart":26370,"closeEnd":26376,"textRuns":[],"parentId":"7bc32260:174","childIds":["7bc32260:176","7bc32260:177"]},{"id":"7bc32260:176","tag":"line","openStart":26284,"attrEnd":26319,"openEnd":26320,"closeStart":26320,"closeEnd":26327,"textRuns":[],"parentId":"7bc32260:175","childIds":[]},{"id":"7bc32260:177","tag":"line","openStart":26327,"attrEnd":26362,"openEnd":26363,"closeStart":26363,"closeEnd":26370,"textRuns":[],"parentId":"7bc32260:175","childIds":[]},{"id":"7bc32260:178","tag":"div","openStart":26524,"attrEnd":26587,"openEnd":26588,"closeStart":28984,"closeEnd":28990,"styleAttr":[26536,26586],"textRuns":[[26588,26611],[27020,27043],[28963,28984]],"parentId":"7bc32260:145","childIds":["7bc32260:179","7bc32260:182"]},{"id":"7bc32260:179","tag":"label","openStart":26611,"attrEnd":26696,"openEnd":26697,"closeStart":27012,"closeEnd":27020,"styleAttr":[26625,26695],"textRuns":[[26697,26722],[26874,26899],[26989,27012]],"parentId":"7bc32260:178","childIds":["7bc32260:180","7bc32260:181"]},{"id":"7bc32260:180","tag":"input","openStart":26722,"attrEnd":26873,"openEnd":26874,"closeEnd":26874,"styleAttr":[26814,26872],"textRuns":[],"parentId":"7bc32260:179","childIds":[]},{"id":"7bc32260:181","tag":"span","openStart":26899,"attrEnd":26957,"openEnd":26958,"closeStart":26982,"closeEnd":26989,"styleAttr":[26912,26956],"textRuns":[[26958,26982]],"parentId":"7bc32260:179","childIds":[]},{"id":"7bc32260:182","tag":"sc-if","openStart":27043,"attrEnd":27112,"openEnd":27113,"closeStart":28955,"closeEnd":28963,"textRuns":[[27113,27138],[28932,28955]],"parentId":"7bc32260:178","childIds":["7bc32260:183"]},{"id":"7bc32260:183","tag":"div","openStart":27138,"attrEnd":27209,"openEnd":27210,"closeStart":28926,"closeEnd":28932,"styleAttr":[27150,27208],"textRuns":[[27210,27237],[27479,27506],[28375,28402],[28638,28665],[28901,28926]],"parentId":"7bc32260:182","childIds":["7bc32260:184","7bc32260:185","7bc32260:189","7bc32260:190"]},{"id":"7bc32260:184","tag":"input","openStart":27237,"attrEnd":27478,"openEnd":27479,"closeEnd":27479,"styleAttr":[27336,27477],"textRuns":[],"parentId":"7bc32260:183","childIds":[]},{"id":"7bc32260:185","tag":"div","openStart":27506,"attrEnd":27539,"openEnd":27540,"closeStart":28369,"closeEnd":28375,"styleAttr":[27518,27538],"textRuns":[[27540,27569],[27810,27839],[28081,28110],[28342,28369]],"parentId":"7bc32260:183","childIds":["7bc32260:186","7bc32260:187","7bc32260:188"]},{"id":"7bc32260:186","tag":"input","openStart":27569,"attrEnd":27809,"openEnd":27810,"closeEnd":27810,"styleAttr":[27650,27808],"textRuns":[],"parentId":"7bc32260:185","childIds":[]},{"id":"7bc32260:187","tag":"input","openStart":27839,"attrEnd":28080,"openEnd":28081,"closeEnd":28081,"styleAttr":[27921,28079],"textRuns":[],"parentId":"7bc32260:185","childIds":[]},{"id":"7bc32260:188","tag":"input","openStart":28110,"attrEnd":28341,"openEnd":28342,"closeEnd":28342,"styleAttr":[28207,28340],"textRuns":[],"parentId":"7bc32260:185","childIds":[]},{"id":"7bc32260:189","tag":"input","openStart":28402,"attrEnd":28637,"openEnd":28638,"closeEnd":28638,"styleAttr":[28511,28636],"textRuns":[],"parentId":"7bc32260:183","childIds":[]},{"id":"7bc32260:190","tag":"input","openStart":28665,"attrEnd":28900,"openEnd":28901,"closeEnd":28901,"styleAttr":[28774,28899],"textRuns":[],"parentId":"7bc32260:183","childIds":[]},{"id":"7bc32260:191","tag":"button","openStart":29112,"attrEnd":29458,"openEnd":29459,"closeStart":29729,"closeEnd":29738,"styleAttr":[29152,29403],"textRuns":[[29459,29472],[29690,29729]],"parentId":"7bc32260:71","childIds":["7bc32260:192"]},{"id":"7bc32260:192","tag":"svg","openStart":29472,"attrEnd":29595,"openEnd":29596,"closeStart":29684,"closeEnd":29690,"textRuns":[],"parentId":"7bc32260:191","childIds":["7bc32260:193","7bc32260:194"]},{"id":"7bc32260:193","tag":"line","openStart":29596,"attrEnd":29632,"openEnd":29633,"closeStart":29633,"closeEnd":29640,"textRuns":[],"parentId":"7bc32260:192","childIds":[]},{"id":"7bc32260:194","tag":"line","openStart":29640,"attrEnd":29676,"openEnd":29677,"closeStart":29677,"closeEnd":29684,"textRuns":[],"parentId":"7bc32260:192","childIds":[]},{"id":"7bc32260:195","tag":"sc-if","openStart":29775,"attrEnd":29841,"openEnd":29842,"closeStart":31159,"closeEnd":31167,"textRuns":[[29842,29851],[31152,31159]],"parentId":"7bc32260:69","childIds":["7bc32260:196"]},{"id":"7bc32260:196","tag":"div","openStart":29851,"attrEnd":29992,"openEnd":29993,"closeStart":31146,"closeEnd":31152,"styleAttr":[29863,29991],"textRuns":[[29993,30004],[30450,30461],[30570,30581],[30806,30817],[31137,31146]],"parentId":"7bc32260:195","childIds":["7bc32260:197","7bc32260:201","7bc32260:202","7bc32260:203"]},{"id":"7bc32260:197","tag":"div","openStart":30004,"attrEnd":30151,"openEnd":30152,"closeStart":30444,"closeEnd":30450,"styleAttr":[30016,30150],"textRuns":[[30152,30165],[30433,30444]],"parentId":"7bc32260:196","childIds":["7bc32260:198"]},{"id":"7bc32260:198","tag":"svg","openStart":30165,"attrEnd":30305,"openEnd":30306,"closeStart":30427,"closeEnd":30433,"textRuns":[],"parentId":"7bc32260:197","childIds":["7bc32260:199","7bc32260:200"]},{"id":"7bc32260:199","tag":"path","openStart":30306,"attrEnd":30374,"openEnd":30375,"closeStart":30375,"closeEnd":30382,"textRuns":[],"parentId":"7bc32260:198","childIds":[]},{"id":"7bc32260:200","tag":"polyline","openStart":30382,"attrEnd":30415,"openEnd":30416,"closeStart":30416,"closeEnd":30427,"textRuns":[],"parentId":"7bc32260:198","childIds":[]},{"id":"7bc32260:201","tag":"div","openStart":30461,"attrEnd":30537,"openEnd":30538,"closeStart":30564,"closeEnd":30570,"styleAttr":[30473,30536],"textRuns":[[30538,30564]],"parentId":"7bc32260:196","childIds":[]},{"id":"7bc32260:202","tag":"div","openStart":30581,"attrEnd":30657,"openEnd":30658,"closeStart":30800,"closeEnd":30806,"styleAttr":[30593,30656],"textRuns":[[30658,30800]],"parentId":"7bc32260:196","childIds":[]},{"id":"7bc32260:203","tag":"button","openStart":30817,"attrEnd":31114,"openEnd":31115,"closeStart":31128,"closeEnd":31137,"styleAttr":[30861,31032],"textRuns":[[31115,31128]],"parentId":"7bc32260:196","childIds":[]},{"id":"7bc32260:204","tag":"sc-if","openStart":31185,"attrEnd":31254,"openEnd":31255,"closeStart":32143,"closeEnd":32151,"textRuns":[[31255,31262],[32138,32143]],"parentId":"7bc32260:38","childIds":["7bc32260:205"]},{"id":"7bc32260:205","tag":"aside","openStart":31262,"attrEnd":31296,"openEnd":31297,"closeStart":32130,"closeEnd":32138,"styleAttr":[31276,31295],"textRuns":[[31297,31306],[31915,31924],[32123,32130]],"parentId":"7bc32260:204","childIds":["7bc32260:206","7bc32260:211"]},{"id":"7bc32260:206","tag":"div","openStart":31306,"attrEnd":31481,"openEnd":31482,"closeStart":31909,"closeEnd":31915,"styleAttr":[31318,31480],"textRuns":[[31482,31493],[31609,31620],[31900,31909]],"parentId":"7bc32260:205","childIds":["7bc32260:207","7bc32260:208"]},{"id":"7bc32260:207","tag":"div","openStart":31493,"attrEnd":31595,"openEnd":31596,"closeStart":31603,"closeEnd":31609,"styleAttr":[31505,31594],"textRuns":[[31596,31603]],"parentId":"7bc32260:206","childIds":[]},{"id":"7bc32260:208","tag":"div","openStart":31620,"attrEnd":31702,"openEnd":31703,"closeStart":31894,"closeEnd":31900,"styleAttr":[31632,31701],"textRuns":[[31703,31716],[31790,31803],[31883,31894]],"parentId":"7bc32260:206","childIds":["7bc32260:209","7bc32260:210"]},{"id":"7bc32260:209","tag":"button","openStart":31716,"attrEnd":31776,"openEnd":31777,"closeStart":31781,"closeEnd":31790,"styleAttr":[31757,31775],"textRuns":[[31777,31781]],"parentId":"7bc32260:208","childIds":[]},{"id":"7bc32260:210","tag":"button","openStart":31803,"attrEnd":31865,"openEnd":31866,"closeStart":31874,"closeEnd":31883,"styleAttr":[31845,31864],"textRuns":[[31866,31874]],"parentId":"7bc32260:208","childIds":[]},{"id":"7bc32260:211","tag":"div","openStart":31924,"attrEnd":31972,"openEnd":31973,"closeStart":32117,"closeEnd":32123,"styleAttr":[31936,31971],"textRuns":[[31973,31984],[32108,32117]],"parentId":"7bc32260:205","childIds":["7bc32260:212"]},{"id":"7bc32260:212","tag":"iframe","openStart":31984,"attrEnd":32098,"openEnd":32099,"closeStart":32099,"closeEnd":32108,"styleAttr":[32052,32097],"textRuns":[],"parentId":"7bc32260:211","childIds":[]},{"id":"7bc32260:213","tag":"sc-if","openStart":32165,"attrEnd":32231,"openEnd":32232,"closeStart":35612,"closeEnd":35620,"textRuns":[[32232,32237],[35609,35612]],"parentId":"7bc32260:9","childIds":["7bc32260:214"]},{"id":"7bc32260:214","tag":"div","openStart":32237,"attrEnd":32414,"openEnd":32415,"closeStart":35603,"closeEnd":35609,"styleAttr":[32249,32413],"textRuns":[[32415,32422],[35598,35603]],"parentId":"7bc32260:213","childIds":["7bc32260:215"]},{"id":"7bc32260:215","tag":"div","openStart":32422,"attrEnd":32595,"openEnd":32596,"closeStart":35592,"closeEnd":35598,"styleAttr":[32434,32594],"textRuns":[[32596,32605],[33652,33661],[35585,35592]],"parentId":"7bc32260:214","childIds":["7bc32260:216","7bc32260:225"]},{"id":"7bc32260:216","tag":"div","openStart":32605,"attrEnd":32756,"openEnd":32757,"closeStart":33646,"closeEnd":33652,"styleAttr":[32617,32755],"textRuns":[[32757,32768],[33120,33131],[33637,33646]],"parentId":"7bc32260:215","childIds":["7bc32260:217","7bc32260:221"]},{"id":"7bc32260:217","tag":"div","openStart":32768,"attrEnd":32772,"openEnd":32773,"closeStart":33114,"closeEnd":33120,"textRuns":[[32773,32786],[32871,32884],[33103,33114]],"parentId":"7bc32260:216","childIds":["7bc32260:218","7bc32260:219"]},{"id":"7bc32260:218","tag":"div","openStart":32786,"attrEnd":32843,"openEnd":32844,"closeStart":32865,"closeEnd":32871,"styleAttr":[32798,32842],"textRuns":[[32844,32865]],"parentId":"7bc32260:217","childIds":[]},{"id":"7bc32260:219","tag":"div","openStart":32884,"attrEnd":32956,"openEnd":32957,"closeStart":33097,"closeEnd":33103,"styleAttr":[32896,32955],"textRuns":[[32957,32974],[33003,33097]],"parentId":"7bc32260:217","childIds":["7bc32260:220"]},{"id":"7bc32260:220","tag":"strong","openStart":32974,"attrEnd":32981,"openEnd":32982,"closeStart":32994,"closeEnd":33003,"textRuns":[[32982,32994]],"parentId":"7bc32260:219","childIds":[]},{"id":"7bc32260:221","tag":"button","openStart":33131,"attrEnd":33387,"openEnd":33388,"closeStart":33628,"closeEnd":33637,"styleAttr":[33174,33353],"textRuns":[[33388,33401],[33617,33628]],"parentId":"7bc32260:216","childIds":["7bc32260:222"]},{"id":"7bc32260:222","tag":"svg","openStart":33401,"attrEnd":33524,"openEnd":33525,"closeStart":33611,"closeEnd":33617,"textRuns":[],"parentId":"7bc32260:221","childIds":["7bc32260:223","7bc32260:224"]},{"id":"7bc32260:223","tag":"line","openStart":33525,"attrEnd":33560,"openEnd":33561,"closeStart":33561,"closeEnd":33568,"textRuns":[],"parentId":"7bc32260:222","childIds":[]},{"id":"7bc32260:224","tag":"line","openStart":33568,"attrEnd":33603,"openEnd":33604,"closeStart":33604,"closeEnd":33611,"textRuns":[],"parentId":"7bc32260:222","childIds":[]},{"id":"7bc32260:225","tag":"div","openStart":33661,"attrEnd":33771,"openEnd":33772,"closeStart":35579,"closeEnd":35585,"styleAttr":[33673,33770],"textRuns":[[33772,33783],[35269,35280],[35570,35579]],"parentId":"7bc32260:215","childIds":["7bc32260:226"]},{"id":"7bc32260:226","tag":"div","openStart":33783,"attrEnd":33832,"openEnd":33833,"closeStart":35263,"closeEnd":35269,"styleAttr":[33795,33831],"textRuns":[[33833,33846],[34480,34493],[35125,35138],[35252,35263]],"parentId":"7bc32260:225","childIds":["7bc32260:227","7bc32260:231","7bc32260:236"]},{"id":"7bc32260:227","tag":"button","openStart":33846,"attrEnd":34127,"openEnd":34128,"closeStart":34471,"closeEnd":34480,"styleAttr":[33889,34085],"textRuns":[[34128,34143],[34425,34471]],"parentId":"7bc32260:226","childIds":["7bc32260:228"]},{"id":"7bc32260:228","tag":"svg","openStart":34143,"attrEnd":34290,"openEnd":34291,"closeStart":34419,"closeEnd":34425,"textRuns":[],"parentId":"7bc32260:227","childIds":["7bc32260:229","7bc32260:230"]},{"id":"7bc32260:229","tag":"rect","openStart":34291,"attrEnd":34338,"openEnd":34339,"closeStart":34339,"closeEnd":34346,"textRuns":[],"parentId":"7bc32260:228","childIds":[]},{"id":"7bc32260:230","tag":"path","openStart":34346,"attrEnd":34411,"openEnd":34412,"closeStart":34412,"closeEnd":34419,"textRuns":[],"parentId":"7bc32260:228","childIds":[]},{"id":"7bc32260:231","tag":"button","openStart":34493,"attrEnd":34756,"openEnd":34757,"closeStart":35116,"closeEnd":35125,"styleAttr":[34536,34722],"textRuns":[[34757,34772],[35076,35116]],"parentId":"7bc32260:226","childIds":["7bc32260:232"]},{"id":"7bc32260:232","tag":"svg","openStart":34772,"attrEnd":34919,"openEnd":34920,"closeStart":35070,"closeEnd":35076,"textRuns":[],"parentId":"7bc32260:231","childIds":["7bc32260:233","7bc32260:234","7bc32260:235"]},{"id":"7bc32260:233","tag":"path","openStart":34920,"attrEnd":34971,"openEnd":34972,"closeStart":34972,"closeEnd":34979,"textRuns":[],"parentId":"7bc32260:232","childIds":[]},{"id":"7bc32260:234","tag":"polyline","openStart":34979,"attrEnd":35014,"openEnd":35015,"closeStart":35015,"closeEnd":35026,"textRuns":[],"parentId":"7bc32260:232","childIds":[]},{"id":"7bc32260:235","tag":"line","openStart":35026,"attrEnd":35062,"openEnd":35063,"closeStart":35063,"closeEnd":35070,"textRuns":[],"parentId":"7bc32260:232","childIds":[]},{"id":"7bc32260:236","tag":"div","openStart":35138,"attrEnd":35227,"openEnd":35228,"closeStart":35246,"closeEnd":35252,"styleAttr":[35150,35226],"textRuns":[[35228,35246]],"parentId":"7bc32260:226","childIds":[]},{"id":"7bc32260:237","tag":"sc-if","openStart":35624,"attrEnd":35685,"openEnd":35686,"closeStart":35968,"closeEnd":35976,"textRuns":[[35686,35691],[35965,35968]],"parentId":"7bc32260:9","childIds":["7bc32260:238"]},{"id":"7bc32260:238","tag":"div","openStart":35691,"attrEnd":35947,"openEnd":35948,"closeStart":35959,"closeEnd":35965,"styleAttr":[35703,35946],"textRuns":[[35948,35959]],"parentId":"7bc32260:237","childIds":[]},{"id":"7bc32260:239","tag":"sc-if","openStart":35980,"attrEnd":36046,"openEnd":36047,"closeStart":36477,"closeEnd":36485,"textRuns":[[36047,36052],[36474,36477]],"parentId":"7bc32260:9","childIds":["7bc32260:240"]},{"id":"7bc32260:240","tag":"div","openStart":36052,"attrEnd":36218,"openEnd":36219,"closeStart":36468,"closeEnd":36474,"styleAttr":[36064,36217],"textRuns":[[36219,36226],[36372,36379],[36463,36468]],"parentId":"7bc32260:239","childIds":["7bc32260:241","7bc32260:242"]},{"id":"7bc32260:241","tag":"div","openStart":36226,"attrEnd":36365,"openEnd":36366,"closeStart":36366,"closeEnd":36372,"styleAttr":[36238,36364],"textRuns":[],"parentId":"7bc32260:240","childIds":[]},{"id":"7bc32260:242","tag":"div","openStart":36379,"attrEnd":36436,"openEnd":36437,"closeStart":36457,"closeEnd":36463,"styleAttr":[36391,36435],"textRuns":[[36437,36457]],"parentId":"7bc32260:240","childIds":[]}]}</script></body></html>
