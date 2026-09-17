@@ -22,15 +22,29 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
 .dt-p .n{background:var(--g);color:#fff;border-radius:100px;min-width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900}
 .dt-p .l{font-size:13px;font-weight:800;color:var(--p)}
 .dt-s{font-size:12.5px;color:#7d7669;font-weight:600}
-.dt-b{margin-left:auto;font-size:9.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:6px 13px;border-radius:100px;background:#fff3e0;color:#f47920;display:flex;align-items:center;gap:7px}
-.dt-nav{background:var(--areia);border-top:1px solid rgba(0,78,76,.1)}
-.dt-nav-in{max-width:900px;margin:0 auto;padding:11px 26px;display:flex;align-items:center;gap:9px;overflow-x:auto;scrollbar-width:none}
-.dt-nav-in::-webkit-scrollbar{display:none}
-.dt-nav-l{font-size:9.5px;font-weight:800;color:#7d7669;letter-spacing:.13em;text-transform:uppercase;flex-shrink:0;margin-right:2px}
-.dt-chip{display:flex;align-items:center;gap:7px;background:#fff;border-radius:100px;padding:7px 14px;font-size:12.5px;font-weight:700;color:var(--p);flex-shrink:0;white-space:nowrap;transition:transform .16s cubic-bezier(.2,.8,.2,1),box-shadow .2s,background .18s}
-.dt-chip:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(7,63,45,.16)}
-.dt-chip.on{background:var(--g);color:#fff}
-.dt-chip svg{flex-shrink:0;opacity:.55}
+.dt-b{font-size:9.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:6px 13px;border-radius:100px;background:#fff3e0;color:#f47920;display:flex;align-items:center;gap:7px}
+.hs{position:relative;margin-left:auto;flex-shrink:0}
+.hs-b{display:flex;align-items:center;gap:9px;background:#fff;border-radius:100px;padding:8px 16px;font-size:12.5px;font-weight:800;color:var(--p);transition:transform .16s cubic-bezier(.2,.8,.2,1),box-shadow .2s}
+.hs-b:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(7,63,45,.15)}
+.hs-b svg:last-child{transition:transform .25s;opacity:.5}
+.hs.on .hs-b svg:last-child{transform:rotate(180deg)}
+.hs-p{position:absolute;top:calc(100% + 9px);right:0;width:318px;max-width:calc(100vw - 36px);background:#fff;border-radius:14px;box-shadow:0 20px 52px rgba(7,40,28,.26);max-height:min(62vh,404px);overflow-y:auto;opacity:0;transform:translateY(-8px) scale(.98);transform-origin:top right;pointer-events:none;transition:opacity .2s,transform .22s cubic-bezier(.2,.8,.2,1);z-index:70}
+.hs.on .hs-p{opacity:1;transform:none;pointer-events:auto}
+.hs-h{padding:15px 18px 12px;border-bottom:1px solid #f0ece4;position:sticky;top:0;background:#fff;z-index:2}
+.hs-h .a{font-size:14px;font-weight:800;color:var(--p)}
+.hs-h .b{font-size:11.5px;color:#8b8578;margin-top:2px}
+.hs-y{font-size:10px;font-weight:800;color:#a49e91;letter-spacing:.13em;text-transform:uppercase;padding:13px 18px 5px;background:#faf8f4}
+.hs-i{width:100%;display:flex;align-items:center;gap:11px;padding:10px 18px;text-align:left;transition:background .14s,padding-left .16s}
+.hs-i:hover{background:#eef6f0;padding-left:23px}
+.hs-i.on{background:#eef6f0}
+.hs-d{background:var(--c);border-radius:8px 8px 0 8px;padding:5px 8px;min-width:42px;text-align:center;flex-shrink:0}
+.hs-d .d{font-size:15px;font-weight:900;color:var(--p);line-height:1}
+.hs-d .m{font-size:8px;font-weight:800;color:var(--p);text-transform:uppercase;letter-spacing:.04em}
+.hs-x{flex:1;min-width:0}
+.hs-x .a{font-size:13px;font-weight:700;color:#2c2a26}
+.hs-x .b{font-size:11px;color:#8b8578;margin-top:1px}
+.hs-t{font-size:8.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:3px 8px;border-radius:100px;flex-shrink:0;background:#eef6f0;color:var(--g)}
+.hs-i svg{flex-shrink:0;opacity:.4}
 .dt-back{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:800;color:var(--g);background:#fff;border-radius:100px;padding:7px 15px;transition:transform .16s,box-shadow .2s}
 .dt-back:hover{transform:translateX(-2px);box-shadow:0 5px 14px rgba(7,63,45,.14)}
 
@@ -91,8 +105,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
 
 @media(max-width:760px){
   .dt-in{padding:12px 18px;gap:10px}
-  .dt-nav-in{padding:10px 18px}
-  .dt-b{margin-left:0}
+  .hs{margin-left:0}
+  .hs-p{right:auto;left:0;transform-origin:top left}
   .wrap{padding:0 18px}
   .pauta{padding:28px 0}
   .ptitle{font-size:21px}
@@ -109,7 +123,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
 </head>
 <body>
 <div id="app"></div>
-<script>window.__BOOT={"dados":{"edicoes":[{"id":"em04t56s","rotulo":"18/09/2026","dia":"18","mes":"set","ano":"2026","curta":"18/09/2026","status":"online","pautas":[{"sessao":"RELACIONAMENTO COM O COOPERADO","titulo":"Publicação conectada ao repositório","texto":"<p>Esta é uma edição de exemplo, gerada para o primeiro deploy do GitHub Pages.</p><p>A partir da próxima publicação feita no <strong>Montador de Informativo</strong>, este arquivo é substituído automaticamente e o conteúdo real aparece aqui.</p>","imagem":"","imagens":[],"video":"","destaque":"<p><strong>Nada a fazer neste arquivo.</strong> Ele existe apenas para o Pages ter o que servir antes da primeira publicação.</p>","botoes":[],"evento":null}]}],"legados":[{"rotulo":"11/09/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-11-09-26"},{"rotulo":"04/09/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-04-09-26"},{"rotulo":"28/08/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-28-08-26"},{"rotulo":"21/08/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-21-08-26"},{"rotulo":"14/08/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-14-08-26"},{"rotulo":"07/08/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-07-08-26"},{"rotulo":"31/07/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-31-07-26"},{"rotulo":"24/07/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-24-07-26"},{"rotulo":"17/07/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-17-07-26"},{"rotulo":"10/07/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-10-07-26"},{"rotulo":"03/07/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-03-07-26"},{"rotulo":"26/06/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-26-06-26"},{"rotulo":"19/06/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-19-06-26"},{"rotulo":"12/06/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-12-06-26"},{"rotulo":"05/06/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-05-06-26"},{"rotulo":"29/05/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-29-05-26"},{"rotulo":"22/05/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-22-05-26"},{"rotulo":"15/05/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-15-05-26"},{"rotulo":"11/05/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-11-05-26"},{"rotulo":"08/05/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-08-05-26"},{"rotulo":"30/04/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-30-04-26"},{"rotulo":"24/04/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-24-04-26"},{"rotulo":"17/04/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-17-04-26"},{"rotulo":"10/04/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-10-04-26"},{"rotulo":"02/04/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-02-04-26"},{"rotulo":"27/03/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-27-03-26"},{"rotulo":"20/03/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-20-03-26"},{"rotulo":"13/03/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-13-03-26"},{"rotulo":"06/03/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-06-03-26"},{"rotulo":"27/02/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-27-02-26"},{"rotulo":"20/02/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-20-02-26"},{"rotulo":"13/02/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-13-02-26"},{"rotulo":"06/02/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-06-02-26"},{"rotulo":"30/01/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-30-01-26"},{"rotulo":"23/01/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-23-01-26"},{"rotulo":"16/01/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-16-01-26"}]},"modo":null,"tela":null,"id":null};</script>
+<script>window.__BOOT={"dados":{"edicoes":[{"id":"e19au186","rotulo":"18/09/2026","dia":"18","mes":"set","ano":"2026","curta":"18/09/2026","status":"online","pautas":[{"sessao":"RELACIONAMENTO COM O COOPERADO","titulo":"Publicação conectada ao repositório","texto":"<p>Esta é uma edição de exemplo, gerada para o primeiro deploy do GitHub Pages.</p><p>A partir da próxima publicação feita no <strong>Montador de Informativo</strong>, este arquivo é substituído automaticamente e o conteúdo real aparece aqui.</p>","imagem":"","imagens":[],"video":"","destaque":"<p><strong>Nada a fazer neste arquivo.</strong> Ele existe apenas para o Pages ter o que servir antes da primeira publicação.</p>","botoes":[],"evento":null}]}],"legados":[{"rotulo":"11/09/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-11-09-26"},{"rotulo":"04/09/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-04-09-26"},{"rotulo":"28/08/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-28-08-26"},{"rotulo":"21/08/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-21-08-26"},{"rotulo":"14/08/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-14-08-26"},{"rotulo":"07/08/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-07-08-26"},{"rotulo":"31/07/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-31-07-26"},{"rotulo":"24/07/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-24-07-26"},{"rotulo":"17/07/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-17-07-26"},{"rotulo":"10/07/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-10-07-26"},{"rotulo":"03/07/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-03-07-26"},{"rotulo":"26/06/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-26-06-26"},{"rotulo":"19/06/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-19-06-26"},{"rotulo":"12/06/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-12-06-26"},{"rotulo":"05/06/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-05-06-26"},{"rotulo":"29/05/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-29-05-26"},{"rotulo":"22/05/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-22-05-26"},{"rotulo":"15/05/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-15-05-26"},{"rotulo":"11/05/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-11-05-26"},{"rotulo":"08/05/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-08-05-26"},{"rotulo":"30/04/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-30-04-26"},{"rotulo":"24/04/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-24-04-26"},{"rotulo":"17/04/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-17-04-26"},{"rotulo":"10/04/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-10-04-26"},{"rotulo":"02/04/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-02-04-26"},{"rotulo":"27/03/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-27-03-26"},{"rotulo":"20/03/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-20-03-26"},{"rotulo":"13/03/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-13-03-26"},{"rotulo":"06/03/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-06-03-26"},{"rotulo":"27/02/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-27-02-26"},{"rotulo":"20/02/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-20-02-26"},{"rotulo":"13/02/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-13-02-26"},{"rotulo":"06/02/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-06-02-26"},{"rotulo":"30/01/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-30-01-26"},{"rotulo":"23/01/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-23-01-26"},{"rotulo":"16/01/2026","link":"https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-16-01-26"}]},"modo":null,"tela":null,"id":null};</script>
 <script>(function runtime(boot) {
   var DADOS = boot.dados;
   var app = document.getElementById('app');
@@ -215,20 +229,59 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
     return h + '</div>';
   }
 
+  var MESN=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+
+  function quebra(rot) {
+    var m = String(rot || '').match(/(\d{1,2})\D+(\d{1,2})\D+(\d{2,4})/);
+    if (!m) return { d: String(rot || '').slice(0, 2), m: '', ano: '—', mi: 0 };
+    var mi = parseInt(m[2], 10) - 1;
+    var ano = m[3].length === 2 ? '20' + m[3] : m[3];
+    return { d: m[1], m: MESN[mi] || '', ano: ano, mi: mi };
+  }
+
   function vNav(e) {
-    var chips = [];
-    if (atual) {
-      chips.push('<button class="dt-chip' + (atual.id === e.id ? ' on' : '') + '" data-open="' + atual.id + '">Atual</button>');
-    }
+    var lista = [];
     arquivadas.forEach(function (a) {
-      chips.push('<button class="dt-chip' + (a.id === e.id ? ' on' : '') + '" data-open="' + a.id + '">' + esc(a.curta || a.rotulo) + '</button>');
+      var q = quebra(a.curta || a.rotulo);
+      lista.push({ q: q, rot: a.curta || a.rotulo, id: a.id, link: null, n: (a.pautas || []).length });
     });
     (DADOS.legados || []).forEach(function (g) {
       if (!g.link) return;
-      chips.push('<a class="dt-chip" href="' + esc(g.link) + '" target="_blank" rel="noopener">' + esc(g.rotulo) + IC.ext + '</a>');
+      lista.push({ q: quebra(g.rotulo), rot: g.rotulo, id: null, link: g.link, n: 0 });
     });
-    if (chips.length < 2) return '';
-    return '<div class="dt-nav"><div class="dt-nav-in"><span class="dt-nav-l">Edições</span>' + chips.join('') + '</div></div>';
+    if (!lista.length) return '';
+
+    var anos = [];
+    lista.forEach(function (i) { if (anos.indexOf(i.q.ano) < 0) anos.push(i.q.ano); });
+    anos.sort().reverse();
+
+    var corpo = anos.map(function (ano) {
+      var itens = lista.filter(function (i) { return i.q.ano === ano; }).map(function (i) {
+        var attr = i.link ? 'data-ext="' + esc(i.link) + '"' : 'data-open="' + i.id + '"';
+        var sub = i.link ? 'Arquivo no Framer' : (i.n + (i.n === 1 ? ' pauta' : ' pautas'));
+        var cauda = i.link ? IC.ext : '';
+        return '<button class="hs-i' + (i.id && i.id === e.id ? ' on' : '') + '" ' + attr + '>'
+          + '<span class="hs-d"><span class="d">' + esc(i.q.d) + '</span><span class="m">' + esc(i.q.m) + '</span></span>'
+          + '<span class="hs-x"><span class="a">' + esc(i.rot) + '</span><span class="b">' + sub + '</span></span>'
+          + cauda + '</button>';
+      }).join('');
+      return '<div class="hs-y">' + esc(ano) + '</div>' + itens;
+    }).join('');
+
+    var topo = (atual && atual.id !== e.id)
+      ? '<button class="hs-i" data-open="' + atual.id + '" style="background:#eef6f0">'
+        + '<span class="hs-d"><span class="d">' + esc(quebra(atual.curta || atual.rotulo).d) + '</span><span class="m">' + esc(quebra(atual.curta || atual.rotulo).m) + '</span></span>'
+        + '<span class="hs-x"><span class="a">Edição atual</span><span class="b">' + esc(atual.rotulo) + '</span></span>'
+        + '<span class="hs-t">Atual</span></button>'
+      : '';
+
+    var n = lista.length;
+    return '<div class="hs" id="hs">'
+      + '<button class="hs-b" data-menu="1">' + IC.hist + 'Edições anteriores' + IC.baixo + '</button>'
+      + '<div class="hs-p">'
+      + '<div class="hs-h"><div class="a">Edições anteriores</div><div class="b">' + n + (n === 1 ? ' edição no histórico' : ' edições no histórico') + '</div></div>'
+      + topo + corpo
+      + '</div></div>';
   }
 
   function vFaixa(e) {
@@ -244,7 +297,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
       : '';
     return '<div class="dt"><div class="dt-in">'
       + '<span class="dt-p"><span class="n">' + esc(d) + '</span><span class="l">' + esc(e.rotulo) + '</span></span>'
-      + sel + voltar + esp
+      + sel + voltar + esp + vNav(e)
       + '</div></div>';
   }
 
@@ -256,16 +309,28 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
       return;
     }
     var ps = e.pautas || [];
-    app.innerHTML = vFaixa(e) + vNav(e)
+    app.innerHTML = vFaixa(e)
       + '<div class="wrap">' + (ps.length ? ps.map(vPauta).join('') : '<div class="vazio">Nenhuma pauta nesta edição.</div>') + '</div>';
     ligar();
   }
 
+  var menuAberto = false;
+
   function ligar() {
+    var mb = app.querySelector('[data-menu]');
+    if (mb) {
+      mb.addEventListener('click', function (ev) {
+        ev.stopPropagation();
+        menuAberto = !menuAberto;
+        var m = app.querySelector('#hs');
+        if (m) m.classList.toggle('on', menuAberto);
+      });
+    }
     app.querySelectorAll('[data-open]').forEach(function (el) {
       el.addEventListener('click', function (ev) {
         ev.preventDefault();
         edId = el.getAttribute('data-open');
+        menuAberto = false;
         aberto = false;
         render();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -275,6 +340,17 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
       el.addEventListener('click', function () { window.open(el.getAttribute('data-ext'), '_blank', 'noopener'); });
     });
   }
+
+  document.addEventListener('click', function (ev) {
+    var m = app.querySelector('#hs');
+    if (m && menuAberto && !m.contains(ev.target)) { menuAberto = false; m.classList.remove('on'); }
+  });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key !== 'Escape' || !menuAberto) return;
+    var m = app.querySelector('#hs');
+    menuAberto = false;
+    if (m) m.classList.remove('on');
+  });
 
   render();
 })(window.__BOOT);</script>
