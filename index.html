@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/unimed-uberl-ndia-design-system-bb57222b-354a-4aec-aee0-8b0662f94fb6/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/unimed-uberl-ndia-design-system-bb57222b-354a-4aec-aee0-8b0662f94fb6/tokens/colors.css">
+  <script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Unimed Sans','Source Sans 3',system-ui,sans-serif;background:#f2efe9;-webkit-font-smoothing:antialiased}
+    a{color:#00995d;text-decoration:none}
+    a:hover{color:#004e4c}
+    input,textarea,button,select{font-family:inherit}
+    ::-webkit-scrollbar{width:10px;height:10px}
+    ::-webkit-scrollbar-track{background:transparent}
+    ::-webkit-scrollbar-thumb{background:#d8d4cc;border-radius:5px;border:2px solid transparent;background-clip:content-box}
+    ::-webkit-scrollbar-thumb:hover{background:#b9b4a9;background-clip:content-box}
+    [contenteditable]:focus{outline:none}
+    [contenteditable] p{margin:0 0 10px}
+    [contenteditable] p:last-child{margin-bottom:0}
+    [contenteditable] ul,[contenteditable] ol{margin:8px 0 10px 20px}
+    [contenteditable] li{margin-bottom:4px}
+    [contenteditable]:empty:before{content:attr(data-ph);color:#b4afa4}
+    @keyframes riseIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+  </style>
+</helmet>
+
+<div style="height:100vh;display:flex;flex-direction:column;overflow:hidden;background:#f2efe9">
+
+  <header style="flex-shrink:0;background:linear-gradient(135deg,#00995d 0%,#004e4c 100%);padding:0 28px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <div style="display:flex;align-items:center;gap:16px;min-width:0">
+      <div style="width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b1d34b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      </div>
+      <div style="min-width:0">
+        <div style="font-size:15px;font-weight:800;color:#fff;letter-spacing:-.01em">Montador de Informativo</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.55);margin-top:1px">Unimed Uberlândia · uso interno</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
+      <input type="file" accept=".docx" style="display:none" ref="{{ setFileEl }}" onChange="{{ onFile }}">
+      <button onClick="{{ pedirArquivo }}" style="display:flex;align-items:center;gap:8px;height:38px;padding:0 18px;border:0;border-radius:9px;background:#b1d34b;color:#004e4c;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:transform .15s,box-shadow .2s" style-hover="transform:translateY(-1px);box-shadow:0 6px 18px rgba(177,211,75,.35)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+        Importar Word
+      </button>
+      <button onClick="{{ novaEdicao }}" style="display:flex;align-items:center;gap:7px;height:38px;padding:0 16px;border:1px solid rgba(255,255,255,.22);border-radius:9px;background:rgba(255,255,255,.08);color:#fff;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:background .18s" style-hover="background:rgba(255,255,255,.16)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" style="flex-shrink:0"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        Nova edição
+      </button>
+      <button onClick="{{ togglePreview }}" title="Mostrar ou esconder o espelho" style="{{ btnTogglePreview }}">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        Espelho
+      </button>
+      <button onClick="{{ gerarEmbed }}" style="display:flex;align-items:center;gap:8px;height:38px;padding:0 18px;border:0;border-radius:9px;background:#fff;color:#004e4c;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:transform .15s,box-shadow .2s" style-hover="transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.18)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        Gerar embed
+      </button>
+      <button onClick="{{ abrirGh }}" title="Conexão com o GitHub" style="{{ btnGh }}">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <div ref="{{ setShellEl }}" style="flex:1;display:flex;min-height:0;position:relative">
+
+    <aside style="width:288px;min-width:214px;background:#fff;border-right:1px solid #e4e0d8;display:flex;flex-direction:column;min-height:0">
+      <div style="padding:20px 20px 12px">
+        <div style="font-size:10px;font-weight:800;color:#00995d;letter-spacing:.12em;text-transform:uppercase">Edições</div>
+      </div>
+      <div style="flex:1;overflow-y:auto;padding:0 12px 20px">
+        <sc-if value="{{ semEdicoes }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:28px 16px;text-align:center">
+            <div style="font-size:13px;color:#8b8578;line-height:1.55">Comece importando o Word da semana.</div>
+          </div>
+        </sc-if>
+        <sc-for list="{{ listaEdicoes }}" as="e" hint-placeholder-count="3">
+          <div onClick="{{ e.abrir }}" style="{{ e.estilo }}">
+            <div style="{{ e.estiloData }}">
+              <div style="font-size:16px;font-weight:900;line-height:1;color:{{ e.corData }}">{{ e.dia }}</div>
+              <div style="font-size:8px;font-weight:800;text-transform:uppercase;color:{{ e.corData }}">{{ e.mes }}</div>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:13px;font-weight:700;color:#1f2420;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ e.rotulo }}</div>
+              <div style="font-size:11px;color:#8b8578;margin-top:2px">{{ e.resumo }}</div>
+            </div>
+            <div style="{{ e.estiloBadge }}">{{ e.badge }}</div>
+          </div>
+        </sc-for>
+
+        <div style="margin-top:22px;padding-top:18px;border-top:1px solid #eeeae2">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;padding:0 8px">
+            <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.12em;text-transform:uppercase">Arquivo Framer</div>
+            <button onClick="{{ addLegado }}" style="width:22px;height:22px;border:0;border-radius:6px;background:#f2efe9;color:#00995d;font-size:15px;font-weight:800;line-height:1;cursor:pointer;transition:background .15s" style-hover="background:#e6f5ee">+</button>
+          </div>
+          <div style="font-size:11px;color:#a49e91;line-height:1.5;padding:0 8px 10px">Links das edições antigas que continuam hospedadas no Framer. Aparecem na trilha de edições do informativo.</div>
+          <sc-for list="{{ listaLegados }}" as="l" hint-placeholder-count="0">
+            <div style="padding:8px;border-radius:8px;background:#faf8f4;margin-bottom:6px;display:flex;flex-direction:column;gap:5px">
+              <input value="{{ l.rotulo }}" onChange="{{ l.setRotulo }}" placeholder="18 de julho de 2026" style="width:100%;height:28px;padding:0 8px;border:1px solid #e4e0d8;border-radius:6px;background:#fff;font-size:12px;font-weight:600;color:#1f2420">
+              <div style="display:flex;gap:5px">
+                <input value="{{ l.link }}" onChange="{{ l.setLink }}" placeholder="https://…" style="flex:1;min-width:0;height:28px;padding:0 8px;border:1px solid #e4e0d8;border-radius:6px;background:#fff;font-size:11px;color:#5c574d">
+                <button onClick="{{ l.remover }}" style="width:28px;height:28px;flex-shrink:0;border:1px solid #f0dfd2;border-radius:6px;background:#fff;color:#f47920;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:#fff3e0">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </aside>
+
+    <main style="flex:1;overflow-y:auto;min-width:420px;padding:24px 28px 80px">
+      <sc-if value="{{ temSelecao }}" hint-placeholder-val="{{ true }}">
+        <div style="max-width:760px;margin:0 auto">
+
+          <div style="background:#fff;border-radius:16px;border:1px solid #e4e0d8;padding:22px 24px;margin-bottom:20px">
+            <div style="display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap">
+              <div style="flex:1;min-width:220px">
+                <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px">Data da edição</div>
+                <div style="display:flex;gap:8px">
+                  <input value="{{ edRotulo }}" onChange="{{ setRotulo }}" placeholder="04/09/2026" style="flex:1;min-width:0;height:42px;padding:0 14px;border:1.5px solid #e4e0d8;border-radius:10px;background:#faf8f4;font-size:16px;font-weight:700;color:#004e4c" style-focus="border-color:#00995d;background:#fff">
+                  <select value="{{ sextaSel }}" onChange="{{ setSexta }}" style="width:150px;flex-shrink:0;height:42px;padding:0 10px;border:1.5px solid #e4e0d8;border-radius:10px;background:#faf8f4;font-size:13px;font-weight:700;color:#00995d;cursor:pointer" style-focus="border-color:#00995d;background:#fff">
+                    <option value="">Sextas…</option>
+                    <sc-for list="{{ sextas }}" as="s" hint-placeholder-count="0">
+                      <option value="{{ s.v }}">{{ s.t }}</option>
+                    </sc-for>
+                  </select>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px">
+                <div>
+                  <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px">Dia</div>
+                  <input value="{{ edDia }}" onChange="{{ setDia }}" placeholder="28" style="width:62px;height:42px;padding:0 10px;border:1.5px solid #e4e0d8;border-radius:10px;background:#faf8f4;font-size:15px;font-weight:800;color:#004e4c;text-align:center" style-focus="border-color:#00995d;background:#fff">
+                </div>
+                <div>
+                  <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px">Mês</div>
+                  <input value="{{ edMes }}" onChange="{{ setMes }}" placeholder="ago" style="width:62px;height:42px;padding:0 10px;border:1.5px solid #e4e0d8;border-radius:10px;background:#faf8f4;font-size:15px;font-weight:800;color:#004e4c;text-align:center" style-focus="border-color:#00995d;background:#fff">
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:18px;padding-top:16px;border-top:1px solid #f0ece4;flex-wrap:wrap">
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+                <div style="display:flex;gap:6px;background:#f2efe9;padding:4px;border-radius:10px">
+                  <button onClick="{{ setEspelho }}" style="{{ btnEspelho }}">Espelho</button>
+                  <button onClick="{{ setOnline }}" style="{{ btnOnline }}">Online</button>
+                  <button onClick="{{ setArquivado }}" style="{{ btnArquivado }}">Arquivado</button>
+                </div>
+                <sc-if value="{{ podePublicar }}" hint-placeholder-val="{{ false }}">
+                  <button onClick="{{ publicar }}" style="display:flex;align-items:center;gap:8px;height:36px;padding:0 18px;border:0;border-radius:9px;background:#00995d;color:#fff;font-size:13px;font-weight:800;cursor:pointer;transition:transform .16s,box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,153,93,.32)">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    {{ rotuloPublicar }}
+                  </button>
+                </sc-if>
+              </div>
+              <button onClick="{{ removerEdicao }}" style="display:flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:1px solid #f0dfd2;border-radius:8px;background:#fff;color:#f47920;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0" style-hover="background:#fff3e0">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path></svg>
+                Excluir edição
+              </button>
+            </div>
+            <sc-if value="{{ dicas }}" hint-placeholder-val="{{ false }}">
+              <div style="margin-top:16px;background:#e6f5ee;border-radius:10px;padding:14px 16px;font-size:12px;color:#00573a;line-height:1.6">
+                <strong>Espelho</strong> aparece só na página /espelho do Framer, para validação. Quando estiver aprovado, clique em <strong>Publicar</strong>: esta edição vira a atual e a anterior vai para o histórico automaticamente.
+              </div>
+            </sc-if>
+          </div>
+
+          <sc-for list="{{ pautas }}" as="p" hint-placeholder-count="3">
+            <div style="background:#fff;border-radius:16px;border:1px solid #e4e0d8;margin-bottom:16px;animation:riseIn .3s ease both;overflow:hidden">
+              <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:#faf8f4;border-bottom:1px solid #f0ece4">
+                <div style="width:26px;height:26px;border-radius:7px;background:#00995d;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">{{ p.num }}</div>
+                <input value="{{ p.sessao }}" onChange="{{ p.setSessao }}" placeholder="Sessão (ex: Governança)" style="flex:1;min-width:0;height:30px;padding:0 10px;border:1px solid transparent;border-radius:7px;background:transparent;font-size:11px;font-weight:800;color:#00995d;letter-spacing:.08em;text-transform:uppercase" style-hover="background:#fff;border-color:#e4e0d8" style-focus="background:#fff;border-color:#00995d">
+                <div style="display:flex;gap:4px;flex-shrink:0">
+                  <button onClick="{{ p.subir }}" title="Subir" style="width:28px;height:28px;border:1px solid #e4e0d8;border-radius:7px;background:#fff;color:#5c574d;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="border-color:#00995d;color:#00995d">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                  </button>
+                  <button onClick="{{ p.descer }}" title="Descer" style="width:28px;height:28px;border:1px solid #e4e0d8;border-radius:7px;background:#fff;color:#5c574d;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="border-color:#00995d;color:#00995d">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </button>
+                  <button onClick="{{ p.duplicar }}" title="Duplicar" style="width:28px;height:28px;border:1px solid #e4e0d8;border-radius:7px;background:#fff;color:#5c574d;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="border-color:#00995d;color:#00995d">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </button>
+                  <button onClick="{{ p.remover }}" title="Remover" style="width:28px;height:28px;border:1px solid #f0dfd2;border-radius:7px;background:#fff;color:#f47920;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:#fff3e0">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div style="padding:18px">
+                <input value="{{ p.titulo }}" onChange="{{ p.setTitulo }}" placeholder="Título da pauta" style="width:100%;height:44px;padding:0 14px;border:1.5px solid #e4e0d8;border-radius:10px;background:#faf8f4;font-size:19px;font-weight:800;color:#004e4c;margin-bottom:12px" style-focus="border-color:#00995d;background:#fff">
+
+                <div style="display:flex;align-items:center;gap:4px;margin-bottom:8px">
+                  <button onMouseDown="{{ p.cmdBold }}" title="Negrito" style="width:30px;height:28px;border:1px solid #e4e0d8;border-radius:7px;background:#fff;font-size:13px;font-weight:900;color:#004e4c;cursor:pointer" style-hover="border-color:#00995d;background:#e6f5ee">B</button>
+                  <button onMouseDown="{{ p.cmdItalic }}" title="Itálico" style="width:30px;height:28px;border:1px solid #e4e0d8;border-radius:7px;background:#fff;font-size:13px;font-style:italic;font-weight:700;color:#004e4c;cursor:pointer" style-hover="border-color:#00995d;background:#e6f5ee">I</button>
+                  <button onMouseDown="{{ p.cmdList }}" title="Lista" style="width:30px;height:28px;border:1px solid #e4e0d8;border-radius:7px;background:#fff;color:#004e4c;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="border-color:#00995d;background:#e6f5ee">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                  </button>
+                  <button onMouseDown="{{ p.cmdLimpar }}" title="Limpar formatação" style="height:28px;padding:0 10px;border:1px solid #e4e0d8;border-radius:7px;background:#fff;font-size:11px;font-weight:700;color:#8b8578;cursor:pointer" style-hover="border-color:#00995d;color:#00995d">Limpar</button>
+                  <div style="flex:1"></div>
+                  <button onClick="{{ p.toggleExtras }}" style="height:28px;padding:0 12px;border:1px solid #e4e0d8;border-radius:7px;background:#fff;font-size:11px;font-weight:800;color:#00995d;cursor:pointer;display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0" style-hover="background:#e6f5ee;border-color:#00995d">
+                    {{ p.rotuloExtras }}
+                  </button>
+                </div>
+
+                <div contenteditable="true" data-ph="Cole ou digite o corpo da pauta…" ref="{{ p.ref }}" onInput="{{ p.onInput }}" onBlur="{{ p.onBlur }}" style="min-height:96px;padding:14px 16px;border:1.5px solid #e4e0d8;border-radius:10px;background:#faf8f4;font-size:14px;line-height:1.65;color:#3a3630" style-focus="border-color:#00995d;background:#fff"></div>
+
+                <sc-if value="{{ p.extras }}" hint-placeholder-val="{{ false }}">
+                  <div style="margin-top:16px;padding-top:16px;border-top:1px dashed #e4e0d8;display:flex;flex-direction:column;gap:14px">
+
+                    <div>
+                      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+                        <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase">Fotos <span style="font-weight:600;text-transform:none;letter-spacing:0">— uma ou várias</span></div>
+                        <button onClick="{{ p.addFoto }}" style="height:24px;padding:0 10px;border:1px solid #e4e0d8;border-radius:6px;background:#fff;font-size:11px;font-weight:700;color:#00995d;cursor:pointer" style-hover="background:#e6f5ee;border-color:#00995d">+ Foto</button>
+                      </div>
+                      <sc-for list="{{ p.fotos }}" as="f" hint-placeholder-count="1">
+                        <div style="display:flex;gap:6px;margin-bottom:6px;align-items:center">
+                          <div style="width:22px;flex-shrink:0;font-size:11px;font-weight:800;color:#b4afa4;text-align:center">{{ f.num }}</div>
+                          <input value="{{ f.url }}" onChange="{{ f.setUrl }}" placeholder="https://…" style="flex:1;min-width:0;height:36px;padding:0 12px;border:1px solid #e4e0d8;border-radius:8px;background:#faf8f4;font-size:12px;color:#3a3630" style-focus="border-color:#00995d;background:#fff">
+                          <button onClick="{{ f.remover }}" style="width:34px;height:36px;flex-shrink:0;border:1px solid #f0dfd2;border-radius:8px;background:#fff;color:#f47920;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:#fff3e0">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                          </button>
+                        </div>
+                      </sc-for>
+                      <sc-if value="{{ p.semFoto }}" hint-placeholder-val="{{ false }}">
+                        <div style="font-size:11px;color:#a49e91;padding:4px 0 2px 28px">Nenhuma foto. Uma foto aparece sozinha; duas ou mais viram galeria.</div>
+                      </sc-if>
+                    </div>
+
+                    <div>
+                      <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Link do YouTube</div>
+                      <input value="{{ p.video }}" onChange="{{ p.setVideo }}" placeholder="https://youtu.be/…" style="width:100%;height:36px;padding:0 12px;border:1px solid #e4e0d8;border-radius:8px;background:#faf8f4;font-size:12px;color:#3a3630" style-focus="border-color:#00995d;background:#fff">
+                    </div>
+
+                    <div>
+                      <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Destaque (caixa verde)</div>
+                      <textarea value="{{ p.destaque }}" onChange="{{ p.setDestaque }}" placeholder="Texto curto em destaque" style="width:100%;min-height:56px;padding:10px 12px;border:1px solid #e4e0d8;border-radius:8px;background:#faf8f4;font-size:13px;line-height:1.55;color:#3a3630;resize:vertical" style-focus="border-color:#00995d;background:#fff"></textarea>
+                    </div>
+
+                    <div>
+                      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                        <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase">Botões</div>
+                        <button onClick="{{ p.addBotao }}" style="height:24px;padding:0 10px;border:1px solid #e4e0d8;border-radius:6px;background:#fff;font-size:11px;font-weight:700;color:#00995d;cursor:pointer" style-hover="background:#e6f5ee;border-color:#00995d">+ Botão</button>
+                      </div>
+                      <sc-for list="{{ p.botoes }}" as="b" hint-placeholder-count="0">
+                        <div style="display:flex;gap:6px;margin-bottom:6px">
+                          <input value="{{ b.texto }}" onChange="{{ b.setTexto }}" placeholder="Saiba mais" style="width:150px;flex-shrink:0;height:34px;padding:0 10px;border:1px solid #e4e0d8;border-radius:8px;background:#faf8f4;font-size:12px;font-weight:700;color:#004e4c" style-focus="border-color:#00995d;background:#fff">
+                          <input value="{{ b.link }}" onChange="{{ b.setLink }}" placeholder="https://…" style="flex:1;min-width:0;height:34px;padding:0 10px;border:1px solid #e4e0d8;border-radius:8px;background:#faf8f4;font-size:12px;color:#3a3630" style-focus="border-color:#00995d;background:#fff">
+                          <button onClick="{{ b.remover }}" style="width:34px;height:34px;flex-shrink:0;border:1px solid #f0dfd2;border-radius:8px;background:#fff;color:#f47920;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:#fff3e0">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                          </button>
+                        </div>
+                      </sc-for>
+                    </div>
+
+                    <div style="background:#faf8f4;border-radius:10px;padding:14px">
+                      <label style="display:flex;align-items:center;gap:9px;cursor:pointer;margin-bottom:0">
+                        <input type="checkbox" checked="{{ p.eventoAtivo }}" onChange="{{ p.toggleEvento }}" style="width:16px;height:16px;accent-color:#00995d;cursor:pointer">
+                        <span style="font-size:12px;font-weight:800;color:#004e4c">Bloco de agenda / evento</span>
+                      </label>
+                      <sc-if value="{{ p.eventoAtivo }}" hint-placeholder-val="{{ false }}">
+                        <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+                          <input value="{{ p.evTitulo }}" onChange="{{ p.setEvTitulo }}" placeholder="Nome do evento" style="width:100%;height:34px;padding:0 10px;border:1px solid #e4e0d8;border-radius:8px;background:#fff;font-size:13px;font-weight:700;color:#004e4c">
+                          <div style="display:flex;gap:8px">
+                            <input value="{{ p.evDia }}" onChange="{{ p.setEvDia }}" placeholder="04" style="width:58px;height:34px;padding:0 8px;border:1px solid #e4e0d8;border-radius:8px;background:#fff;font-size:13px;font-weight:800;color:#004e4c;text-align:center">
+                            <input value="{{ p.evMes }}" onChange="{{ p.setEvMes }}" placeholder="ago" style="width:58px;height:34px;padding:0 8px;border:1px solid #e4e0d8;border-radius:8px;background:#fff;font-size:13px;font-weight:800;color:#004e4c;text-align:center">
+                            <input value="{{ p.evFormato }}" onChange="{{ p.setEvFormato }}" placeholder="Presencial" style="flex:1;min-width:0;height:34px;padding:0 10px;border:1px solid #e4e0d8;border-radius:8px;background:#fff;font-size:12px;color:#3a3630">
+                          </div>
+                          <input value="{{ p.evLocal }}" onChange="{{ p.setEvLocal }}" placeholder="Local — ex: Gaudium Hall" style="width:100%;height:34px;padding:0 10px;border:1px solid #e4e0d8;border-radius:8px;background:#fff;font-size:12px;color:#3a3630">
+                          <input value="{{ p.evHorario }}" onChange="{{ p.setEvHorario }}" placeholder="Horário — ex: 19h30" style="width:100%;height:34px;padding:0 10px;border:1px solid #e4e0d8;border-radius:8px;background:#fff;font-size:12px;color:#3a3630">
+                        </div>
+                      </sc-if>
+                    </div>
+                  </div>
+                </sc-if>
+              </div>
+            </div>
+          </sc-for>
+
+          <button onClick="{{ addPauta }}" style="width:100%;height:52px;border:1.5px dashed #cfc9bd;border-radius:14px;background:#fff;color:#00995d;font-size:14px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;transition:border-color .2s,background .2s" style-hover="border-color:#00995d;background:#e6f5ee">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Adicionar pauta
+          </button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ semSelecao }}" hint-placeholder-val="{{ false }}">
+        <div style="max-width:520px;margin:80px auto;text-align:center;background:#fff;border-radius:18px;border:1px solid #e4e0d8;padding:52px 40px">
+          <div style="width:56px;height:56px;border-radius:15px;background:#e6f5ee;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00995d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          </div>
+          <div style="font-size:20px;font-weight:800;color:#004e4c;margin-bottom:10px">Comece pelo Word da semana</div>
+          <div style="font-size:14px;color:#8b8578;line-height:1.6;margin-bottom:26px">Arraste o documento que a analista mantém online. O montador quebra em pautas, preserva negrito e itálico, e você só ajusta o que precisa.</div>
+          <button onClick="{{ pedirArquivo }}" style="height:44px;padding:0 26px;border:0;border-radius:10px;background:#00995d;color:#fff;font-size:14px;font-weight:800;cursor:pointer;transition:transform .15s,box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,153,93,.3)">Importar Word</button>
+        </div>
+      </sc-if>
+    </main>
+
+    <sc-if value="{{ mostrarPreview }}" hint-placeholder-val="{{ true }}">
+      <aside style="{{ estiloPreview }}">
+        <div style="flex-shrink:0;height:52px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid #e4e0d8;background:#faf8f4">
+          <div style="font-size:11px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase">Espelho</div>
+          <div style="display:flex;gap:4px;background:#f2efe9;padding:3px;border-radius:8px">
+            <button onClick="{{ verOnline }}" style="{{ btnVerOnline }}">Home</button>
+            <button onClick="{{ verEspelho }}" style="{{ btnVerEspelho }}">/espelho</button>
+          </div>
+        </div>
+        <div style="flex:1;min-height:0;background:#fff">
+          <iframe srcDoc="{{ srcDoc }}" title="Espelho do informativo" style="width:100%;height:100%;border:0;display:block"></iframe>
+        </div>
+      </aside>
+    </sc-if>
+
+  </div>
+
+  <sc-if value="{{ modalEmbed }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;background:rgba(15,30,25,.55);display:flex;align-items:center;justify-content:center;padding:40px;z-index:500;animation:fadeIn .18s ease both">
+      <div style="background:#fff;border-radius:18px;width:100%;max-width:720px;max-height:100%;display:flex;flex-direction:column;overflow:hidden;animation:riseIn .25s ease both">
+        <div style="flex-shrink:0;padding:22px 26px;border-bottom:1px solid #e4e0d8;display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+          <div>
+            <div style="font-size:17px;font-weight:800;color:#004e4c">Código para o Framer</div>
+            <div style="font-size:13px;color:#8b8578;margin-top:4px;line-height:1.5">Cole em um bloco <strong>Embed / HTML</strong> na home e também na página /espelho. O mesmo código serve nas duas — ele detecta a rota.</div>
+          </div>
+          <button onClick="{{ fecharModal }}" style="width:32px;height:32px;flex-shrink:0;border:1px solid #e4e0d8;border-radius:9px;background:#fff;color:#5c574d;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:#f2efe9">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <div style="flex:1;min-height:0;padding:20px 26px;overflow:hidden;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button onClick="{{ copiarEmbed }}" style="display:flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:0;border-radius:10px;background:#00995d;color:#fff;font-size:13px;font-weight:800;cursor:pointer;transition:transform .15s" style-hover="transform:translateY(-1px)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              {{ rotuloCopiar }}
+            </button>
+            <button onClick="{{ baixarEmbed }}" style="display:flex;align-items:center;gap:8px;height:40px;padding:0 18px;border:1px solid #e4e0d8;border-radius:10px;background:#fff;color:#004e4c;font-size:13px;font-weight:700;cursor:pointer" style-hover="background:#f2efe9">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Baixar .html
+            </button>
+            <div style="display:flex;align-items:center;font-size:12px;color:#8b8578;font-weight:600">{{ tamanhoEmbed }}</div>
+          </div>
+          <textarea readOnly="{{ true }}" value="{{ embedCodigo }}" style="flex:1;min-height:220px;padding:14px;border:1px solid #e4e0d8;border-radius:10px;background:#faf8f4;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;line-height:1.5;color:#5c574d;resize:none"></textarea>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ modalGh }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;background:rgba(15,30,25,.55);display:flex;align-items:center;justify-content:center;padding:32px;z-index:520;animation:fadeIn .18s ease both">
+      <div style="background:#fff;border-radius:18px;width:100%;max-width:560px;max-height:100%;display:flex;flex-direction:column;overflow:hidden;animation:riseIn .25s ease both">
+        <div style="flex-shrink:0;padding:22px 26px;border-bottom:1px solid #e4e0d8;display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+          <div>
+            <div style="font-size:17px;font-weight:800;color:#004e4c">Publicar direto no GitHub</div>
+            <div style="font-size:13px;color:#8b8578;margin-top:4px;line-height:1.5">Com isso configurado, o botão Publicar envia o informativo para o repositório e o site atualiza sozinho.</div>
+          </div>
+          <button onClick="{{ fecharGh }}" style="width:32px;height:32px;flex-shrink:0;border:1px solid #e4e0d8;border-radius:9px;background:#fff;color:#5c574d;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:#f2efe9">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <div style="flex:1;min-height:0;overflow-y:auto;padding:22px 26px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Usuário ou organização</div>
+              <input value="{{ ghOwner }}" onChange="{{ setGhOwner }}" placeholder="unimed-uberlandia" style="width:100%;height:38px;padding:0 12px;border:1.5px solid #e4e0d8;border-radius:9px;background:#faf8f4;font-size:13px;color:#3a3630" style-focus="border-color:#00995d;background:#fff">
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Repositório</div>
+              <input value="{{ ghRepo }}" onChange="{{ setGhRepo }}" placeholder="informativo-cooperado" style="width:100%;height:38px;padding:0 12px;border:1.5px solid #e4e0d8;border-radius:9px;background:#faf8f4;font-size:13px;color:#3a3630" style-focus="border-color:#00995d;background:#fff">
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Branch</div>
+              <input value="{{ ghBranch }}" onChange="{{ setGhBranch }}" placeholder="main" style="width:100%;height:38px;padding:0 12px;border:1.5px solid #e4e0d8;border-radius:9px;background:#faf8f4;font-size:13px;color:#3a3630" style-focus="border-color:#00995d;background:#fff">
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Arquivo</div>
+              <input value="{{ ghPath }}" onChange="{{ setGhPath }}" placeholder="index.html" style="width:100%;height:38px;padding:0 12px;border:1.5px solid #e4e0d8;border-radius:9px;background:#faf8f4;font-size:13px;color:#3a3630" style-focus="border-color:#00995d;background:#fff">
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:800;color:#8b8578;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Token de acesso</div>
+            <input type="password" value="{{ ghToken }}" onChange="{{ setGhToken }}" placeholder="github_pat_…" style="width:100%;height:38px;padding:0 12px;border:1.5px solid #e4e0d8;border-radius:9px;background:#faf8f4;font-size:13px;font-family:ui-monospace,Menlo,monospace;color:#3a3630" style-focus="border-color:#00995d;background:#fff">
+            <div style="font-size:11.5px;color:#a49e91;margin-top:7px;line-height:1.55">Fica guardado só neste navegador, nunca sai daqui a não ser para o GitHub. Use um <strong>fine-grained token</strong> limitado a este repositório, permissão <strong>Contents: Read and write</strong>, com data de validade.</div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <button onClick="{{ testarGh }}" style="height:38px;padding:0 18px;border:1.5px solid #00995d;border-radius:9px;background:#fff;color:#00995d;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap" style-hover="background:#e6f5ee">Testar conexão</button>
+            <div style="{{ ghStatusEstilo }}">{{ ghStatus }}</div>
+          </div>
+          <div style="background:#eef6f0;border-radius:11px;padding:16px 18px;font-size:12.5px;color:#00573a;line-height:1.65">
+            <strong>Passo a passo, uma vez só:</strong><br>
+            1. Crie o repositório no GitHub e ative o <strong>Pages</strong> (Settings → Pages → branch main).<br>
+            2. Gere o token em <em>Settings → Developer settings → Fine-grained tokens</em>.<br>
+            3. Preencha os campos acima e teste.<br>
+            4. No Framer, embede o endereço do Pages num bloco de Embed. Nunca mais mexa nele.
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:#004e4c;color:#fff;padding:13px 24px;border-radius:11px;font-size:13px;font-weight:700;box-shadow:0 12px 32px rgba(0,0,0,.24);z-index:600;animation:riseIn .22s ease both">{{ toast }}</div>
+  </sc-if>
+
+  <sc-if value="{{ importando }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;background:rgba(242,239,233,.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:700">
+      <div style="width:34px;height:34px;border:3px solid #ddd8ce;border-top-color:#00995d;border-radius:50%;animation:spin .65s linear infinite"></div>
+      <div style="font-size:14px;font-weight:700;color:#004e4c">{{ rotuloCarregando }}</div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;previewLargura&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:470,&quot;min&quot;:360,&quot;max&quot;:720,&quot;step&quot;:10,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;mostrarDicas&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+const KEY = 'montador-informativo-v1';
+const GH_KEY = 'montador-informativo-github';
+
+class Component extends DCLogic {
+  state = {
+    data: null,
+    selId: null,
+    modo: null,
+    previewAberto: null,
+    larguraJanela: 0,
+    extras: {},
+    toast: '',
+    importando: false,
+    modalEmbed: false,
+    embedCodigo: '',
+    copiado: false,
+    gh: null,
+    modalGh: false,
+    ghStatus: '',
+    ghOk: null,
+    publicando: false
+  };
+
+  editores = {};
+  timers = {};
+
+  componentDidMount() {
+    window.addEventListener('resize', this.onResize);
+    if (this.shellEl) this.medir(this.shellEl.getBoundingClientRect().width);
+    try {
+      const g = JSON.parse(localStorage.getItem(GH_KEY));
+      if (g) this.setState({ gh: g });
+    } catch (e) { /* sem config */ }
+    import('./embed-builder.js').then((mod) => {
+      this.builder = mod;
+      let data = null;
+      try { data = JSON.parse(localStorage.getItem(KEY)); } catch (e) { data = null; }
+      if (!data || !data.edicoes) data = { edicoes: [], legados: [] };
+      if (!data.legados) data.legados = [];
+      delete data.acessos;
+      const sel = data.edicoes.length ? data.edicoes[0].id : null;
+      this.setState({ data, selId: sel });
+      if (!data.legados.length) {
+        import('./legados.js').then((lg) => {
+          this.mut((d) => { if (!d.legados.length) d.legados = lg.LEGADOS_FRAMER.slice(); });
+        }).catch(() => { /* sem legados */ });
+      }
+    });
+  }
+
+  medir = (w) => {
+    const larg = Math.round(w || 0);
+    if (!larg || larg === this.state.larguraJanela) return;
+    this.setState({ larguraJanela: larg });
+  };
+
+  setShellEl = (el) => {
+    if (this.shellObs) { this.shellObs.disconnect(); this.shellObs = null; }
+    this.shellEl = el || null;
+    if (!el) return;
+    this.medir(el.getBoundingClientRect().width);
+    if (typeof ResizeObserver === 'undefined') return;
+    this.shellObs = new ResizeObserver((entradas) => {
+      const e = entradas[0];
+      if (e) this.medir(e.contentRect.width);
+    });
+    this.shellObs.observe(el);
+  };
+
+  onResize = () => {
+    clearTimeout(this.timers.resize);
+    this.timers.resize = setTimeout(() => {
+      if (this.shellEl) this.medir(this.shellEl.getBoundingClientRect().width);
+      else this.medir(window.innerWidth);
+    }, 140);
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    if (this.shellObs) this.shellObs.disconnect();
+    Object.keys(this.timers).forEach((k) => clearTimeout(this.timers[k]));
+  }
+
+  componentDidUpdate() { this.syncEditores(); }
+
+  syncEditores() {
+    const ed = this.edicaoAtual();
+    if (!ed) return;
+    ed.pautas.forEach((p) => {
+      const el = this.editores[p.id];
+      if (!el) return;
+      if (document.activeElement === el) return;
+      const alvo = p.texto || '';
+      if (el.innerHTML !== alvo) el.innerHTML = alvo;
+    });
+  }
+
+  salvar(data) {
+    try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) { /* cota */ }
+  }
+
+  mut(fn) {
+    const data = JSON.parse(JSON.stringify(this.state.data || { edicoes: [], legados: [] }));
+    const out = fn(data) || data;
+    this.salvar(out);
+    this.setState({ data: out });
+    return out;
+  }
+
+  aviso(msg) {
+    this.setState({ toast: msg });
+    clearTimeout(this.timers.toast);
+    this.timers.toast = setTimeout(() => this.setState({ toast: '' }), 2600);
+  }
+
+  edicaoAtual() {
+    const d = this.state.data;
+    if (!d) return null;
+    return d.edicoes.find((e) => e.id === this.state.selId) || null;
+  }
+
+  // ---- Word ----
+
+  pedirArquivo = () => { if (this.fileEl) this.fileEl.click(); };
+
+  onFile = (ev) => {
+    const file = ev.target.files && ev.target.files[0];
+    ev.target.value = '';
+    if (!file) return;
+    if (!window.mammoth) { this.aviso('Leitor de Word ainda carregando — tente de novo.'); return; }
+    this.setState({ importando: true });
+    const reader = new FileReader();
+    reader.onload = () => {
+      window.mammoth.convertToHtml({ arrayBuffer: reader.result })
+        .then((res) => {
+          const html = res.value || '';
+          const doc = new DOMParser().parseFromString('<div id="r">' + html + '</div>', 'text/html');
+          const tabelas = Array.from(doc.querySelectorAll('table'));
+          let pautas = null;
+          let dataTab = '';
+          this.origemImport = '';
+
+          // 1º) padrão de 18 campos — pode haver uma tabela por pauta.
+          const acum = [];
+          for (const tab of tabelas) {
+            const r = this.lerPadrao18(tab);
+            if (!r) continue;
+            if (!dataTab && r.data) dataTab = r.data;
+            r.pautas.forEach((p) => acum.push(p));
+          }
+          if (acum.length) { pautas = acum; this.origemImport = 'padrao'; }
+
+          // 2º) tabela com uma linha por pauta.
+          if (!pautas) {
+            for (const tab of tabelas) {
+              const porColuna = this.lerTabela(tab);
+              if (porColuna && porColuna.length) { pautas = porColuna; this.origemImport = 'tabela'; break; }
+            }
+          }
+          // 3º) tabela rótulo | conteúdo solta.
+          if (!pautas) {
+            for (const tab of tabelas) {
+              const vert = this.lerTabelaVertical(tab);
+              if (vert && vert.pautas.length) {
+                pautas = vert.pautas;
+                if (!dataTab) dataTab = vert.data;
+                this.origemImport = 'tabela';
+                break;
+              }
+            }
+          }
+          if (!pautas) pautas = this.quebrarPautas(html);
+
+          const ed = this.builder.edicaoVazia(dataTab || this.proximaSexta());
+          ed.pautas = pautas;
+          this.mut((d) => { d.edicoes.unshift(ed); });
+          this.setState({ selId: ed.id, modo: null, importando: false });
+          const via = this.origemImport === 'padrao' ? ' pelo padrão de campos'
+            : (this.origemImport === 'tabela' ? ' pela tabela' : ' pelo texto');
+          this.aviso(pautas.length + (pautas.length === 1 ? ' pauta importada' : ' pautas importadas') + via);
+        })
+        .catch(() => { this.setState({ importando: false }); this.aviso('Não consegui ler esse arquivo. Salve como .docx.'); });
+    };
+    reader.onerror = () => { this.setState({ importando: false }); this.aviso('Falha ao abrir o arquivo.'); };
+    reader.readAsArrayBuffer(file);
+  };
+
+  // Tabela: cada linha é uma pauta, cada coluna um campo.
+  // Cabeçalhos aceitos (sem acento/caixa): sessao, titulo, texto, imagem, video,
+  // destaque, botao/botao1..3, link/link1..3, evento, local, horario, formato
+  lerTabela(tabela) {
+    const norm = (s) => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const linhas = Array.from(tabela.querySelectorAll('tr'));
+    if (linhas.length < 2) return null;
+
+    const cabec = Array.from(linhas[0].children).map((c) => norm(c.textContent));
+    const acha = (...nomes) => {
+      for (const n of nomes) { const i = cabec.indexOf(n); if (i >= 0) return i; }
+      return -1;
+    };
+    const col = {
+      sessao: acha('sessao', 'secao', 'tag', 'categoria'),
+      titulo: acha('titulo'),
+      texto: acha('texto', 'corpo', 'conteudo'),
+      imagem: acha('imagem', 'linkimagem', 'urlimagem', 'foto'),
+      video: acha('video', 'linkvideo', 'youtube'),
+      destaque: acha('destaque'),
+      b1t: acha('botao', 'botao1', 'botao1texto', 'textobotao1'),
+      b1l: acha('link', 'link1', 'botao1link', 'linkbotao1'),
+      b2t: acha('botao2', 'botao2texto', 'textobotao2'),
+      b2l: acha('link2', 'botao2link', 'linkbotao2'),
+      b3t: acha('botao3', 'botao3texto', 'textobotao3'),
+      b3l: acha('link3', 'botao3link', 'linkbotao3'),
+      evTitulo: acha('evento', 'tituloevento', 'nomeevento'),
+      evDia: acha('dia', 'diaevento'),
+      evMes: acha('mes', 'mesevento'),
+      evLocal: acha('local', 'localevento'),
+      evHorario: acha('horario', 'hora', 'horarioevento'),
+      evFormato: acha('formato', 'modalidade')
+    };
+    if (col.titulo < 0 && col.texto < 0) return null;
+
+    const pautas = [];
+    for (let i = 1; i < linhas.length; i++) {
+      const cels = Array.from(linhas[i].children);
+      const txt = (j) => (j >= 0 && cels[j] ? (cels[j].textContent || '').replace(/\u00a0/g, ' ').trim() : '');
+      const rico = (j) => {
+        if (j < 0 || !cels[j]) return '';
+        const clone = cels[j].cloneNode(true);
+        clone.querySelectorAll('img').forEach((n) => n.remove());
+        const blocos = Array.from(clone.children).filter((el) => /^(p|ul|ol|h[1-6])$/i.test(el.tagName));
+        if (blocos.length) {
+          return blocos.map((el) => {
+            const t = el.tagName.toLowerCase();
+            if (t === 'ul' || t === 'ol') return el.outerHTML;
+            const inner = el.innerHTML.trim();
+            return inner ? '<p>' + inner + '</p>' : '';
+          }).join('');
+        }
+        const inner = clone.innerHTML.trim();
+        return inner ? '<p>' + inner + '</p>' : '';
+      };
+
+      const titulo = txt(col.titulo);
+      const corpo = rico(col.texto);
+      if (!titulo && !corpo.replace(/<[^>]*>/g, '').trim()) continue;
+
+      const p = this.builder.pautaVazia();
+      p.sessao = txt(col.sessao);
+      p.titulo = titulo;
+      p.texto = corpo;
+      p.imagem = txt(col.imagem);
+      p.video = txt(col.video);
+      p.destaque = rico(col.destaque);
+
+      const botoes = [];
+      [[col.b1t, col.b1l], [col.b2t, col.b2l], [col.b3t, col.b3l]].forEach(([ct, cl]) => {
+        const t = txt(ct);
+        let l = txt(cl);
+        if (cl >= 0 && cels[cl]) {
+          const a = cels[cl].querySelector('a[href]');
+          if (a) l = a.getAttribute('href') || l;
+        }
+        if (t) botoes.push({ texto: t, link: l });
+      });
+      p.botoes = botoes;
+
+      const evT = txt(col.evTitulo);
+      const evD = txt(col.evDia);
+      const evL = txt(col.evLocal);
+      const evH = txt(col.evHorario);
+      if (evT || evD || evL || evH) {
+        p.evento = {
+          ativo: true, titulo: evT, dia: evD, mes: txt(col.evMes),
+          local: evL, horario: evH, formato: txt(col.evFormato)
+        };
+      }
+      pautas.push(p);
+    }
+    return pautas.length ? pautas : null;
+  }
+
+  // Padrão de 18 campos: uma tabela por pauta, linhas "rótulo | conteúdo".
+  // Uma tabela pode conter mais de uma pauta (recomeça em "Campo padrão" ou "Nome da sessão").
+  lerPadrao18(tabela) {
+    const norm = (s) => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+
+    const VAZIO = /^nao\s+(informad|se\s+aplica)/;
+    const util = (t) => { const n = norm(t); return t && n && !VAZIO.test(n) && n !== 'n a' && n !== '-'; };
+
+    const campo = (rot) => {
+      const n = norm(rot);
+      if (!n) return '';
+      if (n === 'ordem') return 'ref';
+      if (n.startsWith('campo padrao')) return 'novo';
+      if (n.startsWith('nome da sessao') || n === 'sessao') return 'sessao';
+      if (n.startsWith('categoria')) return 'categoria';
+      if (n.startsWith('titulo')) return 'titulo';
+      if (n.includes('texto curto') || n.startsWith('chamada')) return 'chamada';
+      if (n.includes('texto longo') || n.includes('texto principal') || n.startsWith('corpo')) return 'corpo';
+      if (n.startsWith('subtitulo') || n.startsWith('intertitulo')) return 'subtitulo';
+      if (n.includes('complementar')) return 'extra';
+      if (n.startsWith('destaque') || n.includes('informacao chave')) return 'destaque';
+      if (n.startsWith('cta') || n.includes('chamada para acao')) return 'cta';
+      if (n.startsWith('link')) return 'link';
+      if (n.startsWith('data')) return 'data';
+      if (n.startsWith('horario')) return 'horario';
+      if (n.startsWith('local')) return 'local';
+      if (n.startsWith('imagem') || n.startsWith('imagens') || n.startsWith('foto')) return 'imagem';
+      if (n.startsWith('video')) return 'video';
+      if (n.startsWith('anexo')) return 'anexo';
+      if (n.startsWith('observac')) return 'obs';
+      if (n.startsWith('assinatura') || n.includes('responsavel')) return 'assinatura';
+      return '';
+    };
+
+    const paras = (cel) => {
+      const c = cel.cloneNode(true);
+      c.querySelectorAll('img').forEach((n) => n.remove());
+      const blocos = Array.from(c.children).filter((el) => /^(p|ul|ol|h[1-6])$/i.test(el.tagName));
+      if (blocos.length) {
+        return blocos.map((el) => {
+          const tg = el.tagName.toLowerCase();
+          if (tg === 'ul' || tg === 'ol') return el.outerHTML;
+          const inner = el.innerHTML.trim();
+          return inner ? '<p>' + inner + '</p>' : '';
+        }).join('');
+      }
+      const inner = c.innerHTML.trim();
+      return inner ? '<p>' + inner + '</p>' : '';
+    };
+
+    const links = (cel) => {
+      const out = [];
+      cel.querySelectorAll('a[href]').forEach((a) => { const h = a.getAttribute('href'); if (h) out.push(h); });
+      const t = (cel.textContent || '').replace(/\u00a0/g, ' ');
+      (t.match(/https?:\/\/[^\s,;)"'<>]+/g) || []).forEach((u) => { if (out.indexOf(u) < 0) out.push(u); });
+      return out;
+    };
+
+    const linhas = Array.from(tabela.querySelectorAll('tr'));
+    if (!linhas.length) return null;
+
+    const brutos = [];
+    let atual = null;
+    let reconhecidos = 0;
+
+    linhas.forEach((tr) => {
+      const cels = Array.from(tr.children);
+      if (cels.length < 2) return;
+      const rot = (cels[0].textContent || '').replace(/\u00a0/g, ' ').trim();
+      const cel = cels[1];
+      const txt = (cel.textContent || '').replace(/\u00a0/g, ' ').trim();
+      const c = campo(rot);
+      if (c === 'ref') { atual = null; return; }
+      if (!c) return;
+      reconhecidos++;
+      if (c === 'novo' || (c === 'sessao' && atual && atual.sessao)) { atual = { _cels: {} }; brutos.push(atual); }
+      if (!atual) { atual = { _cels: {} }; brutos.push(atual); }
+      if (c === 'novo') return;
+      if (!util(txt) && c !== 'imagem' && c !== 'video' && c !== 'link') return;
+      atual[c] = txt;
+      atual._cels[c] = cel;
+    });
+
+    if (reconhecidos < 4) return null;
+
+    let data = '';
+    const pautas = [];
+
+    brutos.forEach((b) => {
+      if (!b.titulo && !b.corpo && !b.chamada) return;
+      const p = this.builder.pautaVazia();
+      p.sessao = (b.categoria && util(b.categoria) ? b.categoria : (b.sessao || '')).toUpperCase();
+      p.titulo = b.titulo || '';
+
+      let corpo = '';
+      if (b.chamada) corpo += paras(b._cels.chamada);
+      if (b.corpo) corpo += paras(b._cels.corpo);
+      if (b.subtitulo) corpo += '<p><strong>' + b.subtitulo + '</strong></p>';
+      if (b.extra) corpo += paras(b._cels.extra);
+      p.texto = corpo;
+
+      if (b.destaque) p.destaque = paras(b._cels.destaque);
+
+      const urlsLink = b._cels.link ? links(b._cels.link) : [];
+      const rotuloCta = (b.cta || '').replace(/^[^\wÀ-ÿ]+/, '').replace(/\s*\/\s*/g, ' — ').trim();
+      if (urlsLink.length) {
+        p.botoes = [{ texto: rotuloCta || 'Saiba mais', link: urlsLink[0] }];
+      } else if (rotuloCta) {
+        // CTA sem link é fecho de texto ("Esperamos vocês!"), não botão.
+        p.texto += '<p>' + rotuloCta + '</p>';
+      }
+
+      if (b._cels.imagem) {
+        const u = links(b._cels.imagem).filter((x) => !/youtu\.?be|youtube\.com/i.test(x));
+        if (u.length) { p.imagens = u; p.imagem = u[0]; }
+      }
+      if (b._cels.video) {
+        const u = links(b._cels.video).filter((x) => /youtu\.?be|youtube\.com/i.test(x));
+        if (u.length) p.video = u[0];
+      }
+      if (b._cels.anexo) {
+        const u = links(b._cels.anexo);
+        if (u.length) p.botoes = (p.botoes || []).concat([{ texto: 'Baixar anexo', link: u[0] }]);
+      }
+      p.botoes = (p.botoes || []).filter((x) => x && x.texto && x.link);
+
+      const temData = b.data && util(b.data);
+      const temHora = b.horario && util(b.horario);
+      const temLocal = b.local && util(b.local);
+      if (temData && (temHora || temLocal)) {
+        const dt = this.builder.parseRotulo(b.data);
+        p.evento = {
+          ativo: true,
+          titulo: b.titulo || '',
+          dia: dt.dia || '',
+          mes: dt.mes || '',
+          local: temLocal ? b.local : '',
+          horario: temHora ? b.horario : '',
+          formato: temLocal && /online|remoto|virtual|formul/i.test(b.local) ? 'Online' : (temLocal ? 'Presencial' : '')
+        };
+      } else if (temData) {
+        const m = String(b.data).match(/\d{1,2}\s*\/\s*\d{1,2}(\s*\/\s*\d{2,4})?/);
+        if (m && !data) data = m[0].replace(/\s/g, '');
+      }
+      pautas.push(p);
+    });
+
+    if (!pautas.length) return null;
+    return { data, pautas };
+  }
+
+  // Tabela vertical: cada linha é "rótulo | conteúdo".
+  // Uma nova pauta começa a cada linha de Sessão (ou de Título repetido).
+  lerTabelaVertical(tabela) {
+    const norm = (s) => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+
+    const tipo = (rot) => {
+      const n = norm(rot);
+      if (!n) return '';
+      if (/\b(dia|data)\b/.test(n) && /informativo|sair|edicao/.test(n)) return 'data';
+      if (/sessao|secao|categoria/.test(n)) return 'sessao';
+      if (/titulo/.test(n)) return 'titulo';
+      if (/texto|corpo|conteudo|descricao/.test(n)) return 'texto';
+      if (/destaque|observacao|atencao/.test(n)) return 'destaque';
+      if (/botao|botoes|cta|link/.test(n)) return 'botao';
+      if (/video|youtube/.test(n)) return 'video';
+      if (/imagem|imagens|foto|fotos|arte|peca/.test(n)) return 'imagem';
+      if (/local/.test(n)) return 'local';
+      if (/horario|hora/.test(n)) return 'horario';
+      if (/formato|modalidade/.test(n)) return 'formato';
+      if (/evento|agenda/.test(n)) return 'evento';
+      return '';
+    };
+
+    const rico = (cel) => {
+      const c = cel.cloneNode(true);
+      c.querySelectorAll('img').forEach((n) => n.remove());
+      const blocos = Array.from(c.children).filter((el) => /^(p|ul|ol|h[1-6])$/i.test(el.tagName));
+      if (blocos.length) {
+        return blocos.map((el) => {
+          const t = el.tagName.toLowerCase();
+          if (t === 'ul' || t === 'ol') return el.outerHTML;
+          const inner = el.innerHTML.trim();
+          return inner ? '<p>' + inner + '</p>' : '';
+        }).join('');
+      }
+      const inner = c.innerHTML.trim();
+      return inner ? '<p>' + inner + '</p>' : '';
+    };
+
+    const urls = (cel) => {
+      const out = [];
+      cel.querySelectorAll('a[href]').forEach((a) => { const h = a.getAttribute('href'); if (h) out.push(h); });
+      const txt = (cel.textContent || '').replace(/\u00a0/g, ' ');
+      (txt.match(/https?:\/\/[^\s,;)"'<>]+/g) || []).forEach((u) => { if (out.indexOf(u) < 0) out.push(u); });
+      return out;
+    };
+
+    const linhas = Array.from(tabela.querySelectorAll('tr'));
+    let data = '';
+    const pautas = [];
+    let cur = null;
+    let vistos = 0;
+
+    const fechar = () => {
+      if (!cur) return;
+      const vazia = !cur.titulo && !(cur.texto || '').replace(/<[^>]*>/g, '').trim();
+      if (!vazia) pautas.push(cur);
+      cur = null;
+    };
+    const garante = () => { if (!cur) cur = this.builder.pautaVazia(); return cur; };
+
+    linhas.forEach((tr) => {
+      const cels = Array.from(tr.children);
+      if (!cels.length) return;
+      const temPar = cels.length > 1;
+      const rot = temPar ? (cels[0].textContent || '').trim() : '';
+      const cel = temPar ? cels[1] : cels[0];
+      const txt = (cel.textContent || '').replace(/\u00a0/g, ' ').trim();
+      const t = tipo(rot);
+      if (!t && !txt) return;
+      vistos++;
+
+      if (t === 'data') {
+        if (!data && txt) {
+          const m = txt.match(/(\d{1,2}\s*[\/\-]\s*\d{1,2}(?:\s*[\/\-]\s*\d{2,4})?)/);
+          data = m ? m[1] : txt.replace(/^.*?informativo\s*[–\-—:]?\s*/i, '').trim();
+        }
+        return;
+      }
+      if (t === 'sessao') { fechar(); garante().sessao = txt.toUpperCase(); return; }
+      if (t === 'titulo') {
+        if (cur && cur.titulo) { const s = cur.sessao; fechar(); garante().sessao = s; }
+        garante().titulo = txt;
+        return;
+      }
+
+      const p = garante();
+      if (t === 'texto') { p.texto = (p.texto || '') + rico(cel); return; }
+      if (t === 'destaque') { p.destaque = (p.destaque || '') + rico(cel); return; }
+      if (t === 'botao') {
+        const links = urls(cel);
+        const rotulo = txt.replace(/https?:\/\/\S+/g, '').replace(/[|–—-]\s*$/, '').trim();
+        if (rotulo || links.length) {
+          p.botoes = (p.botoes || []).concat([{ texto: rotulo || 'Saiba mais', link: links[0] || '' }]);
+        }
+        return;
+      }
+      if (t === 'video') { const l = urls(cel); if (l.length) p.video = l[0]; else if (txt) p.video = txt; return; }
+      if (t === 'imagem') {
+        const l = urls(cel).filter((u) => !/youtu\.?be|youtube\.com/i.test(u));
+        if (l.length) { p.imagens = (p.imagens || []).concat(l); p.imagem = p.imagens[0]; }
+        return;
+      }
+      if (t === 'local' || t === 'horario' || t === 'formato' || t === 'evento') {
+        const ev = Object.assign({ ativo: true, titulo: '', dia: '', mes: '', local: '', horario: '', formato: '' }, p.evento || {}, { ativo: true });
+        if (t === 'local') ev.local = txt;
+        else if (t === 'horario') ev.horario = txt;
+        else if (t === 'formato') ev.formato = txt;
+        else {
+          ev.titulo = ev.titulo || txt;
+          const d = this.builder.parseRotulo(txt);
+          if (d.dia) ev.dia = d.dia;
+          if (d.mes) ev.mes = d.mes;
+        }
+        const loc = txt.match(/local\s*:?\s*([^\n|]+)/i);
+        const hor = txt.match(/hor[áa]rio\s*:?\s*([^\n|]+)/i);
+        if (loc) ev.local = loc[1].trim();
+        if (hor) ev.horario = hor[1].trim();
+        if (!ev.titulo) ev.titulo = p.titulo || '';
+        p.evento = ev;
+        return;
+      }
+
+      // Sem rótulo reconhecido: cai no corpo (ou vira título, se ainda não houver).
+      if (!txt) return;
+      const l = urls(cel);
+      if (l.length && /youtu\.?be|youtube\.com/i.test(l[0]) && !p.video && txt.length < 110) { p.video = l[0]; return; }
+      if (!p.titulo && txt.length <= 130 && !/[.;]\s/.test(txt)) { p.titulo = txt; return; }
+      p.texto = (p.texto || '') + rico(cel);
+    });
+    fechar();
+    if (!pautas.length || vistos < 2) return null;
+    return { data, pautas };
+  }
+
+  quebrarPautas(html) {
+    const nova = () => this.builder.pautaVazia();
+    const doc = new DOMParser().parseFromString('<div id="r">' + html + '</div>', 'text/html');
+    const root = doc.getElementById('r');
+    if (!root) return [nova()];
+    root.querySelectorAll('img').forEach((n) => n.remove());
+
+    const tabelas = Array.from(root.querySelectorAll('table'));
+    for (const t of tabelas) {
+      const lidas = this.lerTabela(t);
+      if (lidas) { this.origemImport = 'tabela'; return lidas; }
+    }
+    this.origemImport = 'texto';
+    tabelas.forEach((t) => t.remove());
+
+    const out = [];
+    let cur = null;
+    const fechar = () => { if (cur && (cur.titulo || (cur.texto || '').replace(/<[^>]*>/g, '').trim())) out.push(cur); };
+    const abrir = (titulo) => { cur = nova(); cur.titulo = titulo || ''; };
+
+    Array.from(root.children).forEach((el) => {
+      const tag = el.tagName.toLowerCase();
+      const txt = (el.textContent || '').replace(/\u00a0/g, ' ').trim();
+      if (!txt && tag !== 'ul' && tag !== 'ol') return;
+
+      if (/^h[1-4]$/.test(tag)) { fechar(); abrir(txt); return; }
+
+      const num = txt.match(/^(\d{1,2})\s*[\.\)\-]\s*(.{3,140})$/);
+      const curto = txt.length <= 140;
+      const strong = el.querySelector('strong, b');
+      const soNegrito = !!strong && strong.textContent.replace(/\u00a0/g, ' ').trim() === txt;
+
+      if (num && curto) { fechar(); abrir(num[2].trim()); return; }
+      if (soNegrito && curto && cur && (cur.texto || '').replace(/<[^>]*>/g, '').trim()) { fechar(); abrir(txt); return; }
+      if (soNegrito && curto && !cur) { fechar(); abrir(txt); return; }
+
+      if (!cur) abrir('');
+
+      const link = el.querySelector('a[href]');
+      if (link) {
+        const href = link.getAttribute('href') || '';
+        if (/youtu\.?be|youtube\.com/i.test(href) && !cur.video) { cur.video = href; if (txt === link.textContent.trim()) return; }
+      }
+
+      if (tag === 'ul' || tag === 'ol') cur.texto += el.outerHTML;
+      else cur.texto += '<p>' + el.innerHTML + '</p>';
+    });
+    fechar();
+    return out.length ? out : [nova()];
+  }
+
+  // Todas as sextas-feiras daqui até o fim do ano, em dd/mm/aaaa.
+  sextasDoAno() {
+    const hoje = new Date();
+    hoje.setHours(0, 0, 0, 0);
+    const d = new Date(hoje);
+    d.setDate(d.getDate() + ((5 - d.getDay() + 7) % 7));
+    const fim = new Date(hoje.getFullYear(), 11, 31);
+    const out = [];
+    while (d <= fim && out.length < 60) {
+      const dd = String(d.getDate()).padStart(2, '0');
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      out.push(dd + '/' + mm + '/' + d.getFullYear());
+      d.setDate(d.getDate() + 7);
+    }
+    return out;
+  }
+
+  // ---- GitHub ----
+
+  get gh() {
+    return Object.assign({ owner: '', repo: '', branch: 'main', path: 'index.html', token: '' }, this.state.gh || {});
+  }
+
+  salvarGh(patch) {
+    const g = Object.assign({}, this.gh, patch);
+    try { localStorage.setItem(GH_KEY, JSON.stringify(g)); } catch (e) { /* cota */ }
+    this.setState({ gh: g, ghStatus: '' });
+  }
+
+  ghPronto() {
+    const g = this.gh;
+    return !!(g.owner && g.repo && g.token && g.path);
+  }
+
+  async ghApi(caminho, init) {
+    const g = this.gh;
+    const res = await fetch('https://api.github.com/repos/' + g.owner + '/' + g.repo + caminho, Object.assign({
+      headers: {
+        Authorization: 'Bearer ' + g.token,
+        Accept: 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28'
+      }
+    }, init || {}));
+    let corpo = null;
+    try { corpo = await res.json(); } catch (e) { corpo = null; }
+    return { ok: res.ok, status: res.status, corpo };
+  }
+
+  testarGh = async () => {
+    if (!this.ghPronto()) { this.setState({ ghStatus: 'Preencha todos os campos.', ghOk: false }); return; }
+    this.setState({ ghStatus: 'Testando…', ghOk: null });
+    const r = await this.ghApi('');
+    if (r.ok) {
+      const perm = r.corpo && r.corpo.permissions && r.corpo.permissions.push;
+      this.setState({
+        ghStatus: perm ? 'Conectado a ' + r.corpo.full_name : 'Conectado, mas o token não tem permissão de escrita.',
+        ghOk: !!perm
+      });
+    } else if (r.status === 401) this.setState({ ghStatus: 'Token inválido ou expirado.', ghOk: false });
+    else if (r.status === 404) this.setState({ ghStatus: 'Repositório não encontrado — confira nome e permissões do token.', ghOk: false });
+    else this.setState({ ghStatus: 'Erro ' + r.status + ' ao conectar.', ghOk: false });
+  };
+
+  async commitEmbed(mensagem) {
+    const g = this.gh;
+    const html = this.builder.buildEmbed(this.state.data);
+    const bytes = new TextEncoder().encode(html);
+    let bin = '';
+    bytes.forEach((b) => { bin += String.fromCharCode(b); });
+    const conteudo = btoa(bin);
+
+    const alvo = '/contents/' + g.path.split('/').map(encodeURIComponent).join('/');
+    const atual = await this.ghApi(alvo + '?ref=' + encodeURIComponent(g.branch));
+    const sha = atual.ok && atual.corpo ? atual.corpo.sha : undefined;
+
+    const corpo = { message: mensagem, content: conteudo, branch: g.branch };
+    if (sha) corpo.sha = sha;
+
+    return this.ghApi(alvo, { method: 'PUT', body: JSON.stringify(corpo) });
+  }
+
+  // Espelho → Online. A que estava Online vai para o histórico. Depois, commit.
+  publicar = async () => {
+    const id = this.state.selId;
+    let anterior = '';
+    let rotulo = '';
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === id);
+      if (!e) return;
+      rotulo = e.rotulo || '';
+      d.edicoes.forEach((o) => {
+        if (o.id !== id && o.status === 'online') { o.status = 'arquivado'; anterior = o.rotulo || ''; }
+      });
+      e.status = 'online';
+    });
+    this.setState({ modo: null });
+
+    if (!this.ghPronto()) {
+      this.aviso(anterior
+        ? 'Publicado. ' + anterior + ' foi para o histórico.'
+        : 'Informativo publicado.');
+      return;
+    }
+
+    this.setState({ publicando: true });
+    try {
+      const msg = 'Informativo ' + rotulo + (anterior ? ' — ' + anterior + ' arquivado' : '');
+      const r = await this.commitEmbed(msg);
+      this.setState({ publicando: false });
+      if (r.ok) this.aviso('No ar. O site atualiza em cerca de um minuto.');
+      else if (r.status === 409) this.aviso('Conflito no repositório — tente publicar de novo.');
+      else this.aviso('Publicado aqui, mas o envio ao GitHub falhou (erro ' + r.status + ').');
+    } catch (e) {
+      this.setState({ publicando: false });
+      this.aviso('Publicado aqui, mas não consegui falar com o GitHub.');
+    }
+  };
+
+  proximaSexta() {
+    const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    const d = new Date();
+    d.setDate(d.getDate() + ((5 - d.getDay() + 7) % 7));
+    void meses;
+    return String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0') + '/' + d.getFullYear();
+  }
+
+  // ---- edições ----
+
+  novaEdicao = () => {
+    const ed = this.builder.edicaoVazia(this.proximaSexta());
+    this.mut((d) => { d.edicoes.unshift(ed); });
+    this.setState({ selId: ed.id, modo: null });
+  };
+
+  removerEdicao = () => {
+    const id = this.state.selId;
+    let prox = null;
+    this.mut((d) => {
+      d.edicoes = d.edicoes.filter((e) => e.id !== id);
+      prox = d.edicoes.length ? d.edicoes[0].id : null;
+    });
+    this.setState({ selId: prox });
+  };
+
+  setCampoEd(campo, valor) {
+    const id = this.state.selId;
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === id);
+      if (!e) return;
+      e[campo] = valor;
+      if (campo === 'rotulo') {
+        const p = this.builder.parseRotulo(valor);
+        if (p.dia) e.dia = p.dia;
+        if (p.mes) e.mes = p.mes;
+      }
+    });
+  }
+
+  setStatus(status) {
+    const id = this.state.selId;
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === id);
+      if (!e) return;
+      if (status === 'online') d.edicoes.forEach((o) => { if (o.id !== id && o.status === 'online') o.status = 'arquivado'; });
+      e.status = status;
+    });
+    this.setState({ modo: null });
+  }
+
+  // ---- pautas ----
+
+  mutPauta(pid, fn) {
+    const eid = this.state.selId;
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === eid);
+      if (!e) return;
+      const p = e.pautas.find((x) => x.id === pid);
+      if (p) fn(p, e);
+    });
+  }
+
+  setTextoDebounce(pid, html) {
+    clearTimeout(this.timers['t' + pid]);
+    this.timers['t' + pid] = setTimeout(() => { this.mutPauta(pid, (p) => { p.texto = html; }); }, 420);
+  }
+
+  addPauta = () => {
+    const eid = this.state.selId;
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === eid);
+      if (e) e.pautas.push(this.builder.pautaVazia());
+    });
+  };
+
+  moverPauta(pid, delta) {
+    const eid = this.state.selId;
+    this.mut((d) => {
+      const e = d.edicoes.find((x) => x.id === eid);
+      if (!e) return;
+      const i = e.pautas.findIndex((p) => p.id === pid);
+      const j = i + delta;
+      if (i < 0 || j < 0 || j >= e.pautas.length) return;
+      const tmp = e.pautas[i]; e.pautas[i] = e.pautas[j]; e.pautas[j] = tmp;
+    });
+  }
+
+  cmd(nome) {
+    return (ev) => { ev.preventDefault(); try { document.execCommand(nome, false, null); } catch (e) { /* noop */ } };
+  }
+
+  // ---- legados ----
+
+  addLegado = () => { this.mut((d) => { d.legados.push({ rotulo: '', link: '' }); }); };
+
+
+
+  // ---- embed ----
+
+  gerarEmbed = () => {
+    if (!this.builder) return;
+    const html = this.builder.buildEmbed(this.state.data);
+    this.setState({ modalEmbed: true, embedCodigo: html, copiado: false });
+  };
+
+  fecharModal = () => this.setState({ modalEmbed: false });
+
+  copiarEmbed = () => {
+    const txt = this.state.embedCodigo;
+    const done = () => { this.setState({ copiado: true }); setTimeout(() => this.setState({ copiado: false }), 2200); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, done);
+    else done();
+  };
+
+  baixarEmbed = () => {
+    const blob = new Blob([this.state.embedCodigo], { type: 'text/html' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'informativo-cooperado.html';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1500);
+  };
+
+  // ---- render ----
+
+  renderVals() {
+    const d = this.state.data;
+    const seg = (ativo, cor) => 'height:28px;padding:0 14px;border:0;border-radius:7px;cursor:pointer;font-size:12px;font-weight:800;transition:background .18s,color .18s;background:' + (ativo ? '#fff' : 'transparent') + ';color:' + (ativo ? cor : '#8b8578') + ';box-shadow:' + (ativo ? '0 1px 4px rgba(0,0,0,.1)' : 'none');
+    const segMini = (ativo) => 'height:24px;padding:0 11px;border:0;border-radius:6px;cursor:pointer;font-size:11px;font-weight:800;background:' + (ativo ? '#fff' : 'transparent') + ';color:' + (ativo ? '#004e4c' : '#8b8578') + ';box-shadow:' + (ativo ? '0 1px 3px rgba(0,0,0,.1)' : 'none');
+
+    const edSel = this.edicaoAtual();
+    const modo = this.state.modo || (edSel && edSel.status === 'espelho' ? 'espelho' : 'online');
+    const medida = this.state.larguraJanela;
+    const larga = medida > 0 && medida >= 1180;
+    const mostrarPreview = this.state.previewAberto === null ? larga : this.state.previewAberto;
+
+    const base = {
+      setFileEl: (el) => { this.fileEl = el; },
+      onFile: this.onFile,
+      pedirArquivo: this.pedirArquivo,
+      novaEdicao: this.novaEdicao,
+      gerarEmbed: this.gerarEmbed,
+      addPauta: this.addPauta,
+      addLegado: this.addLegado,
+      removerEdicao: this.removerEdicao,
+      fecharModal: this.fecharModal,
+      copiarEmbed: this.copiarEmbed,
+      baixarEmbed: this.baixarEmbed,
+      verOnline: () => this.setState({ modo: 'online' }),
+      verEspelho: () => this.setState({ modo: 'espelho' }),
+      modoEfetivo: modo,
+      toast: this.state.toast,
+      importando: this.state.importando || this.state.publicando,
+      abrirGh: () => this.setState({ modalGh: true }),
+      fecharGh: () => this.setState({ modalGh: false }),
+      modalGh: this.state.modalGh,
+      ghOwner: this.gh.owner, ghRepo: this.gh.repo, ghBranch: this.gh.branch, ghPath: this.gh.path, ghToken: this.gh.token,
+      setGhOwner: (e) => this.salvarGh({ owner: e.target.value.trim() }),
+      setGhRepo: (e) => this.salvarGh({ repo: e.target.value.trim() }),
+      setGhBranch: (e) => this.salvarGh({ branch: e.target.value.trim() || 'main' }),
+      setGhPath: (e) => this.salvarGh({ path: e.target.value.trim() || 'index.html' }),
+      setGhToken: (e) => this.salvarGh({ token: e.target.value.trim() }),
+      testarGh: this.testarGh,
+      ghStatus: this.state.ghStatus,
+      ghStatusEstilo: 'font-size:12.5px;font-weight:700;line-height:1.4;color:'
+        + (this.state.ghOk === true ? '#00995d' : (this.state.ghOk === false ? '#f47920' : '#8b8578')),
+      btnGh: 'display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:9px;cursor:pointer;flex-shrink:0;transition:background .18s,border-color .18s;border:1px solid '
+        + (this.ghPronto() ? 'rgba(177,211,75,.6)' : 'rgba(255,255,255,.22)')
+        + ';background:' + (this.ghPronto() ? 'rgba(177,211,75,.2)' : 'rgba(255,255,255,.08)')
+        + ';color:' + (this.ghPronto() ? '#dcecab' : '#fff'),
+      modalEmbed: this.state.modalEmbed,
+      embedCodigo: this.state.embedCodigo,
+      rotuloCopiar: this.state.copiado ? 'Copiado!' : 'Copiar código',
+      rotuloCarregando: this.state.publicando ? 'Publicando no GitHub…' : 'Lendo o documento…',
+      tamanhoEmbed: Math.round((this.state.embedCodigo || '').length / 1024) + ' KB',
+      dicas: this.props.mostrarDicas !== false,
+      btnVerOnline: segMini(modo === 'online'),
+      btnVerEspelho: segMini(modo === 'espelho'),
+      mostrarPreview: mostrarPreview,
+      togglePreview: () => this.setState({ previewAberto: !mostrarPreview }),
+      btnTogglePreview: 'display:flex;align-items:center;gap:7px;height:38px;padding:0 15px;border-radius:9px;cursor:pointer;font-size:13px;font-weight:700;white-space:nowrap;flex-shrink:0;transition:background .18s,border-color .18s;border:1px solid ' + (mostrarPreview ? 'rgba(177,211,75,.6)' : 'rgba(255,255,255,.22)') + ';background:' + (mostrarPreview ? 'rgba(177,211,75,.2)' : 'rgba(255,255,255,.08)') + ';color:' + (mostrarPreview ? '#dcecab' : '#fff'),
+      estiloPreview: (function (larguraPref, disponivel) {
+        const comum = 'background:#fff;border-left:1px solid #e4e0d8;display:flex;flex-direction:column;min-height:0;';
+        if (larga) return comum + 'width:' + larguraPref + 'px;min-width:340px;flex-shrink:0';
+        const base = disponivel > 0 ? disponivel : 900;
+        const w = Math.max(300, Math.min(larguraPref, base - 72));
+        return comum + 'position:absolute;top:0;right:0;bottom:0;width:' + w + 'px;z-index:400;box-shadow:-14px 0 44px rgba(20,35,28,.2)';
+      })(this.props.previewLargura || 470, medida)
+    };
+
+    if (!d) {
+      return Object.assign(base, {
+        semEdicoes: false, semSelecao: false, temSelecao: false,
+        listaEdicoes: [], listaLegados: [], pautas: [], srcDoc: ''
+      });
+    }
+
+    const ed = this.edicaoAtual();
+    const ordem = { online: 0, espelho: 1, arquivado: 2 };
+    const listaEdicoes = d.edicoes.slice().sort((a, b) => (ordem[a.status] || 3) - (ordem[b.status] || 3)).map((e) => {
+      const ativo = e.id === this.state.selId;
+      const arq = e.status === 'arquivado';
+      const esp = e.status === 'espelho';
+      const cor = arq ? '#f47920' : (esp ? '#8b8578' : '#00995d');
+      const n = (e.pautas || []).length;
+      return {
+        rotulo: e.rotulo || 'Sem data',
+        dia: e.dia || '—',
+        mes: e.mes || '',
+        resumo: n + (n === 1 ? ' pauta' : ' pautas'),
+        badge: arq ? 'Arq.' : (esp ? 'Espelho' : 'Online'),
+        corData: arq || esp ? '#fff' : '#004e4c',
+        estilo: 'display:flex;align-items:center;gap:10px;padding:10px;border-radius:11px;cursor:pointer;margin-bottom:4px;transition:background .15s;background:' + (ativo ? '#e6f5ee' : 'transparent') + ';box-shadow:' + (ativo ? 'inset 0 0 0 1.5px #00995d' : 'none'),
+        estiloData: 'width:38px;flex-shrink:0;border-radius:8px 8px 0 8px;padding:5px 0;text-align:center;background:' + (arq ? '#f47920' : (esp ? '#b6b1a5' : '#b1d34b')),
+        estiloBadge: 'flex-shrink:0;font-size:9px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 7px;border-radius:100px;background:' + (arq ? '#fff3e0' : (esp ? '#f2efe9' : '#e6f5ee')) + ';color:' + cor,
+        abrir: () => this.setState({ selId: e.id, modo: null })
+      };
+    });
+
+    const listaLegados = (d.legados || []).map((l, i) => ({
+      rotulo: l.rotulo || '',
+      link: l.link || '',
+      setRotulo: (ev) => { const v = ev.target.value; this.mut((x) => { if (x.legados[i]) x.legados[i].rotulo = v; }); },
+      setLink: (ev) => { const v = ev.target.value; this.mut((x) => { if (x.legados[i]) x.legados[i].link = v; }); },
+      remover: () => this.mut((x) => { x.legados.splice(i, 1); })
+    }));
+
+    const pautas = ed ? ed.pautas.map((p, i) => {
+      const ev0 = p.evento || {};
+      const aberto = !!this.state.extras[p.id];
+      const set = (campo) => (e) => { const v = e.target.value; this.mutPauta(p.id, (x) => { x[campo] = v; }); };
+      const setEv = (campo) => (e) => { const v = e.target.value; this.mutPauta(p.id, (x) => { x.evento = Object.assign({}, x.evento || {}, { [campo]: v }); }); };
+      return {
+        id: p.id, num: i + 1,
+        sessao: p.sessao || '', titulo: p.titulo || '',
+        imagem: p.imagem || '', video: p.video || '', destaque: p.destaque || '',
+        fotos: (p.imagens && p.imagens.length ? p.imagens : (p.imagem ? [p.imagem] : [])).map((u, fi) => ({
+          num: fi + 1, url: u,
+          setUrl: (e) => {
+            const v = e.target.value;
+            this.mutPauta(p.id, (x) => {
+              const arr = (x.imagens && x.imagens.length ? x.imagens.slice() : (x.imagem ? [x.imagem] : []));
+              arr[fi] = v;
+              x.imagens = arr.filter((u2, k) => u2 || k < arr.length - 1);
+              x.imagem = x.imagens[0] || '';
+            });
+          },
+          remover: () => this.mutPauta(p.id, (x) => {
+            const arr = (x.imagens && x.imagens.length ? x.imagens.slice() : (x.imagem ? [x.imagem] : []));
+            arr.splice(fi, 1);
+            x.imagens = arr;
+            x.imagem = arr[0] || '';
+          })
+        })),
+        semFoto: !(p.imagens && p.imagens.length) && !p.imagem,
+        addFoto: () => this.mutPauta(p.id, (x) => {
+          const arr = (x.imagens && x.imagens.length ? x.imagens.slice() : (x.imagem ? [x.imagem] : []));
+          arr.push('');
+          x.imagens = arr;
+        }),
+        extras: aberto,
+        rotuloExtras: aberto ? 'Menos opções' : 'Mais opções',
+        eventoAtivo: !!ev0.ativo,
+        evTitulo: ev0.titulo || '', evDia: ev0.dia || '', evMes: ev0.mes || '',
+        evLocal: ev0.local || '', evHorario: ev0.horario || '', evFormato: ev0.formato || '',
+        setSessao: set('sessao'), setTitulo: set('titulo'),
+        setImagem: set('imagem'), setVideo: set('video'), setDestaque: set('destaque'),
+        setEvTitulo: setEv('titulo'), setEvDia: setEv('dia'), setEvMes: setEv('mes'),
+        setEvLocal: setEv('local'), setEvHorario: setEv('horario'), setEvFormato: setEv('formato'),
+        toggleEvento: (e) => { const on = e.target.checked; this.mutPauta(p.id, (x) => { x.evento = Object.assign({}, x.evento || {}, { ativo: on }); }); },
+        toggleExtras: () => this.setState((s) => ({ extras: Object.assign({}, s.extras, { [p.id]: !s.extras[p.id] }) })),
+        ref: (el) => { if (el) { this.editores[p.id] = el; if (el.innerHTML !== (p.texto || '')) el.innerHTML = p.texto || ''; } else { delete this.editores[p.id]; } },
+        onInput: (e) => this.setTextoDebounce(p.id, e.currentTarget.innerHTML),
+        onBlur: (e) => { clearTimeout(this.timers['t' + p.id]); this.mutPauta(p.id, (x) => { x.texto = e.currentTarget.innerHTML; }); },
+        cmdBold: this.cmd('bold'), cmdItalic: this.cmd('italic'),
+        cmdList: this.cmd('insertUnorderedList'), cmdLimpar: this.cmd('removeFormat'),
+        subir: () => this.moverPauta(p.id, -1),
+        descer: () => this.moverPauta(p.id, 1),
+        duplicar: () => this.mut((x) => {
+          const e2 = x.edicoes.find((y) => y.id === this.state.selId);
+          if (!e2) return;
+          const j = e2.pautas.findIndex((y) => y.id === p.id);
+          const cp = JSON.parse(JSON.stringify(e2.pautas[j]));
+          cp.id = 'p' + Math.random().toString(36).slice(2, 9);
+          e2.pautas.splice(j + 1, 0, cp);
+        }),
+        remover: () => this.mut((x) => {
+          const e2 = x.edicoes.find((y) => y.id === this.state.selId);
+          if (e2) e2.pautas = e2.pautas.filter((y) => y.id !== p.id);
+        }),
+        botoes: (p.botoes || []).map((b, bi) => ({
+          texto: b.texto || '', link: b.link || '',
+          setTexto: (e) => { const v = e.target.value; this.mutPauta(p.id, (x) => { x.botoes[bi].texto = v; }); },
+          setLink: (e) => { const v = e.target.value; this.mutPauta(p.id, (x) => { x.botoes[bi].link = v; }); },
+          remover: () => this.mutPauta(p.id, (x) => { x.botoes.splice(bi, 1); })
+        })),
+        addBotao: () => this.mutPauta(p.id, (x) => { x.botoes = (x.botoes || []).concat([{ texto: '', link: '' }]); })
+      };
+    }) : [];
+
+    let srcDoc = '';
+    if (this.builder) {
+      srcDoc = this.builder.buildEmbed(d, { forceMode: modo, forceId: ed ? ed.id : null });
+    }
+
+    return Object.assign(base, {
+      semEdicoes: d.edicoes.length === 0,
+      semSelecao: !ed,
+      temSelecao: !!ed,
+      listaEdicoes, listaLegados, pautas, srcDoc,
+      edRotulo: ed ? (ed.rotulo || '') : '',
+      edDia: ed ? (ed.dia || '') : '',
+      edMes: ed ? (ed.mes || '') : '',
+      setRotulo: (e) => this.setCampoEd('rotulo', e.target.value),
+      sextas: this.sextasDoAno().map((v) => ({ v, t: v })),
+      sextaSel: '',
+      setSexta: (e) => { const v = e.target.value; if (v) this.setCampoEd('rotulo', v); },
+      podePublicar: !!ed && ed.status !== 'online',
+      publicar: this.publicar,
+      rotuloPublicar: this.ghPronto() ? 'Publicar no site' : 'Publicar',
+      setDia: (e) => this.setCampoEd('dia', e.target.value),
+      setMes: (e) => this.setCampoEd('mes', e.target.value),
+      setEspelho: () => this.setStatus('espelho'),
+      setOnline: () => this.setStatus('online'),
+      setArquivado: () => this.setStatus('arquivado'),
+      btnEspelho: seg(ed && ed.status === 'espelho', '#8b8578'),
+      btnOnline: seg(ed && ed.status === 'online', '#00995d'),
+      btnArquivado: seg(ed && ed.status === 'arquivado', '#f47920')
+    });
+  }
+}
+</script>
+</body>
+</html>
