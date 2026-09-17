@@ -1,0 +1,20 @@
+<div style="width:100%">
+  <iframe
+    id="informativo"
+    src="https://informativoudi.github.io/informativounimeduberlandia/"
+    title="Informativo do Cooperado"
+    style="width:100%;height:1400px;border:0;display:block;overflow:hidden"
+    scrolling="no"
+    loading="lazy"
+  ></iframe>
+</div>
+<script>
+(function () {
+  var f = document.getElementById("informativo");
+  window.addEventListener("message", function (e) {
+    if (!e.data || e.data.tipo !== "informativo:altura") return;
+    var h = parseInt(e.data.altura, 10);
+    if (h > 200) f.style.height = h + "px";
+  });
+})();
+</script>
