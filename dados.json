@@ -9,6 +9,26 @@
    "status": "online",
    "pautas": [
     {
+     "id": "p4th59fq",
+     "sessao": "TECNOLOGIA",
+     "titulo": "Workshop de Letramento em IA para Cooperados",
+     "texto": "<p>Para orientar os cooperados sobre como o uso da IA pode contribuir com o seu trabalho, a Unimed Uberlândia promove o Workshop de Letramento em IA para Cooperados.</p><p>O evento será conduzido por Fred Parreira e Marcello Nasser, que vão abordar casos reais de aplicação da IA na medicina, como análise e síntese de informações, otimização de processos de trabalho, entre outros temas.</p><p><strong>Confira a programação</strong></p><p>08h às 08h30 — Café da manhã e recepção dos participantes. 08h30 às 09h — Contexto &amp; Ferramentas. 09h às 09h45 — Aplicações Médicas Reais. 09h45 às 10h30 — Segurança, Tendências &amp; Prática. 10h30 às 11h30 — Uso no dia a dia da Clínica / Financeiro.</p><p>Esperamos vocês!</p>",
+     "imagem": "",
+     "imagens": [],
+     "video": "",
+     "destaque": "<p>A participação no workshop vale 3 pontos no Programa CooperAtivo.</p>",
+     "botoes": [],
+     "evento": {
+      "ativo": true,
+      "titulo": "Workshop de Letramento em IA para Cooperados",
+      "dia": "12",
+      "mes": "set",
+      "local": "Sicoob Aracoop",
+      "horario": "8h às 12h",
+      "formato": "Presencial"
+     }
+    },
+    {
      "id": "pnxpbxcq",
      "sessao": "GOVERNANÇA",
      "titulo": "Conselho de Administração comunica medidas de gestão e decisão sobre a Festa do Dia do Médico",
@@ -31,26 +51,6 @@
       "local": "",
       "horario": "12h40",
       "formato": "Online"
-     }
-    },
-    {
-     "id": "p4th59fq",
-     "sessao": "TECNOLOGIA",
-     "titulo": "Workshop de Letramento em IA para Cooperados",
-     "texto": "<p>Para orientar os cooperados sobre como o uso da IA pode contribuir com o seu trabalho, a Unimed Uberlândia promove o Workshop de Letramento em IA para Cooperados.</p><p>O evento será conduzido por Fred Parreira e Marcello Nasser, que vão abordar casos reais de aplicação da IA na medicina, como análise e síntese de informações, otimização de processos de trabalho, entre outros temas.</p><p><strong>Confira a programação</strong></p><p>08h às 08h30 — Café da manhã e recepção dos participantes. 08h30 às 09h — Contexto &amp; Ferramentas. 09h às 09h45 — Aplicações Médicas Reais. 09h45 às 10h30 — Segurança, Tendências &amp; Prática. 10h30 às 11h30 — Uso no dia a dia da Clínica / Financeiro.</p><p>Esperamos vocês!</p>",
-     "imagem": "",
-     "imagens": [],
-     "video": "",
-     "destaque": "<p>A participação no workshop vale 3 pontos no Programa CooperAtivo.</p>",
-     "botoes": [],
-     "evento": {
-      "ativo": true,
-      "titulo": "Workshop de Letramento em IA para Cooperados",
-      "dia": "12",
-      "mes": "set",
-      "local": "Sicoob Aracoop",
-      "horario": "8h às 12h",
-      "formato": "Presencial"
      }
     },
     {
