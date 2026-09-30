@@ -54,6 +54,28 @@
      }
     },
     {
+     "id": "p2iga14y",
+     "sessao": "RELACIONAMENTO COM O COOPERADO",
+     "titulo": "Último final de semana para a retirada do seu presente de Dia dos Pais. Veja como retirar!",
+     "texto": "<p><strong>Veja como retirar!</strong></p><p>Veja como retirar!</p>",
+     "imagem": "https://comunica.ufu.br/sites/default/files/imagem-chamada/2026-09/Live%20Novo%20Convenio%20Saude%20Suplementar%20UFU.png",
+     "imagens": [
+      "https://comunica.ufu.br/sites/default/files/imagem-chamada/2026-09/Live%20Novo%20Convenio%20Saude%20Suplementar%20UFU.png"
+     ],
+     "video": "",
+     "destaque": "<p>Último final de semana para retirada do presente de Dia dos Pais.</p>",
+     "botoes": [],
+     "evento": {
+      "ativo": false,
+      "titulo": "",
+      "dia": "",
+      "mes": "",
+      "local": "",
+      "horario": "",
+      "formato": ""
+     }
+    },
+    {
      "id": "peqfyqkn",
      "sessao": "SÉRIE — APP DO COOPERADO",
      "titulo": "App do Cooperado de cara nova | Parte 8: Canal de Conduta e Serviços Próprios",
@@ -118,28 +140,6 @@
       "local": "Estádio Municipal Parque do Sabiá",
       "horario": "17h",
       "formato": "Presencial"
-     }
-    },
-    {
-     "id": "p2iga14y",
-     "sessao": "RELACIONAMENTO COM O COOPERADO",
-     "titulo": "Último final de semana para a retirada do seu presente de Dia dos Pais. Veja como retirar!",
-     "texto": "<p><strong>Veja como retirar!</strong></p><p>Veja como retirar!</p>",
-     "imagem": "https://comunica.ufu.br/sites/default/files/imagem-chamada/2026-09/Live%20Novo%20Convenio%20Saude%20Suplementar%20UFU.png",
-     "imagens": [
-      "https://comunica.ufu.br/sites/default/files/imagem-chamada/2026-09/Live%20Novo%20Convenio%20Saude%20Suplementar%20UFU.png"
-     ],
-     "video": "",
-     "destaque": "<p>Último final de semana para retirada do presente de Dia dos Pais.</p>",
-     "botoes": [],
-     "evento": {
-      "ativo": false,
-      "titulo": "",
-      "dia": "",
-      "mes": "",
-      "local": "",
-      "horario": "",
-      "formato": ""
      }
     },
     {
