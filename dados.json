@@ -7,28 +7,7 @@
    "mes": "out",
    "ano": "2026",
    "status": "espelho",
-   "pautas": [
-    {
-     "id": "p8eyis5v",
-     "sessao": "",
-     "titulo": "",
-     "texto": "",
-     "imagem": "",
-     "imagens": [],
-     "video": "",
-     "destaque": "",
-     "botoes": [],
-     "evento": {
-      "ativo": false,
-      "titulo": "",
-      "dia": "",
-      "mes": "",
-      "local": "",
-      "horario": "",
-      "formato": ""
-     }
-    }
-   ]
+   "pautas": []
   },
   {
    "id": "e7e7blyk",
