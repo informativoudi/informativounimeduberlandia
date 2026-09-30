@@ -1,1 +1,622 @@
-{"v":2,"iv":"24ZFBv/RTHSLfy/N","ct":"PHcc4QK7otpzdTODv/DZYTXAZB3p/DnaZsjhUS/7Yx+RwLBOAcZhVFUrEhkiiQqyKIy0f9pVGZCghAbO+Fhg5ie0mYOhGptHOLPMjP70p71ZtM7imFQWTJcVSsZjoY+tF8CMXzWMHLgJtkw8cq8gaKmtStg2QnjEJGxsO+wZoqRTEasgpz0ILvARQDBC+FseU0NyW0hUs1TG0NfT6DCx61vs2JJKu2AMdaa8YLgdF7ab7MYJFrdkCVnnhyfawkWx1Df9XzK4nfXe/tuz6LTIhdq5b226AcQts4R3vHQJROl1hkOOTpeKMvXf1VU4XRC78p6Y9DrwJtekiL3VipYUvjKI5D4ap/BMFNsWiWvvUliqq0Pc8tu9tRj6O51bT66mYKe5IQR7N2gqqR9m4Q0SoQyJ6rAFrE8AtJnQp8tFvakvtj5CNkRQ5zblD3blu7BDaRHVIXe6K7MsxMRPZgA+4P00Xz9Qq0hh7W2rv5DPMW+jAmd2/QggD57IY40lXFFqo108mGIxFlfGz/lZf2CJBFlA+kqUhZo6ahncAqHeMhwR+OSRWOG8yBiSkaS88LYT6DNL/b0c7Vl7BeKC1PBB2Vwnw9jWhIlGAp01zivyuvHzx3jJWy5Wki9liwljxlkhdI98lzTsVEF72y854p5C0rjnWktr4fG6I/u5bGVHVpytzEO19r6tC/2ANvNBFBs3XM4QTei2ityMF58w7WQVNKEv5wy+oIiHChpjvczl9F8cmokkYSe8HMfNxnossoI1HOPWj8RHDuX5fnBVQM58WBizMV1jdOMU1zMzEWQjhDvxyyS8aKHd+ySv/QyeV/0yPz4QGDI31i4SB0lt4PF1WYHr1KTQuCRmb2wBZdlWevpWGSCz/Hgbd59zoamGZZHn4LZmc52foc8TNhYA1SDFbjy1t40i/la9p9OMENfa4xcOhX5WqEbt1Ki5BaybdGs7UTkNWehJ45BL8cOGLpneQpDCcFo2s37/k+c2g/++a0cCqzTozkOQrHqnGOhS/0VW1xx9Agzf9wxI9fN0fs11qs9vzm2k90yYmrntlI8XJDH8zRKgRvvdcUK2p7a8bDtL4bxl3NLv/pJHN8Nn4AUaIhAh6rutm/U8GouK+XxdCGiwOVLL14tUZlt1LQIHFT1Pf9jCrK+QpHwBrM+sJQYHoM/fsohkHe27yEurrIPfkWs0I0plpLry43UaCBVcXIGlOYTd8aTIoGn/Tdb41u9dfmzWovdv/2yf3sZbZqegYc303TVvBmVX3p+vWfk4IXBu8v5TQGSv3tZZIWaCyWNiOw6BwvCDsnqleg8fEBFMdKW15SoAbs/IVKe3jyrTYG+qr/ZP4aeAeDaEDxM0v1W/Xud3usQrkoEqLFuA7rjSLKAyGusFhbLIDwlqu9fkvNMgvbrEepcPOlqTj30czUn1WXNwhmo2ufyTDEC2DJwKLeOxbA/rRZkjZ0lKW8TT8GS/QjT++YNpqZirbjQmKXSVWUY40H7aYXF3Ac51GqMxd16NhDcn2Ju+I7V4l08Zza7FtL4sRB0etZdlVkW59cNdp1d64LO6JLC6qxh+Yg/EWBc2Y/FZXbpUkrAWpgcSgBpl/TSwGjtj32rl31IbBD3EQBrogCJJ5rsE7GcrGKXnK+1QSzFKgbluP16jSBs6nVylJELpglMau4s0CVitYuazYutOyGZbB2lmQmeudzXbNNksPmfvlXRY9iwP4JT7JxlLBS1PlZl0S48TGITt5KHZRsYeyvZFLH99BuOP35mmSj97y6eOEXbfEILYiQxiX14wq+JzV/zLmiuSFb4lP1S0OZp95kg+rChf+To0umDzvmSeaVCeNs+iwF9qZnXO4J8tHbPkseLtCB/bTAUhztl4/pNmXRFWkfyh6rd+s6uN8FEBmKfqhYDFf09RSNmCgnqJNt4CHnEFj7j4s6LmCa2R1YyCuqhYEWnTXbZOOhHVzHzDngprUbkuCFYDjevvHMV8AKJ5J7rLAznZVfIn0m2HzIT41AKkDkvZ19NnwW/l6ZgNMJaAgO51S9XdI9eQwxex2CrokrU2SfsozCa39gmSTQO/6URWUPsUrmAYmVi2CUczaz34RF5+YBGFlmtUz+THigAnGSF49pxkUP/aAOa0asWmUSCwd23GYi4Eh5ig/xni58BWpqbOToOUPjW/x/DnwSWGoOp5RqhNLNPzyQ+BXyTdulIiFjcqwmiOsH/wwfOP2XfvYbo0Eb3iX1TIK/kDXs6FoGgRZNOtVWIwVxpxniU3+j6n/xdaftT0HYq6EnWSy3f06SYlLgs4/J+nz3OULbnbWMkygrKNleGyvc7ubMEfTw22DC0MqxQeLwiyG32ze/NogkxrhrmY8aweEtpnbp+rVq/L9jEXPvdQKYF/DKUb43lb//5ip/L7j2zSgNfG4MYIqC9NR2PJV8Us5mcqHLLSVWhT5KFuP+k4TH+PfPsQIPcLWlCTlU366ensVSmTJb1cHjZBeMNDXVs9f1/BeNB1+eCckiVKsfesWmFKWDGVGUYac/JXm478bEJlQ10TUk4WWx07SzOjVGGUBVDyDYcTngww4myeOB5smLCgP0O5VVMzUsjiL8ppVMJuCkHqeHJ56cbHtpyCs0fWDxRAF3YRhPQt9qFO9r5zjocXP+MeSGahGN87VidLKku/ro1R86PeIikmvKvsmxuRf2wEMnu+NilBaZMQMYQE3JanYxDkVZ6Cv8F7qCQ1V9QxhKVWkYhJOKF9sAm3vPMDhtQZdlQxOV/CrpVAlEBQiKFKn1XAjpeXQDekamRgnMUxKxtlHvhTvlDZotfBsp9BOWbTMXxxjGdkrlogJvyMos5hRo8cE3dr/X9IWBy182DGACB86zc/mNZJA0Cwx17x4LgPJf0DUBPRsJm9C7OVDYrASLGDCQZcoLaK+sIwm+eSjkqMNj/NIn7OdbnvJwdbm0bcTECD4OqhJRa4Sd8mnEmcu006Y0sTrK3W0aB4Irxu3EzQ8mZ+qVmowY9W6BKwXKLaJFjULTJTCUEB2ANnqmV88eGB8M7ZbV9TLWjGwsCfqIV+2ObZOixig4oZ03FBIEa0M8pyHHrPS3bpd3DvVx78+/St0NMdHgG1hiCWCvf9tmJC9Mp410342EAG/VeI2sw2RuLTfNtxh9qnhd0d6sCbZ1e0UQngbl6SVbvXmKpFJbng2UXQoNiP98XoG441NkCoxITzJVkxnGsgQ4/UX14NzSZ1kWTx6goFnqxc/R0WIk2K5w0b7rII+zEaHHZz/S8tSDYrGCvbkAQ2LGLa7kNHa/S7D8cXSVCOQ4cj8/9fu+XU9uHJYSf/PV50rJBmeyBA+BstHgAAlsI1M3W+mIGGZL4XYZELtk+9eGZ/7ZuYqsJGaCf0Con4o/AKQwvS1DRLr+oCx0c03AVCp+EFUHL+/6re1zK5Srq0II49AcQsFFV8a6ZwLbyGN5SwqZzk+JPwPAOTivfkGeFCrNpDomtXUyZCylRlcJ8iplrkOFnxRhbF4iHLJZvRtOc3sop9iyBPrk2/YXoBtDHbS3tm6Dtt+3XzyIXsT3EBtDLQ0hSZ8h5rT3X35oHrtduV5T/Z92Kj0xsfsGtQb2gYuPDBTYiXk/0DfxMhImJhvyI4jbxwZzVpjUINz+VDrHxbdNR3ZbqDRZjZWs4ySVlNY0Mpdn21pL3Q6b0MC5j8qIgGd3i2FFD8g9y34io49ltQ8DwntGZcic7X+i2KauiiacoX1lHvNJ80oK95oJ673/CLkkYr8M8bp4jLH4LL0bWqAk57YOJ8APr/XxiQangvlmQTyGIqLwinCE9OJ6KMRYyLeppeqm8Q4J5RXHaaHaOIMBFMruWYls0l4HqDha9HzrigI6IPchlxYr21vZE5AYwq/D6CqYbSrUH332eiwpVHLWzOm632w/8ovRvjC+/zlnjXvB3MJpw/ZcPK7Rk5gMeP5PLVm/jtWaQ1ydUbw7NL86UKDyTfjj8Bio8FfuXXsS0XyGfIHuR4V+XoOpzJPbuXLKPc3VY4ZTjvV6WGZru+LaGwlaneq6KIFNbjHAIiIFKqhf5T4cEnJyLBonMb+KtVKSGd5rsKPBwmngHHdApy4teCSQxkH/RPyNZVF8lteKlmy80y4x9UmRPqwFshEUYQxGPS73G9zPQwjmsKigLURdbywlc4jf2vmfRhEXcqeUhoTJMqNAqD2mJzMmLqPKdPahWG0fYDLjzpEsxo/tS/Atj8qLsG7MZ6XWXatVR0d1crnOefBPqid/lCgiF1764mb4PcljxmSdjUy+yOJ86PWdXFJsIO0EpROWv1qeATZwFxXuNbPIsb5uxXdApUq3/RMUcfAaXQzayhh83aeKuCVHkVy15cw2iDYImakdj3/NNZyT2BVvihz2k5+FeBoW+LZoBTzXRtTS4J2KrsUzSY4t6sE98y+0Kp7Fe4QNoWjotM0EDbwRZYOG2SZ1HSas4t8ocGrLVDq43DesneaBD6C9JCOoUaPaOza+DxwNM8hsCxFnl1jhIzBPch6rl0mZitZJStnzFfUorKH6TPVwRamukbLiuVsVIwCl7alVJ0eB07xr4+QTyd/5tNub0ltszbpIA4T/yKpkkAmBrAwTUUwYWLnqKiHAXscLbxfp4YJaiHZ+z/X+jYCc3gLHfpqvfm7csHWgLUomvvfx6beZpyAEG+aLAp0IPIJCVngyrNQ/qzC3doAS6ppubbpWb9CiYsyDlM5jue2sE9CYEAgdxCAqUiap12TTMnJF/BKq8pPHiam8WsnLvtC0Uy6Y4rteKr1a5drvYy3PTS5uI1hbMa24Vjr1P06i2NgwJ30/wwN4SzQLM8Xoow9kyz9TJ6IkOUCwEbcOvjX7gQSSxC/x3FfiGFkFF8QgE1Fym6+QwumGJSsCA2rF29O+NkGwJZFwuTPaAhso9ypb35qh8XPgVvuB/XPY8gdhckEUyY5/Kb4oGW3Fv2jENcqMDEuvzhKCZwP3wrMezTJQXKFQMXycVG8kBcoRuqGn8eFPyU0lbxGXT5cTewzCPYr0tAEv08uCU+DVSf01lXjYYfd5JPfs1Bvkw8LqHsx3f9jpNCTmiUuI3WG33EKx5ISeNrCmLc17Vpsfd/BQg5y9bMk3rDaxFLzwvFcbYNFMnFgeueCfmaIf+Mjc9cuHTYF6Jp+1UHLHlmFi4/7Kq/z06kXWTsqGWnMF/m8w8bN5ixARO4mDqZE9ej+bgGVNO11JGtduvBU5Eki6AZskXgeIdBcdIjsNL0R1kZd7EKvguM8mYSEU2aMiMCuAmX+NGuuDOnR0htacA6ZRbOr4tx2yi5USGCT1TJ2WfRmrc5vrC5d2yYuVXjSDzQnksg3Gtuntdt3W0OYIBbEhYuxeAnP0l99pfDGv4GBE5hYDQbbpFqm8k9eYT4XHYvECJCTE/2OBWFIMaEb8QTbME1ts4opH2s6DQwzufPoZFZCV/4lWRANcQZ0Zj9TWp5oyOqgJhIA0ANUU75NCMIrqLhLUyKUPZGRrBGDJc17xs35jPBhMuH/kHHdiRGaYGGmzkdFJb9G6EhG+leP1KTAd0md8EwtgGDFutCZ7oJeo9OIlzckdkyHTDj7hnYI77zuxdU/2ojewGynMqkWEiK9+BTkWToVQbvrWX7Ul9aBV1KpzU+Lh5qdANbbOXqgCAzFkmzDocjOGLmx0oIsM9OxEYBH6D4iZiAFbXZcdtWzNE0fyHs/wL9ljn/lvks/Xut3MR4x8Gj2QasJqkFqxJEGBFj0x1fGFhU33y4sWSaJNYCwBDnj2HR+tIp2L6S83LU0EadkwUTy/INLALPKAcVYunhDM+hWQy9lbc/mc68B9+H1oZKkWym8RIJJKmt2XROFIZIbse5tbY0l2jQAZQNQT7KuixfKS0xXb+XYAv8u6aWpvx/qliFs8xw06oV3SPVz0fYpvDB7aMbOQ3r6kKNhUOWbDRKN0YccrrvoezS0S1VEwf3Y+k433KU4tIBPsy5UZu27xibaZEbvsqVBGcx7jIEv4p0gcqaS9skmBFaQaIOfWvytYes+H4MIPevKzLXyF8kE2eTetXiWQKwuW92pZTRitKgLrHJ9tr7vxwfLcJWRQfwxW/jYBs1JruK0c788aM4RCFmI0Z3HL4DDlfZO9zH30PfVov1pMnyMrwPrY+zdZsLs+nmVtqH5O5Mb+eqgwyaEmf+SQNefhKpVEE4TblhcUkRajynEuqA4wthT4x5GRM3S0/gZEQgCA+p39k6cz020HWlLabz8tqGAmlb/gLdIg6FDEimKli/mTPYvvKNFtPegxWQODsRaC6q7D4vfpjb1+Q0RGmjKEDENIQyawiqdD7uCxzsIv+UxxE/6g9NtzP+A0+uGt0o+0agzBHA+GqqNDlF8+LRAtOvCguE7J7MZeJ9Z9rx8AaNBJILLfgGuc/mtXrrKxe6i2AXl9UkiabIzzBbdpVJzPaGYFL8cZvSC4i6urVat75+Mw/R3qb/e3QqrO0LlFxIYewQTRPN7NNnTghhb7ySobC3zrzxbMYiYeJqkVKXPP8cxAoEv6iMnolandBHG/vuieEwuqEhq1wa9hWuk9FzmC72XLjrLO+yRHmwLIr2qRiU3ajQ1NmIQ5/1kkvY2cD34X9cHEDo7jq5z9X6CMtBHknbtARMxk/t2wVYvAPkOVwdvkRplWL5uJfpaC91gg44l2QhP6eNS2c2flDHa/SvayozUycw9EwxGdHGl9aV3D8k+ZCYNgUcQHs9hr/4Gumy+G9QiZDhJbMsjd43UPYPq4U12+TVFbWBLASJlj8F1Pjw6+faaiLXRfvQm4xJubVQUjT06AnaSWREddGY4z76lSlHv8zYRGcgCoLzxNhfE/sW1lWrihUrd9mQftydTQxD5tIfz5s6BSm/FAQfak+wQzNND4dRY+c3lOzFGFA0XF3HzIYk/0eTbUA2HwxWUJPFdJRpPOoDQcAVZgZT7IL2ONmBwbamrxgrnuN9OYJeZLzM7CPTRaBSB7ZvRbnilS8wdCRHLbSRSZ5FVdcENs3CE4DZdres5bdQ96HFvNCCe8TNGUdcNAQrY7/Qrtl++/6n25f9lhlUG8C01VMcB89nfCxwfQ9aPssvo0j5oNiVZ0imeqqfBmCvviWCzgqmg0Zp4CC+22dZxe1DhWPeZkpB51k76uQrgkG41f15M0IboFQkgCNn2vl/9GVvYKQoN+qXx6qXVCTpgUYZbM0+SZpcSxgjJ0taNbhYJguf2uZwl/7tu8T5Ucs5hmVGsTn8R8YAJoU2yeCUduJYCkuk7vtVIG5IG4x1AtPQHM1hhlyJIfdTZTzpaqDYVdXmYkKf66Vz8g0ECc4aJb55gRcI1OU8M821zPa5hU/kSyHavr4VuRBh/mfLYPDBbbAZrD7YD6OZi9JCZ73q5oYN7RkJ3Rc68yEkIl008KDGhmZi+m08Ogi4gucOEnL7RMS7Fd+OViWLmVjocgPxMS84UMIV2inhYJqy6Oy8ZeMWpNJlgUZjo0oDQYUO4wS+Eo+jlOKX8wGlUOI8zdcOVY7KSSPkj86wgdbRxrDDI23pUBCBaF8UiFtc7tWaU1hJIp1n+SgCl/W0Mh7hWE9O+rgwNWiJ3Gp5tq3WDnqxpo4f/EGBaST3iMTFD3sV78wEzJwiCUEbVeaInx7xz3fN7+xjfAMQgwwhekZZMVYEaFsrKYngA+oDXBJ9btzaOdO+DUModeGO+BQDJdSuW0/Rt/zD1LOf/iAPPnwwMvjBkBYVf327CRnw6lndYEXuqE/64wb2DJSuS2SLF05xrbaN04BcyxciXEAG9cS9p8C8y7dC0yxvrxWMzjChbrOHLK5T6IAplKDtJRxQv/8FXg2rgzYZzFvc2ges3Dmmm2pTH/zS1jJWoApPtf6JOEUk4a88wlhwUqEt79sEdMOhHoUtNmx5NtUe4rUI5vPnJa2DCnnpk91Owic41W+PQ8o9ZiZeI6Fg5NbY95PKGku49hknyyRl49zeEmSkDy+FoUMx3Q+ll7g5h9wDX6BIMkwNMroUMvE1cDMsCjosgTN7dmIsmKz9mgHul89wgPr0//NdBdsTRIloriJDqrh7ioyndIu9VQHAkGwAECIiYSba2nZeiPkXVR58nUdUVKjGNkfmJWoc7LsEndHlDfOvCVU7DXQaObit1h98P9P5AKzjdld2wkUj0xgamrWwyTuJGeoVxFFRiF5D5b7XCCn7j0LtP9sPdzJBg012SatGirPcnRCvqoiKIkJFNPF3vjLBg9EaLfwvTYNFSt1aMzWeUIGDlclYQHsqXDX6KMKwujX93drN5BrkZqYN/Up82ZtZNbT2hh/wTDdgUT5Wv61bcvCdTyWLEB24+nMeqMH54G9lwP1vA8tpd6edYEE+ClieJz+zAMKwTzvV2YOgEJWsaSHOGFf+8IA7wyH1JnQA221AqPk3K6N6MY9oGXO5SbiIw6ScGerpfNMZdNMJypZ66qAhDhFAGN4RaTHX1DeOC0VhXO4JMBd7DuCLm9jUCj4B1R8f7SkhHddZWhPb5zqDpc5rXVJNDnkIjeyxws0WZmZSbHovinelQX2OsmGhby6nFezdZ/Jsi239ZyttJSp7rGcR6w3Kyw/CqR4ZB34MleCBriJJST7Hs8i8mkyHq9qeYc/niLTyJ1VkteZ5ZHlP8apUVgaXq1LvXlDIFlQRYqmRZXi+T1KbfzUnCohptICsU7IADVoHx+9/XrC+V2Ys4mhZ2L+GCmzONRFpMw0b5hGNx5Jc7w0oQ673Ks8Zaou63TXhUR60RNi9VzMfdjSqr4Y+SMplWYaRUIC0Ks0e0828nVWD9+vC8aY6JB6bSVJiRN1PCedwxhfmvLW58jz/CCkBXnve2edKGzuiFasOw8eKh7JVxT3HDw7X+o5y0yDlbVXLpcOBUpUAiyu1dbkWMqEFo4u++8fVQNAa9DrmxPbGNJAKSoP0vttnsOmDA1QdeunpXwgwPaMFmJmLuYBgxQKkQqCjJJxW4AUKAJ++mhl5k7bmOhRWtaN09BY5CVETLvLiqcafi1Tl4dmIh17FrZ2Q6nxB3nJTwnnG8NU0vIVTA9rQlrhXBbJBxVJjBNT530Zw+SVozljxibfDhn1fzrAgBZlcOAfEyyAU7xKsx1oJTY/8jNHj4fBkEG2LjrgCBcEkTW8o6Jmg+1TaTRxPwnvZsjlIUTl86HN2ChP+BKJOqbF8vksqL/s3xSAIzkk9FfcsPWshoFOp06KRXOcX5KF7ZMOM7UMWAi4IySCq4589zBOcp196SFzTkVG6sKocLUfEnmkLZ77QV07PEsqauc6DRuAvvDWGrviuiorxk3rE7ltzNg/HsfW/va2l6oBEFo6AoWt5gVxZeN7S3trUoLkuCxrpSm4cFf2NND5zOZ99O4DLwDweW3NPKzPOlWIx7HdNrBVyP6Fq4hE1RCfxX5ln/prpSXUc3KQHmruoWTnlfvRRPkgWwqP8JqYcZ2cXLgQufxZu4Igu5LnQX7YbqBKyULjDcfye4r3k3qJej1/icyBxhhqYRYug63SPBrH7t8U6JFmHqv8T9UpFF2wH7ZF0ELhwO3Vh7903DqYltnGtB0zHYOdwoR7mK9sD4BS2cFh520k6PcWyazL6iZ0P/QlLYaKbfj31HoArVDZuTltJuijOpHAKc7J6R5qWfn0RPPpSd1bNk5x/9WFcpGuCcuOEOmE0BPIFIxnEipZsbBgsjSE32/xhiJ1eY7ioJMadrOv2qL4i8QSxS38Zt3oLOOynDOIM9bmcCbp6qucv5Q/7O5nJmBTiN40JWu1H/ds7ijfS/H6vRHx1wU768naWFiFY/zFIs9udvrPgkWT1iWP91+xXcyMP+5wy/PHcIVuR7qEhMoerhxB/Gdxehin2LDptThdFe/CM8H4dfF7yWAvTqy+BufvuBmfVE0bUMUXNswGUYlmrxXXfKzDGN6MfmIdwD+zznc2LLyfxw7/0lBML0czoAYnUnKy7LixlsnryayfCe9qbFw+u3hGcQ3btskaOkZ2USlnvlOo9S2GfEd9KhLgNDlsgvkZ79DZCx6+KbsgqaFlc1OWuJMatWAnzd845FHZAo5xMwTr6m99P/o1qZ75FPe8vLlX4Qp5JB/epPx7LJWTMWM8zN65A9RhGGYP7fKPa28o2FA4OTPYXsQ2qSiSQoKRNV9GQUBEpSgvIw/lCDQXMkzAgM9uOzukD028BJ9+5gw75/wcZD9bIFtyCepeDYJndVT1GpGXfMZuopYBMTX38jO8haPT6dLPbEpK83eIV01TpIZGHlq9h8Gg5+nwsWMB6SwTqDT0I5x+Xi7+4R/hfC69avE8I3waNGWM+RSSqE33jM3ItZl2J4LhxfUqjcGlKw0OOu++GhEQl8ONL8R74YW768/GCOg4U9Oaw2psg04DV5vy8trk2VWHEcvicEGBWtrTlRIoBq4B1E3/nxEy7tIw8kZ0KAQwQAh2TXs47WWFPaXoUvBhvGmtokrlnbmKIn4+G61z2So8Hg6WwqAsoeJhb8PkWKVHO1l8ZRoLTyTieSQErjyFVxHNXYbHKKgBVsCgZeQK8fFffniA5LodWGMsKj8QkaRf3b2a3eW8QZIwgIu5PVKz9ew2yW8Gr2ZRBE+ptOTSUwB6I2U1xAYVH4SVea1nTAXRpG7SpZ8s0xe/tYzHo1mdqcGQeMQaHc5QukDfVaOV+SKFmojfZi43Y3g2aTpKffmShSzp5ZfbltRZXxd4UakmBpKwDp/9GZu7EhcrJ9f8sN35ZoNIXt8H+3j8c+9lyHZgUBQ8yqpdTcDuljQQtTz64Q+A3tjgrQZ6wQeS4edwXw6jwjcarFzfm5gcM8K+aVPQRjSLhP3gziUk2ty9Xos4oZjex50ei9stU3Y/+XJuC1yz3CwDlUpycW3tbDxuN6Ipku5O58nAxtTeGPDxT2PnLjgZB/QjkBG5UMWdShq0KrCslxSHkUHhMHWMH0SsxBUyslSarow9A1vIfjFbWA/WYCMnlKgRXjvsO0FE1rNng9uKOS6PiL0Q5wQA0t7NcOJhHHCGNSknKLipisevlm14LiSRrYS4XE4C2cMG6Z6mB2H/1gUOBgLAvNVucm+dTKuqJ7tADpxXnffNR2/WZiqUhc8FtH5mrAVhiFptL12mYpcUZbeX3jiuO6niSO0zGkWKb7fdsXlWXIV0DtLFoOWlh8hnboab+AwJCvxNhlBkz4UwH+4VimJwSpK7N1/DZbr1Djw3sCWkJCPhBpyZ/WK2OxhO2rsyj9VDkeXFbw94VzEoehyBf6LUCJaQse6cRF70lWAyCeYBHnAbOewZwHRjIpogpZDQGpOhU5oyTgX/Mq3K68PQ9sP6Pyuc/1ha6Yc6zpxFhlT6yzxOT/GNpDuof9W5Pl7sT5P92+2Pb0Xyg0WPCnAkdId6RBQp6fjBXYmZgpKeyC3lPNAUiCKN7laFKirXfP3FBO2XNk7CopGa0S7ruDjs7bfOG2G/xgG4QnErXqNlfcHDhBIe66Mn6hnipLBZ/5Wq2rWekyf8rCp+GaOM0CZ7IO0FaGfq4wcnJN0djc/ir7iYoB/a9+LP7/e6LPx7Q0Y/Tpv5oi95zdV4dmsje7eKFW2s+vZqzcfu1rI+KuaCk4OY1bHhtK+Pl5RSrofL91fp+EWo5U62j9Gl8BqgkC/9YYEuzr+spxRZ/rAr9UImAs5tfndiOQqmlcqkd1CfwKZ5K4xzq7CE0DFi7VqrUiNprv5BB5KjB8BdhyjrRGbwwhZAmlMjiJuEaJELYY7KfUhAR7C9WmPS7nQdIPHt/yRBhiwhlMu5MJROjLbKH94HIGvwLnoin4pSgHDBXkRXBRg/RukTUj83nqLOPqS2ZgK1gDchBXIIMCyB+h0wucc8FNuOuM8bQGieZqdkjYaF4d1HtIRr8/WxswsW++kNoxdfSgOSBLM0Em2IZKsAg8y86+8JDAvtkDLiRoToDGBsnC5jKe2jThDkr/4/8/OaJa9/ButFkSZ26SIORyN3wqVVfkjmVD88DxvqnGr2ld8d8E5QwP/chbgg1DuWfSC8k2bK/ixzighFMdfi9f15DQkgVnJ48UAPJpWTBJ6OyXjUT3qhw9KTk9xXEuuJ3D7DTeHngY/9QzcHREP8ZjWa8RSou/bMmM5gVKG5HA4nzOy1Ug3rYbNJXkwNTI1diNCaC0oJbUEfVJIyzTuAelpG4f+88GbUYzL/JWHdAtx11fzr9DfQbMk+QpRD3rcldjljR50OEPuYvpABaNAUrbZG7NfPW2El4Rdh5XbT8P/oYo5+Z8aM7i6jFyaM2/vXwsKByFF8H+ZzITcNTxEMC0bbPegElmFflUfocG05ZlODvAep3u00ZSKgebXKz+DYID1BirEaBDxYLG61PP3aPGKQsa77KIHPIzedJo2OceRTFgYcsWSTbAmoAfSnA+ZhQuv2t3N2RFWBaXeMiPImYPjS2foq1vGyNzycrFZBgFZEt0IqRPutYrbv8XVGcllUTIBMPwDnlOzqyBvjBt0NeomuKSmvj6dl4li8UJ2Dqgtj4HjCw+h/Na2y1BATZqhsHWjko6tjQjOC57xGaivT8Nj6XZMq+RcKyaLzs7OUKaeS5x7ZCUwY08D35OxcIA2kJre83AdKheYIA8Xocw6fzg2+efca5LCYGnNo4xFSxyAqC2I2P39SV+Vc3Qhv5+OSrifhSzWAO/Lb0wmwKGwVQR7xAKw2ck88ja4wEVkV2tDuaHYmsqzJR+oxKz93iYbc0rpxlM2cyL287O/9VMFG3tkEvM1WSvDObGG0y9M2+f5CYDiUVnS1E+bPV/OWAfRqrDCWxDTFswPXTOK2dgR6BCzU3jmTw6F8h5/8zd2CWMB4MlKT6Qf9SlMCMtti2XTBYUPVHOfKPneC/Dhh7yNe5nDIfsZxxxtxtSMA+js7GT2YFwjkTHUCBG9OaW9aAmdbQEbCGw5dhkoBLmGocQRU6jB1G18SZ93JSzCgUyuoC11EE9RgdowaRbB0/7u4X8ddm/5MqmnyAgWvRGEGuD4HGQS5lQMyA9khXwMchTCrdx0r4j9C76eUjK3NlsDOuGqVRVoSZEzOyv0Auw1yx0ty7igEmNP52AIGe2ev/4+7HCjMgiRnhZo54VU+fU+ck1rzawPxgJtDGe3CsQ8UDfZY8xh9Of3GhEW4Dte6fkehRUmV1bF3vILetejT9zjbi0im0eNV4BmDXktCOEq0d5Si7x6eW8V9OMS4YQE9Q9+hulOhs7eAJfCtUYhPrrnstvsl/tL+avjGx4MSqL39IwFS2Fca+jBNXwr/Bt6rYi85VRbg0OvfTaaVhHCdItIFzMKrMlXC+8L8K4FecsREPnXAecpG+U/iIeeaDxUgOMDg9IQ2htLvmCtvRCHiSj9ArFYt75TedKS5i+Z4iDrTzakDONIvgVKL3YE6sXmX1FlJtfru9SPRoG0DV/qILqqRoI6So333uEOLsFWs/n8dPswe319MdowG6WBHAVjHB/PdOS5kDP+lkuasXJUm31tLkyKJaTNAJztLCla3MPXV6hlnAT2uxdDCukueX89twpBvfDvDmZtksWI2rmRBnX5Jweyq2iCG27QjKPZcpvu8OVOss4Nih4FZ9h+PHXJB+lJKjgjES02e83c12pXSVmB1pQxIb7wOvNaSsQtbv5f80d7f4wQfvHqik6+tJVy6oXdN+rDhqv7c5lvEPSshGGMWyJU4TRilfv9pjE/mvkBB34qjjt7AzQklg44QWUXLS/b1TqOx3xiSXS2AZJ7YxGyUcC50ziFSQPurQCfYyAgT8oR6JK75ZqSenA1X1MEFg4e2ARnAaLOkSdg3ipzMZTBmFS6zQ1TT22A95sUeZD6+Fx/wExH1aYO7xWtgVVNujRwOXJARUrDNqttZQKnx7j+D/tc8iNaUqSYsEdfFpywuqghY00oMHovd4son2VsT7Y8hBxil3YkWXCXpgaGzpQ/31PfDb9D3ylfeJ2yAs6Z7YDC46tpEYPhrrGG8qyao+Je19GyRomGmNutp73kA76e/ve5mXO7fhKaunDk/UkvbinuC4KCWJ+z9wYZ7jwbhfiIfDAJIqQfnpHM3jxxhliZK52tybh4G7FbJ+XTde5w5GLLHM6JguadwIOPNK336zQBy1BjqytYB1jiSwYpO7pv9KYDe+kTTcSV6bqpHJV3orQoGA7olXWq3jF5um3JnuWYBrutOywZLXH71xsG1LbGw3k70MNqNIwNujzBgMLhFbUOzdUH8ktAJszgT4A+nCxtOoKDFe1F1Bvwq/OGl4HuOcxMVKhfT/2UizukWuSmA0bRsopNnEdWXVR/ZwA3XAp6NAQekYJcy+K2jzFKzwoN+wBLE2ToC5h/28uBwu2Bml1wXryvd83HNRj3lI/Y39Y2MLdfOm3n73QDdBYbTVQkZh/WN1APhbxezyIobvJ6rySsUFEY5HN36B1hkz6dVcxetbdgViPPSIp62Th7hr3wQhOdpq7puKef2ZGj/4Z16eJ/+/jVsEtZ7wKtRHy8yNBaIdavjACxsb0UnYkPwbTis18kZehXWrD/Gtzzy2teDAOOBbtHInfFO53JYvl45t8HkSD/TVEW3jfg+htduKttFnSZypqUXQMZTskINYOjDYSnggEY8Yfpp84HYUYacoEpK4QC0cgke5QFShqTwCsyKlvzAMU9M2n7ZJJmzSaGTvnQJrfLxiGSxA26LCvgg3mFK5nu4osve7jguMyVPSV5p8b1CoSH9vzlbBaNH+MDr1ffcaEp5LySORwWQTxaH3Yu78RHGl8Sva17JPPSaG6HziBLtOQCyfcBIyBz+fA2LL8K7PM+hftgt5rvL34q0EPomEG3OdeNa56N9qvzm4n58PH3kpyCZH+Ooj2Rvgt7HqpOhBvU2LLJEsaC2kND+A0V6OmmmzmckN2borT5DjfVIwK+Z5P6fFJLU4nPnF57wg0s8Th0fN2vQUpWdTHsgzSJSa1Q9M6Kvl/5yz4+/7QcabKMxB5+O5fGAy2tkfT2YGxAOsShmrFipLG5IYoCRAm0Bkj2k2Q+DBOQ3zqdOvkFgSQUqxaGxbpdCGstYIvK9hyjcj41cewQNEUXFNRfFuKLcrXdDamPFCFR3zzbMbhcew0tgIPi2Z0wf2/VvY6GXXvhA1qJe4FNz2B8C7MU2utwmzlMumk87ihiI4HER+9gvDUv2nGilqO1q7Vd3uaags5scL1mLNSVaXMnzfGNnD5I/aHwrk2o3ejQWSt+L6Nz/WUwr+/YBrDgqMSeHyCGujOWElkzq0tlc3CnWfv4UELOE0V2Jqjxrw148smEOMFG3IriGrAb4J0obWTzVw/5fbYl6ygv5NfV2QjqfDeJsTQk5WQfiC087i3Yhz3SwT0y5KPyld+I+ymmwpOBoCgKCgNnTJ9zNRacXqtrWbFUewRvz+sOai/5HH9t8IWyUlUZc08vOOm4Z+UhJSzCCm3oaVuTp55Stm1XD08uQKITrWsY0kUULJIvXco8kRwkPAC3Y83tuIKkS/b+74/MEcDaSmetp3cS+39bvVdF5giyADl4viHgU1/XTMHGJZL+5U7UomWnMJam5XLCriWxgIwWz8qEHW+lUK7wlXQtoh4kz07dgjTrmWAHixko4XC2UuDQxVwnHhR+truktHiO+mu70bNiQX77SKYNehGZjjd2jCUB6+cZRFL86q2+fROmm/EiYUlvTVuxwalNghtaWnqQDl3sXXVNzyf9phAGc2ZG10rAL/xsK336/0PC/AXUwNXtodlTk1XUxoGPe6nsTwsDR5u8jha+Nj17AQTXEes/Mp/MKWazzgZXStxJTorAPia5oBcyQHXN6QDMebQzDY/Vj3J4qPO1owqQoEpVYwzByl2/K++zmbhAvjEmKeue3DrRuDp2TWYD5DBnjFHROyNeHZEVeH67SBj76cwW91B9cuNO8B/Wnx2/81DMOpxfXvicuPrKqHAO7KMTZNt+T44LfbPqmmeb0/YZXyTsQLD53S4d7A2uH3R2BOd7UlwRQ2d/tfrJqxlrlftNul64T3N81lHfcve6HR6+zP2aMoA2NGoTyLLa8aeVqBPyYLUQwuIFTCIZPuSOHq/76yVtmkqGrJ7pPcWg2aj+24nhaZK7JS6anecIxH8E/L/o8EuHkEtuQ00nkLmle7RINuuw5XYlaKQ5SziFh4Xj0ZdR/+Dbrnm+vcIHv4sqDXFLhciNoaRmuU30ssasYGHM/sTGTAP77885KqdWWJWLriB3FOjoMUaeDCCXVpqje27+NhEAw3aPII+0t/h99pQBselh1D/2P9npOPpwDq0D4XOongv6dDmpedHa9PD/tKt+Dm8a+gM2G5efABZ1xrVgpT0PsRNj8wJXwZVPnrcCRyhQKV5i1Cl6b5cJxxTCdJ7wAJgN5/s7fccNHaHBZSHDwcc1gp30DhSRdA49wHHcmLcSkl1HUuVqT0LhJANTyyDf2UrwqqT5Z5YQ98CzVh+8Z+NwaP9QMJA+tbLdJ41WSCKfcAbbgcaZIFm9uBz7iKghGFk0PsSa8KtBXhffX6Z1WluC5yT+bT3094S59gDfU7ejB02z4wM/lTbUVWyLZQ34mevcQF7/IhSYcE+P1x4J/JoMqKunXEhoc5Pl27okUBzuhlyupSW+/lPjW9lvkZmxIRDHPv6CMznzzzjjP+khpSifuuuIjhKlGRLgQUMGfgkHbMmfH+HNp6kB9BDyyZB9uCl23YoaGAwKFrAxgBIC/3Q656eXg+hDLXXswoXruOTH1afU/G3dpVkWt8yAGXZ6LcpI3vmSPR4NoKzQs5PmF1+P+ytrzfn1o7TP9fLTSJTiS3KYClAhkQkMGuF8rcIXOUmpvOu5W5aCS/DFcv268b+aBDUBn44RHdF7rKZe6hYXhcJT93S3RU6Ku+juieKTCXau/18dQ4S2nMPKpuX7saX+2wlze788DH6BW6lagSDoM+WXJyHkdQbnwofmIvoVR0HD2mBo/pm0XD3oNfesSOHa71nmg/whYHKDWCB78Cd6L7Gx5G+LtYK+8FfHAjSJCs6QI4MYsDW47Smfmf4EompJxX0HJzoU7Il6te+wOV2A20emKNFcqm+/BTH3RywUbdBB3347KLK8QNrqyYAspQv6MsKG6BQRXe1szx4Ae1ySmjSPxk1T9aL0LyW9voRdC+Va8ZF/l3pabN50wlEXwkr1aLmV8soYVqX3lDzYrr/s7MzoVI+buoGT5gW0LFzJ4aalOESRLRidcpsJqLpP7jXFWwGgDo0kVANt90rrMmGNEIdg3y8BuL7F/tIJzXcXlQb6o5+ml3RMCLWll4myZEKJ4VDqIINFBPiV/M0HnFhsOGRk4dTtfI9ELN17NTQorlyNERFvyZNtO0padSH4UxvfQFFc5FpHyhnlHTB8AK8sUl1vEagMvuL4yR4eAVHnAY9NbipPuh3i/IBM36ezzerRiMk/dXRgS+2u/rXD8f9IFBcKts3jYqWMqzTb5HLQJ/Nfd7MnsYv5FGJcBOhHHpsrTo05l57CgmeiRSkxcvMZWEcDP6VHBVKDN0BV7UGgyBtrmcpk6hbSCM89sJKcxPNBqsrFwsLYXScxsmAzRHpi3MDyGqeQpZgRPCC0Yn2wBbciM1D8I/y0Xidn+6a5/VCNTpX5RBacfYmsu1Sefnf8Vx0TsG/Y8i3jT/pykMtaXavhQyiFu5ZYqFJcXsMwzP0Y7x+F8QqU97XN5dARoLrM2APJbTdngvGxYJwUO0jjet3eXygh2Yrjs4ljN8GMEYPvvSzbEyFh83PEeCgCwjyxUfvgeDAfXFPKGoE/nkIu6VgpNvDtf/+vxKDmTJZKw6HbaJ+G54Wr8qD8InVwfTZRu9ktbZ/Q8b+ri4uFvh7Y21qULlX7DzCW/OS98ilNSH2xvEMvMV5ZAhBsrUBHtOIW0Jz+TcoPTbuGepK1opKx41/koxns9D2DPmAYW7HkX6WNfaTfOzCp7eBsVbCBHkYdb6fV/OSinKG41eQ3XEnNxLpPf+x0pNor/z7UxDet7VsiSBoeGbyK6Hcb36wiSDPZ6teAwwwJJ5AFmDBBmp+SnWpJfKxU/Q8R4SGLO8FBnQ7fl4ogJg3yi10BYAaHPejnW0cZf2ljy54Je4AV50jpEOPEirSRcbU+Odo5tbD2GaMNjLXZtsa337jxu92isStY5x3hi5vgD60Nm0++T+7MeR3sSbRfhg9E64F67HcI7a0Tcnd/5I5gYB4fiET4NoeLwx7Qq63GOsWaUXRXWJeLVYggLvztSzkV30kS7gmC/1D+aIJyXBKhgp52awizVRbDrpB4drG5BiWEFmbi+o3WQ8fzUtIFHOT8+LV3mgfdOeA9sbu2WTSq5tmKht30IG5CDLg5X65ZUtDkKEcngks5T473pJk6ifuVo3ocKdsxxVXMdyxxVK4SU6ZxbcjvY7ldlWdRLyv/GxnRhf/oUHWHHKbhSwIJaCfn7biCwhx3eZwPfYNSSgYnXCwM165P6Ysux92fLECEX//ea3pwExs1ABG4qZFK+siNJIBzFNUjxGHD9g5Zo9PZ1yjlNcavVWt7/anrLkIp1CHk/OVhzpKhSGrwx62W0xDft+vpkQBPYzEPE040gtMju0pWSdHQmwbRen9m+cesF3TlmnT8aEX6ySX1WR2XhCdPY40zi192p08kqRg9c4uxmiNftO8FyE1v6PuO7NBSHdiA7abvzcx+etQ3ATGi10mOLpHRoLCXD2cVo+CsqRKPYdzlfGoNq3sVEAzGE4mGCl2kkPQtcTfiLteruBEsB73oFJ0+ly14ZStE4GebP/o9FFMhfNIRAw1U4IPhlUlvDHFnsD18dzxGX1KwZZw7MllyaaH3FqpmS1gwyJFdu/hwYWndw5k+ClFYlTftMFi1Y1UX/5oIPSkXH4wvvTkBNWFE7HLhnJn0hLsMigq7VWfu42YHs7fUmC18tNw3x1XwDzuZSitgc0IkHhQvSvX6Z/Eh7O6WRNEOEIjMu22zT7ekbPj3Sr0mK+uRuJI7PG6okPs02Fnv5oBeEv00t4eLlkMCZr6m137QQcATw1dHvrHaIeqvI8XOkeCps398mTH49cBzwB+8jZbQk64ly10hg1BJIwHXhuLG0e8Hii45PCOYhzOji0MInNAFWJAP+XMbIPeio3L3M2GJFpyUW4jA6xIcBiBXi9gKEFB/DtEibcvrWgcKslLXa/WkMu5aHR+C5LN87qxRHHffz6e49pO+C0YYnfNMyxAjX6DJKYTvrot9oZbPwxf58DHUDrsetcFGpGpq47jHFTRxCDTVvG4hJ3DAo8ov50T4iCV4l1dG6qer9EkgNtXuETcqD8GWXvOf5lvAsjpUUrUaw2UhQJZuwu+WEcBjeAcwm2SWEserWBcX31DRW85qcIfyTpnLiDEoCzWr7yvRNUg2yRII8rmpEBubTJz3y4bxP1V+ln8CAYEWGBw0zsFYfp5RJgv0YwAvS4yNJDs/+Ad9W5XEaN7uJITUZo4uqGbA7CyE2ieAHpTVNNYn/7pFiLpR53SdUoPeln+0vpyHR4pA9LpW19SmMqdS6+30yjfVox87cj8d5QQaXEWpJKZfKJ92z6oOSeeuS+suLVUtHkJ/eEQ9aJBgkomH0T59RsASbq8TFeoL/uPT2Qn/7rFM0Lsp4MbWiVZnfIkrRv6UuOASiXC0C7O2UfeftgNDV42/AGcwxP+5hHtkflRJmSI5uHOXIy2daY6NhVlkLc3NsKO3KMAFdU2KukFdgOkltRckSIhoJ0gP+8sfs157lFbs7sHabUU1nACQXSzgjfpncIA8yx0vTDFlAwLOzV/diF3+DTG0fxEBfa5PMhTKcscVcd7+cAZsmmSbrWZRau/mcWRgFxMNMHbZwpp3aOqsZULzU2tMdM4DBQ7Oh9W0xdGmuQE6r+bKPsIOkUjtEQ1uBYgycaY3W3PFmPRfNMt7r/pvwNuKenmVMis9WDGGnH8L6V75pfRe2J99LsYIgKYEzNuQhb1WMnaKo3kYdJFHt53mAM1f/gLzMF8HrlUSRScPpGbD+fs5pVp/NPDrlj0yVgUV9BQHn9gdIVJLh4/OsSzqJg+TwaO7ZsKVPmR6N/nanLHGYLK35DhDQqhoHtgCpt7ugMuDKHAUfwuOo0pqRlyt6URO4lT3j5c4ZejaZB/1LIWWazkhBd4+q9dnUZpexBjcGjrih+hhsNJtCexZpp25VDBlhEZJFC/T3XWzREaBxBBVByWCfAv6zXoUmk1nATvKqET5oQZYtGW7wttYaHDyhVjMRQ6Fxj04MHtEDSLlGk35E5VUjI8pCcQo0WqI72gKLu0mqPXvgJkogBcS+LdzeFykf8ZMRcv0uBa3wdXhZrbcHt0b/5TkRMTE16cfi1uYmGrkKbiv3KQNqfnSjqa3jHibBIVOOifKehZz6mQ+MHesr+cPG0V7Wpn29VGBHfDR2FCK843/4MHYbNTr92F/b0pcSxP29WcK0Y7YbG+n+tC1mfuSHctb+1MMuMFlHa/IdfECIIP5JdC5vcsQGhGV44x3UqxGArTJzHgznOF5CrJ3SvuGq1J+5jCiJaTpbiJJr0xFKn4iObaTfMwrknRH+eRxaVgvj4jm7sp7T0yZ1iImHdYoejkyIVIBM++IFyBBgrxGY6nt0Hb238zf5DMV0gJ3O2uShsIxEhHCEtLkMtGwwbdTc6KlTWUYVn09lhuLaUbZLNwMIpeuRIIylJUV+QlXZvBeJiyNchNyeJdR8f3CYf0PAHRpqXOcG4Xziwr+6XT3vW5Pzzpu38RtZiygU8jjst+QtkLAmCPUbdN/vee83UQiA47UEUSU0HxOp/sCr6DKNBPRGV7sQBsmRdYNe9A69oHmNg7OND5rch8s0ToeBC2rZHJF5CGDuEcpTvp2f3xChvaybEnce8c4GH1jL+RLh48MHwHsn2lRhKuRUhN7uPpWwv4CRfsOOimaWwtdBtAH+d6CDRKB9HihJLOix6Ac2dJYkW+Eocn1tCel7Iauuxvi0zilknojXMByfs/yRVrLYI40qQVT9FJCBPrUJtTQiJeKLJTjfBE+xTftRHIFN2vEoAzUbD1A4PHuVy8S/80hToG69P6gz1/O6ZQ49rDcNuaS8YhsInwy/s3HgG0zpaFrL83sMs0c+7lE3RzCSR1Umh+jxPVy1BtQIohmHFxiilgDvv5NQ2i9BTVEnE0kREOD6VqzpTB4+bgBlZ036eYGMzWk/lQC3WInHETJZTnMIV0QZVC/+3vjT9eKUR4LQid/wpUNz8YmeEZHulxTpSntTaWiLQ9tnyiAM2M2XTID8cPQVHgucQ3qDAwbTUp4ds3r9iV35Oe6SLACi9Na4j0VIfu/Z3ttM9uwxBwxWC2aiTmEyw2QIpOJrMT6+yihvkXfQAftY7mu5lLUPvXOxj/nYRljCL7UN+o/zUn8PBsvXcvZ+L6D3id66adr3ir9m40swp1jl2dbYkjTYLOxi51AlexomIoKahx7X9s2taye9T4rLurF25oiZTYW5d8PiXibQ0hxUtsiza5fcKGZdBvw6l4TuJgGjLTx82sku6cFXBh7fQ+s6LhfXWo2AriyVC1VXEsNuT1OSnJhZIow1TD4KRkaKxfX/dMNydk3YL4wHxcVnPiW1uf+ZP86vG5rd45rqvpUB1FyTyU1EhAltgcmAgsKdZIJojb+A0S7qOLx/M4HJ9fxXKp/7v38XlkZkKlVna34bzRrDxfNADl7VqXoOPldWgdIoIHnqv7OXUhsLJXixKFxTyGsbUo0+ILiDUZBpQwGVjoWrrVekD6v4ZU8tNpV2b3lMoM//1lWY7BSz6uF9X3rYLXhm91gzlIiyk7+SGeGaCyN3BZYlEoKfFX2nvIizJy98FvPSbt0Pf48wuUHvIrAbUac7lb5PN4RUeudg43Va4nbJQCEd7wwdKaww5hvRo1TluMYh2TDmbME2OxwpKlEgprCwVNVy3GUp3d6kXXE/QsWluslXZI3/ogDVVZY8LHmGh6mmhFB5e2dOZTy2UEgnE7O9ZOZxjg1lejnuO0WN+aVSZXDaNo31+naZPasrikwgUO9gl8TfdaejwDe5P3ESlr/b/ykl5Dc/3SZcxs5NFKgkzL/7NIer2/ZC3nc+qe7q9xA/Ut8kENG5alnRJOy21ZvU2iBvHgyy2xHAhYxoPMS5JJSIMNFaXTR6WPOa8hqv6IGlKQA7nuPEpa/h0UarwHWEOjDnU2ldnFp5D1/ttZ3wcqMtu5OyUQbqsAf3Sk0zmBaMzCOeZefm33xOpnuQ4l3L/XUyt86INcX2ga94GtMoyxMi1iEklI3/G2rszCPbuBUa6xF2UwCcY5xJZyNYN2LI4TkHKmc5BE5tywCkUo9eHeK7zDQqgsNsptpurF6ef0JPXwh/1NMh3NFcZxfdeFHvCEAyyr05oXMhtnfLil6YUhJ1DVG1vCDBp0EsMTC4lh99r4vM6EcqFpv6KH5AIorEpcaiPhmjDr4RZlxtNqDtV9CztpOo1DJAj5G81QsGugTWsRdcufRm/6S10QBCRw4395PaUTnHN4HFUOVcAqs19fcVxkxDt/FL7hoo3qyllsOE4n42PuO1ZW+5JSU0egu4Qv7EK1doPHhT7ghYeIQzeGVK7+m88+zBYs30WxDFPVhiGB1PmzrZz3uaPP7ZR4OJ/5y95YH4woOarCuGBL2FfwQKD2pdtywQErNPK4RC702ugxyUYcjDsifn4JKu8Hk/IwJhyPSEhbXXNJ/2NGd0UGbwfC8Uo+acT0Xz7zIuSYYUfU8QxV/zhGYuH5yx+XoG1KGy4VBF6TVT6UQW7MvAjsA0ZQnWpaDkhsygo5BK3Dhp0k7NJq7Yh3bFDc+hVs6BOcInUZzIW7ckVU4j5/mJoHUY46paQZtILWR/JNW1qAgYcwGhFFApQQly9YAuK9u6sCyGz56bVE/ydGJlcSsaDfsks/aUgCS3BeXBXjJ05GjUbwTT40ZXJhSJ98uf79PlypOlCYejw2d5k6BYvTuZGewB/caT5P4D4MWopm9vnptT8N0hk8O/ySnqntWKXUZABXV9GkumsznUitGouQeY0oJAUF2GHcIii3l/Wue1ge3s7cIZWmOmpH+VnRi/uu5y3MKeIuZaZIdQYVd3yyeUwV8dOQehGchJZGsu7SU0csHgY0o4Fqg/2lMhy9fG198c0t/xpX4ULxY7E48c7WkRI+KmlgJutra8eRM1okiYHcof5dWreKzEN1nwVs9fpQVD6BcPrN7HyyifXOzrXvFpjb+QVtobSoTxyjKxj2Mhi2c9HN0UDD2c5y5xn3sanoLtfZ88o2k6wEeRTT6nz2xeJJmkJ8zNnlv1Ff8D9Xg4wwSV3NbQtHvZERwW+OI1teaBhaNLRl2HtePrr9fSXp3Lw8rk4I1DxccmEfquFW5JZh+ReY8rDq/eMLHJl3Lyjzp/SYYcvfOoK2msDIIoeaFbE/YO6QGapG/FWVmiu4WZdZQh7RePjuGUANqMbEENrZUqReMyZAKllJjYmVu9AedhHunohWWk/DuBcKaHT1l+2QD9g1VBQoFpng2oNb8GNaqDKIf2XxSHpQUHTGJANdgRElybcZIzZLXEtnf3v5DiQ0dfkiwD1WxfPqKZJ+Cwv9POwPJdicdQc+uE3dbRvH4rEjOKYFx7ab/lOW4toSXeatjaxH9p2Dhzcqy3QrD2papgSopRMheyhyEG+M6agRJVWjPZZ5b/hc64RuKN3Fu71vG/88i0nQZzik4BHon0JJR5MVc0NcE0ozUtaU/zo202Rc/Mo3y5L9kGBSyBcIQkCYX0T580RnAnQ3A5M/1m7rjP8mymbGUBBfO7JMBjG0b2TM06bkGsmYpxnBEQAcEjyzJKe8h+JxvzTDssEvC1v2+M1UtXoL6TD9PcXXZ52NiOUn9uLO25XX2v7ZLgITRLW+2joT/k6Te1foFCMJ+y824EgCNM8YlsYK/07JgDVNAVCVj72X2bFS0bEbY1CzmJyuxZcMCnR0HTauVL51lFs+csVqagL8zc/FaQekWhL28n9Za0TTPKSDLaATZA9AMEd2wAyUE0Ex/QqWTFszuq4hYDW37s3QbOZ1JCN/AE1D5iYZt2+RZJOeuEq6kDpCJyg9mmWxpExgcWP5kew6tEvxSBHb2264VZc5Mu6gXTho0AdLhF0kjcRLbmb59w9e4kl6mdQCIYsnWBcu3A7nC5KNherx4H50kNLV2ZIIGS9PYTP+ZysOQOcG0el1EENwlk0P6KxGmOg2Jki0E94bSq7Z+23NK7kZYjLtfmIiOZLB1iEsCXf51bNpMmdWu0p9/ZOVZHMG6HqeNhXTg1nVZDeNkwQpUdxHxVFOtIWOF6aL6+IqKm1YvqEXP9eqtBK6/KC+YloOM1WCWCQPlbIlkTXIwTMfR+se5w5Q95f+nMKHZo2XVpLDIJ/FEK5t24Vbuij/ddWAuCmh2bqIaKQI9hvlM4KlMI8rRgt/65ZJALyX/roDnuhWRnGzvhNUF6I7wbOOOvprx5Okcpf5+TYArIP32YPFQqNYK0t8RZxNPh8aWA2XPhkURbL/VbNuP30JcL25/9VxJtzEfebF7wajI2H3DRIcDyh41QWCOLw7qPbBF3Q66SDrpcs3OmIfmTVS5GZnjh2JgDFHE5T6sEoQOngaMCwRAWXz9k8+MFDur51Ezg549JqcEp5tj6SdIaiyooKqKlVFDBTrsRJpObnlKqIw20NEa/NRBxaiBDImv7ElsCqmF1Otla1x38CkzadrhhR2ZYRd8uMaP8Gwva0d+iSa+O11w+TJGPXcZ+JVUqnVlhAAc2rs58vBf97VQyLAaI+uJR8yKiRdL4tol2BlQ67CkFBcPjAUIT2JKBgqg1QGtklUMJhB8be2oydCVoFcAodgBggsBQ4rXUq/sRPXOriFlaRFaCbXDu6rN4CxgHSdUsH9m3ZjnJZrjv7Ao2wcEmFwT2hXKXXUDF3ASX32yu0zQzTvm0cR5FOpMHxkWCFsks8izkW0/Vri2FUOn+S/50mjjqERepmgW0Q3l/6YKx13PS0VFtyPi0B6+w4n5aXWVM4QuoG+0zV6lmklI4WjSpMu55DDaEkZHq3ztvmnc/IbSxYEcnz8RgcvjGAeCURDbMtKImvLnINZZb2//yYYJkr4qcMcZLCiHraI6DPD07yBI5IlvpK6miaSxoEiBmTAWW0EyH4ySyjCetoa4osxLn8dfr9iLdA1XDw6m0jBvsWCWgejwxpJjiK7YXoq6e7a7pO0UYnDvH+ex+aN8Rp4r4IYp5nGILDbdHdDGwVkqtV0DBoht/9M+PjEaswLDN+e2QfFXJ/scraUGBJ62VzTR7HgnzXnAafV0MyVQo4UIEyaIVcahZ3xM9dAbO3HcW6t0ck8QKghtTPi56wqMOsxtRlKni/uUHa4uCzDfgH2BzoGtC5qiKZCroDuiTs+dJWpB3mdBZ2/e0H805dNvI10ZbT9ngvgGUFa0sS5tWLula+hlD2P+9GfHlMb39ad28vZ+bCAMNIImOQrxGxQqC2cKwFNKJGIWGWG2uZ70J2H7HPNOzbSBdov5v4OgYXqDWN84XXGE1W/KrKRRLpG5DPSjz2I3tCAiyptltVdH+wjvQimKawrlybnaEZXjbV9BgOea2zTKzItOU9dhOPUSFP1MBbuvuftFzi5CuoyISctas3N5chwR7y/7zjz37DM0a87OIdPXkTehpdJ0be/+/InbQX5cct+6e31gFCXT/wvTNoqr408ADgBtGxhr6ykDninilE0qyy9oykSCsRLTCrEy/beUNcNohqTQDTHG9FSphYD1w7VrUitq3wUQLNVBVTL0eJNGWTWp4GG8gTVMwhsRcT9LUoVidj4+BZN0dozuG6f2fcfGPl7GDpwHgd9hgG8j6GPpAVhuf93IdBJ1MyJPrJOkGsejv3sxq9gr/EUfHFbWl3zODZxQBRdqWsyxm7O3WnP2fmgWYwTNFF/5coUcnTikH4MpYA0tDD0IOzg9nXF4VjdTYyq0N5acBglcKSwRou2MIUpqcyBJHxfZ6Y8pQUC7UlrN9JbMiskIGZr3U0jl62CMVM5UvY7rJJzZpD6p7AOOTPKuiQhQnLWwIsEdcQuBBOygjq3ZTdXixRXeqFKmjvXfub0S67sw4zhMFfezhdWP6KvtWfOQ810ENbovfaxnQ9doVEnObK9fua8l7por74N3pfPLs2u39Rtjs2exHaymOfRW6Szl7S8kBuZr7GHhjugugJTU8gPAP952pqRRc09azxcb4cBj9r5aHTwRzku9gZWsUia04S1GGvOCP+xXYl1bEICNGRPAxA5FyfsxBP5XkkWYUz8TySYGwO9+SRGjMaWCy8sFViP0WBtv2ShVAb+DdYVJSBxh3Rj1boUhN5qu+aBKi6fIlTihEQCGg5NQfamGtQngo7KbzXEDZ1ayxZrVTo/hr4iZAYbtzJbvhdCyr6xfwB+JzulmPL57AFrwXVdSWgpBhQHJ5O2YQe1m0bzPaWqRFY4jecn4bMp05HnTg4hu/Zc/JjD3gHtt/vjO7O2272by0G8t6HK8WiR4XY8S3sDYOZ+cy69lGvnxevfocqIEXCji/fNClsvN8CtsiRI5jWujefpil9OX/ejlajXbe6IR9/hcisxs6CH1fyvajQGCtZvTA4OhvnjiY7+/IRr3FHBixexPsqHyBWMSKhlths+k0PLrOMoMp5Owp4CTal81QXiasY8w9V38Q35XyCnUSC3XGEg3Geiyq2GkLhCT2gUIIuul2Ked/M80r7ne83MXtHpW7YfKV50+w/+qBS6BU3rdcvWlEjpB7ThQwU3NYnw1ncRqr+Gd51Z8PDyyj6OOng4+L2Xp9hHJjJP0EjY1jwbfXZ7fzmbqUU0kdW1H9R+CubRJpEEdwROSszcZGgLbY/GYXkSiRiQeIzut/2XNxz9Ud5n4Q57WyfxjsRCwAuBG3tCkk9wZlqvFtY7xscT4qwcMJw+7SYdxJTCTcEF3DxEcFadaSkJTkOy6m5TVYnnhXlzxQEzrpCfUitIOvRBLyE5IuJLavPVT7eNoQ="}
+{
+ "edicoes": [
+  {
+   "id": "e7e7blyk",
+   "rotulo": "02/10/2026",
+   "dia": "2",
+   "mes": "out",
+   "ano": "2026",
+   "status": "online",
+   "pautas": [
+    {
+     "id": "pnxpbxcq",
+     "sessao": "GOVERNANÇA",
+     "titulo": "Conselho de Administração comunica medidas de gestão e decisão sobre a Festa do Dia do Médico",
+     "texto": "<p>Comunicação sobre medidas de gestão, redução de despesas e a decisão excepcional de não realizar a Festa do Dia do Médico em 2026.</p><p>Diante dos resultados econômico-financeiros de 2025 e do cenário projetado para 2026, o Conselho de Administração e a Diretoria da Unimed Uberlândia vêm adotando uma condução diligente e austera na gestão das despesas da cooperativa. O objetivo é melhorar os resultados do exercício, preservar o caixa e fortalecer a sustentabilidade da Unimed Uberlândia no longo prazo.</p><p><strong>Medidas para redução de despesas</strong></p><p>Redução do número de colaboradores; medidas técnico-administrativas voltadas à redução da sinistralidade e melhoria da eficiência operacional; redução de despesas administrativas gerais; ações de combate a desvios de conduta.</p>",
+     "imagem": "",
+     "imagens": [],
+     "video": "",
+     "destaque": "<p>As medidas vêm sendo conduzidas sem comprometer a remuneração dos cooperados, incluindo iniciativas de valorização da produção médica, como o Programa Valoriza.</p>",
+     "botoes": [
+      {
+       "texto": "Acesse a Sala",
+       "link": ""
+      }
+     ],
+     "evento": {
+      "ativo": true,
+      "titulo": "IA par Marketing",
+      "dia": "28",
+      "mes": "Set",
+      "local": "",
+      "horario": "12h40",
+      "formato": "Online"
+     }
+    },
+    {
+     "id": "p4th59fq",
+     "sessao": "TECNOLOGIA",
+     "titulo": "Workshop de Letramento em IA para Cooperados",
+     "texto": "<p>Para orientar os cooperados sobre como o uso da IA pode contribuir com o seu trabalho, a Unimed Uberlândia promove o Workshop de Letramento em IA para Cooperados.</p><p>O evento será conduzido por Fred Parreira e Marcello Nasser, que vão abordar casos reais de aplicação da IA na medicina, como análise e síntese de informações, otimização de processos de trabalho, entre outros temas.</p><p><strong>Confira a programação</strong></p><p>08h às 08h30 — Café da manhã e recepção dos participantes. 08h30 às 09h — Contexto &amp; Ferramentas. 09h às 09h45 — Aplicações Médicas Reais. 09h45 às 10h30 — Segurança, Tendências &amp; Prática. 10h30 às 11h30 — Uso no dia a dia da Clínica / Financeiro.</p><p>Esperamos vocês!</p>",
+     "imagem": "",
+     "imagens": [],
+     "video": "",
+     "destaque": "<p>A participação no workshop vale 3 pontos no Programa CooperAtivo.</p>",
+     "botoes": [],
+     "evento": {
+      "ativo": true,
+      "titulo": "Workshop de Letramento em IA para Cooperados",
+      "dia": "12",
+      "mes": "set",
+      "local": "Sicoob Aracoop",
+      "horario": "8h às 12h",
+      "formato": "Presencial"
+     }
+    },
+    {
+     "id": "peqfyqkn",
+     "sessao": "SÉRIE — APP DO COOPERADO",
+     "titulo": "App do Cooperado de cara nova | Parte 8: Canal de Conduta e Serviços Próprios",
+     "texto": "<p>Continuando com a nossa série sobre as novidades do App do Cooperado, nesta edição o assunto é sobre o Canal de Conduta e Serviços Próprios.</p><p>Descubra como é fácil acessar essas funcionalidades e utilizá-las, com poucos toques, direto pelo aplicativo.</p><p><strong>Assista ao vídeo e confira o passo a passo dessa funcionalidade.</strong></p><p>Canal de Conduta: direcionamento automático para o navegador do celular, com acesso rápido e seguro ao canal oficial. Serviços Próprios: acesso aos principais serviços assistenciais próprios da Unimed Uberlândia, com informações sobre as unidades de atendimento especializadas.</p><p>Acesse agora o APP do Cooperado e confira na prática essas funcionalidades.</p>",
+     "imagem": "https://naoperdenao.com/wp-content/uploads/2023/03/Kaka-Fotografias_-Unimed-319.jpg",
+     "imagens": [
+      "https://naoperdenao.com/wp-content/uploads/2023/03/Kaka-Fotografias_-Unimed-319.jpg"
+     ],
+     "video": "",
+     "destaque": "<p>Duas funcionalidades, um só objetivo: aproximar você da Unimed Uberlândia e facilitar na rotina do seu dia a dia.</p>",
+     "botoes": [],
+     "evento": {
+      "ativo": true,
+      "titulo": "App do Cooperado de cara nova | Parte 8: Canal de Conduta e Serviços Próprios",
+      "dia": "28",
+      "mes": "out",
+      "local": "Online",
+      "horario": "09h20",
+      "formato": "Online"
+     }
+    },
+    {
+     "id": "ppzo0sgs",
+     "sessao": "RELACIONAMENTO COM O COOPERADO",
+     "titulo": "Disponibilidade Assistencial e Suficiência da Rede de Cooperados",
+     "texto": "<p>Sua participação contribui para o planejamento da nossa rede</p><p>A Unimed Uberlândia está realizando uma pesquisa para conhecer a disponibilidade de atendimento dos médicos cooperados e a percepção sobre o acesso às consultas nas diferentes especialidades. E a sua participação será essencial para os estudos de dimensionamento e suficiência da rede.</p><p><strong>Atenção</strong></p><p>A pesquisa é rápida e garante 2 pontos extras no Programa CooperAtivo.</p>",
+     "imagem": "",
+     "imagens": [],
+     "video": "https://youtu.be/Hy5O7KgLKR4?si=xzkLt-Ply_DAo1aE",
+     "destaque": "<p>Participação até 25/09.</p>",
+     "botoes": [
+      {
+       "texto": "Clique aqui! — Preencha o formulário e participe",
+       "link": "https://forms.cloud.microsoft/r/Hqf4Jr4Q0T"
+      }
+     ],
+     "evento": {
+      "ativo": true,
+      "titulo": "Disponibilidade Assistencial e Suficiência da Rede de Cooperados",
+      "dia": "25",
+      "mes": "set",
+      "local": "Online — formulário",
+      "horario": "",
+      "formato": "Online"
+     }
+    },
+    {
+     "id": "pa3mf5pl",
+     "sessao": "RELACIONAMENTO COM O COOPERADO",
+     "titulo": "Confira os sorteados para o jogo do UberLÂNDIA x ASA",
+     "texto": "<p>Agradecemos a todos os cooperados que participaram do sorteio de ingressos para o camarote do jogo do UberLÂNDIA x ASA, pela Final do Campeonato Brasileiro (Série D).</p><p>Confira os sorteados:</p><p><strong>Confira os sorteados</strong></p><p>🏆 Par 1: / 🏆 Par 2:</p>",
+     "imagem": "",
+     "imagens": [],
+     "video": "",
+     "destaque": "<p>Jogo pela Final do Campeonato Brasileiro — Série D.</p>",
+     "botoes": [],
+     "evento": {
+      "ativo": true,
+      "titulo": "Confira os sorteados para o jogo do UberLÂNDIA x ASA",
+      "dia": "13",
+      "mes": "dez",
+      "local": "Estádio Municipal Parque do Sabiá",
+      "horario": "17h",
+      "formato": "Presencial"
+     }
+    },
+    {
+     "id": "p2iga14y",
+     "sessao": "RELACIONAMENTO COM O COOPERADO",
+     "titulo": "Último final de semana para a retirada do seu presente de Dia dos Pais. Veja como retirar!",
+     "texto": "<p><strong>Veja como retirar!</strong></p><p>Veja como retirar!</p>",
+     "imagem": "https://comunica.ufu.br/sites/default/files/imagem-chamada/2026-09/Live%20Novo%20Convenio%20Saude%20Suplementar%20UFU.png",
+     "imagens": [
+      "https://comunica.ufu.br/sites/default/files/imagem-chamada/2026-09/Live%20Novo%20Convenio%20Saude%20Suplementar%20UFU.png"
+     ],
+     "video": "",
+     "destaque": "<p>Último final de semana para retirada do presente de Dia dos Pais.</p>",
+     "botoes": [],
+     "evento": {
+      "ativo": false,
+      "titulo": "",
+      "dia": "",
+      "mes": "",
+      "local": "",
+      "horario": "",
+      "formato": ""
+     }
+    },
+    {
+     "id": "pl35hjq2",
+     "sessao": "RELACIONAMENTO COM O COOPERADO",
+     "titulo": "Indique sua(eu) secretária(o) e ganhe 10 pontos no CooperAtivo!",
+     "texto": "<p>Sua(eu) secretária(o) é quem está todos os dias ao seu lado: organiza a agenda, atende os pacientes e mantém o consultório funcionando.</p><p>Que tal retribuir esse cuidado? Indique sua(eu) secretária(o) para conhecer de perto o trabalho da Unimed Uberlândia, e ainda ganhe 10 pontos no CooperAtivo.</p><p>A indicação permite que a(o) secretária(o) conheça de perto o trabalho da Unimed Uberlândia.</p><p>Clique aqui e preencha o formulário</p>",
+     "imagem": "",
+     "imagens": [],
+     "video": "https://youtu.be/wnJMdiomzCI?si=XtarlMPCxbNOCgdr",
+     "destaque": "<p>Ganhe 10 pontos no CooperAtivo.</p>",
+     "botoes": [],
+     "evento": {
+      "ativo": false,
+      "titulo": "",
+      "dia": "",
+      "mes": "",
+      "local": "",
+      "horario": "",
+      "formato": ""
+     }
+    }
+   ]
+  }
+ ],
+ "legados": [
+  {
+   "rotulo": "04/09/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-04-09-26"
+  },
+  {
+   "rotulo": "28/08/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-28-08-26"
+  },
+  {
+   "rotulo": "21/08/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-21-08-26"
+  },
+  {
+   "rotulo": "14/08/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-14-08-26"
+  },
+  {
+   "rotulo": "07/08/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-07-08-26"
+  },
+  {
+   "rotulo": "31/07/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-31-07-26"
+  },
+  {
+   "rotulo": "24/07/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-24-07-26"
+  },
+  {
+   "rotulo": "17/07/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-17-07-26"
+  },
+  {
+   "rotulo": "10/07/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-10-07-26"
+  },
+  {
+   "rotulo": "03/07/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-03-07-26"
+  },
+  {
+   "rotulo": "26/06/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-26-06-26"
+  },
+  {
+   "rotulo": "19/06/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-19-06-26"
+  },
+  {
+   "rotulo": "12/06/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-12-06-26"
+  },
+  {
+   "rotulo": "05/06/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-05-06-26"
+  },
+  {
+   "rotulo": "29/05/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-29-05-26"
+  },
+  {
+   "rotulo": "22/05/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-22-05-26"
+  },
+  {
+   "rotulo": "15/05/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-15-05-26"
+  },
+  {
+   "rotulo": "11/05/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-11-05-26"
+  },
+  {
+   "rotulo": "08/05/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-08-05-26"
+  },
+  {
+   "rotulo": "30/04/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-30-04-26"
+  },
+  {
+   "rotulo": "24/04/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-24-04-26"
+  },
+  {
+   "rotulo": "17/04/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-17-04-26"
+  },
+  {
+   "rotulo": "10/04/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-10-04-26"
+  },
+  {
+   "rotulo": "02/04/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-02-04-26"
+  },
+  {
+   "rotulo": "27/03/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-27-03-26"
+  },
+  {
+   "rotulo": "20/03/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-20-03-26"
+  },
+  {
+   "rotulo": "13/03/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-13-03-26"
+  },
+  {
+   "rotulo": "06/03/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-06-03-26"
+  },
+  {
+   "rotulo": "27/02/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-27-02-26"
+  },
+  {
+   "rotulo": "20/02/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-20-02-26"
+  },
+  {
+   "rotulo": "13/02/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-13-02-26"
+  },
+  {
+   "rotulo": "06/02/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-06-02-26"
+  },
+  {
+   "rotulo": "30/01/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-30-01-26"
+  },
+  {
+   "rotulo": "23/01/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-23-01-26"
+  },
+  {
+   "rotulo": "16/01/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-16-01-26"
+  },
+  {
+   "rotulo": "09/01/2026",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-09-01-26"
+  },
+  {
+   "rotulo": "19/12/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-19-12-25"
+  },
+  {
+   "rotulo": "12/12/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-12-12-25"
+  },
+  {
+   "rotulo": "05/12/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-05-12-25"
+  },
+  {
+   "rotulo": "28/11/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-28-11-25"
+  },
+  {
+   "rotulo": "21/11/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-21-11-25"
+  },
+  {
+   "rotulo": "14/11/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-14-11-25"
+  },
+  {
+   "rotulo": "07/11/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-07-11-25"
+  },
+  {
+   "rotulo": "31/10/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-31-10-25"
+  },
+  {
+   "rotulo": "24/10/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-24-10-25"
+  },
+  {
+   "rotulo": "17/10/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-17-10-25"
+  },
+  {
+   "rotulo": "10/10/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-10-10-25"
+  },
+  {
+   "rotulo": "03/10/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-03-10-25"
+  },
+  {
+   "rotulo": "26/09/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-26-09-25"
+  },
+  {
+   "rotulo": "19/09/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-19-09-25"
+  },
+  {
+   "rotulo": "12/09/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-12-09-25"
+  },
+  {
+   "rotulo": "05/09/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-05-09-25"
+  },
+  {
+   "rotulo": "29/08/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-29-08-25"
+  },
+  {
+   "rotulo": "22/08/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-22-08-25"
+  },
+  {
+   "rotulo": "14/08/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-14-08-25"
+  },
+  {
+   "rotulo": "08/08/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-08-08-25"
+  },
+  {
+   "rotulo": "01/08/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-01-08-25"
+  },
+  {
+   "rotulo": "25/07/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-25-07-25"
+  },
+  {
+   "rotulo": "18/07/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-18-07-25"
+  },
+  {
+   "rotulo": "11/07/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-11-07-25"
+  },
+  {
+   "rotulo": "04/07/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-04-07-25"
+  },
+  {
+   "rotulo": "27/06/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-27-06-25"
+  },
+  {
+   "rotulo": "13/06/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-13-06-25"
+  },
+  {
+   "rotulo": "06/06/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-06-06-25"
+  },
+  {
+   "rotulo": "30/05/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-30-05-25"
+  },
+  {
+   "rotulo": "23/05/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-23-05-25"
+  },
+  {
+   "rotulo": "16/05/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-16-05-25"
+  },
+  {
+   "rotulo": "09/05/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-09-05-25"
+  },
+  {
+   "rotulo": "02/05/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-02-05-25"
+  },
+  {
+   "rotulo": "25/04/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-25-04-25"
+  },
+  {
+   "rotulo": "17/04/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-17-04-25"
+  },
+  {
+   "rotulo": "11/04/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-11-04-25"
+  },
+  {
+   "rotulo": "04/04/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-04-04-25"
+  },
+  {
+   "rotulo": "28/03/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-28-03-25"
+  },
+  {
+   "rotulo": "21/03/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-21-03-25"
+  },
+  {
+   "rotulo": "14/03/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-14-03-25"
+  },
+  {
+   "rotulo": "07/03/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-07-03-25"
+  },
+  {
+   "rotulo": "28/02/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-28-02-25"
+  },
+  {
+   "rotulo": "21/02/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-21-02-25"
+  },
+  {
+   "rotulo": "14/02/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-14-02-25"
+  },
+  {
+   "rotulo": "07/02/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-07-02-25"
+  },
+  {
+   "rotulo": "31/01/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-31-01-25"
+  },
+  {
+   "rotulo": "24/01/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-24-01-25"
+  },
+  {
+   "rotulo": "17/01/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-17-01-25"
+  },
+  {
+   "rotulo": "10/01/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-10-01-25"
+  },
+  {
+   "rotulo": "03/01/2025",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-03-01-25"
+  },
+  {
+   "rotulo": "27/12/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-27-12"
+  },
+  {
+   "rotulo": "20/12/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-20-12"
+  },
+  {
+   "rotulo": "13/12/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-13-12"
+  },
+  {
+   "rotulo": "06/12/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-06-12"
+  },
+  {
+   "rotulo": "29/11/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-29-11"
+  },
+  {
+   "rotulo": "22/11/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-22-11"
+  },
+  {
+   "rotulo": "14/11/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-14-11"
+  },
+  {
+   "rotulo": "08/11/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-08-11"
+  },
+  {
+   "rotulo": "01/11/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-01-11"
+  },
+  {
+   "rotulo": "25/10/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-25-10"
+  },
+  {
+   "rotulo": "18/10/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-18-10"
+  },
+  {
+   "rotulo": "11/10/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-11-10"
+  },
+  {
+   "rotulo": "04/10/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-04-10"
+  },
+  {
+   "rotulo": "27/09/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-27-09"
+  },
+  {
+   "rotulo": "20/09/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-20-9"
+  },
+  {
+   "rotulo": "13/09/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-13-09"
+  },
+  {
+   "rotulo": "06/09/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-06-09"
+  },
+  {
+   "rotulo": "30/08/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-30-08"
+  },
+  {
+   "rotulo": "23/08/2024",
+   "link": "https://informativodocooperado.framer.website/outras-paginas/informativo-23-8"
+  },
+  {
+   "rotulo": "16/08/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-16-08"
+  },
+  {
+   "rotulo": "09/08/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-09-08"
+  },
+  {
+   "rotulo": "02/08/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-02-08"
+  },
+  {
+   "rotulo": "26/07/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-26-07"
+  },
+  {
+   "rotulo": "19/07/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-19-07"
+  },
+  {
+   "rotulo": "12/07/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-12-7"
+  },
+  {
+   "rotulo": "05/07/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-05-7"
+  },
+  {
+   "rotulo": "26/06/2024",
+   "link": "https://informativodocooperado.framer.website/p%C3%A1ginas/informativo-26-06"
+  }
+ ]
+}
