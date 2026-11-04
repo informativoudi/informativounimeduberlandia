@@ -16,10 +16,18 @@
     "ct": "WEPgCj3SFUXZf3XD7n/w+KX0OF5RcWFkKHVMXWsJW6FMyQ9VJfOSPCsOVdYMQohZcqApaYpGzpANDcZgt050hzu2pE8=",
     "salt": "eF5bvJmuwZdvSZlwY5yDWQ=="
    }
+  },
+  {
+   "nome": "Laura",
+   "chave": {
+    "iv": "CAeKGUAUp75l6/IW",
+    "ct": "OyoZudg5tAW0w90OPgpLrri5Du99ivwm6Z2sj/8JvME0bumRqKId27O4brCg8jUmXJNIz+WGew0SNplv5vlvhsmCUFM=",
+    "salt": "13qohsPfluHbF0ixPo5ysw=="
+   }
   }
  ],
  "cofre": {
-  "iv": "CeaGG2oEutMhDge8",
-  "ct": "umdnqag7FYzzoh2kGyQLcTvuMO1t9XeSqaJn7S53r+HMdXY9jrNwwslNdoDUgScsXZIrOlrGxmhDF47cGojxxvjeHXpjKMHBAJnxjPEKrD2s4cgvG/8Jfss8ZeRUWzBtUMrpLGmBY2Jf8txtFUFrwLASzGrnKcsrAjeUADT+ra5uXDvwse/oEoCFAg=="
+  "iv": "PhZJbrzlTfSjodjM",
+  "ct": "8gRkSglhoKqLNyE7io4xldj7tpFXkImm+6DjOg0DlkQu9SpVuMPvUOWxf1GKtmT6x+0oe6BDnAdpomGYniR5STsGbNkKQiWJe3q1jc4l3/I37HXPSk7eQ81qlmzpXqRI3ON/7GjV1sWWe6vYZ8fPwAoXCQqK8VSOHN2BUzLGyDN46sirljqRmjUWdQ=="
  }
 }
